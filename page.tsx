@@ -1,14 +1,18 @@
 "use client";
 
-import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
-import { About } from "@/components/about";
-import { Strategy } from "@/components/strategy";
-import { BuyBox } from "@/components/buy-box";
-import { Process } from "@/components/process";
-import { ForAgents } from "@/components/for-agents";
-import { Contact } from "@/components/contact";
-import { Footer } from "@/components/footer";
+import { Navbar } from "@/navbar";
+import { Hero } from "@/hero";
+import { About } from "@/about";
+import { Strategy } from "@/strategy";
+import { BuyBox } from "@/buy-box";
+import { Process } from "@/process";
+import { Advisory } from "@/advisory";
+import { BrokerPartner } from "@/broker-partner";
+import { ForAgents } from "@/for-agents";
+import { Testimonials } from "@/testimonials";
+import { Contact } from "@/contact";
+import { EmailOptin } from "@/email-optin";
+import { Footer } from "@/footer";
 
 export default function Home() {
   return (
@@ -19,8 +23,12 @@ export default function Home() {
       <Strategy />
       <BuyBox />
       <Process />
+      <Advisory />
+      <BrokerPartner />
       <ForAgents />
+      <Testimonials />
       <Contact />
+      <EmailOptin />
       <Footer />
     </main>
   );

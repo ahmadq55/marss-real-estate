@@ -2,15 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "@/button";
+import { cn } from "@/utils";
 
 const navLinks = [
   { href: "#about", label: "About" },
+  { href: "#advisory", label: "Advisory" },
+  { href: "#for-brokers", label: "For Brokers" },
   { href: "#strategy", label: "Strategy" },
   { href: "#buy-box", label: "Buy Box" },
   { href: "#process", label: "How It Works" },
-  { href: "#for-agents", label: "For Agents" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -53,7 +54,7 @@ export function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-7">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}

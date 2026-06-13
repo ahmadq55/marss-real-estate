@@ -2,10 +2,21 @@
 
 const links = {
   Company: ["About", "Strategy", "Buy Box", "How It Works"],
-  "For Partners": ["For Agents", "For Brokers", "For Sellers", "Submit a Deal"],
+  Services: ["Advisory", "For Brokers", "For Agents", "Submit a Deal"],
 };
 
 export function Footer() {
+  const anchorMap: Record<string, string> = {
+    Advisory: "#advisory",
+    "For Brokers": "#for-brokers",
+    "For Agents": "#for-agents",
+    "Submit a Deal": "#contact",
+    About: "#about",
+    Strategy: "#strategy",
+    "Buy Box": "#buy-box",
+    "How It Works": "#process",
+  };
+
   return (
     <footer className="bg-[#050505] border-t border-[#1a1a1a] py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +60,7 @@ export function Footer() {
                 {items.map((item) => (
                   <li key={item}>
                     <a
-                      href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                      href={anchorMap[item] ?? `#${item.toLowerCase().replace(/\s+/g, "-")}`}
                       className="text-gray-500 hover:text-gray-200 text-sm transition-colors"
                     >
                       {item}
