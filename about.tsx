@@ -6,10 +6,10 @@ import { CheckCircle, Building, Briefcase, Globe } from "lucide-react";
 const credentials = [
   "Real estate investor backed by business operations",
   "Specializes in value-add and transitional commercial assets",
-  "Innovative Equity Carry Financing structure — no traditional lender required",
+  "Equity Carry Financing — senior loan up to 60% LTV funds down payment, closing costs & initial CapEx",
   "Aligned incentives: buyer and seller win together",
   "Transparent milestone-based performance tracking",
-  "Experienced in multi-family, mixed-use, and commercial acquisitions",
+  "Acquires real estate and operating businesses — gas stations, car washes, auto dealerships, motels, light manufacturing & more",
 ];
 
 const pillars = [
@@ -69,14 +69,18 @@ export function About() {
           >
             <div className="border-l-2 border-yellow-500 pl-6 mb-8">
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                We are a real estate and business-backed investment firm
-                actively acquiring commercial and multi-family assets using a
-                proprietary{" "}
+                We are a real estate and business acquisition firm actively
+                acquiring commercial real estate and operating businesses
+                backed by real estate — gas stations, car washes, auto
+                dealerships, motels, light manufacturing, and more — using
+                a proprietary{" "}
                 <span className="text-yellow-400 font-semibold">
                   Equity Carry Financing
                 </span>{" "}
-                approach that eliminates the friction of traditional
-                transactions.
+                structure: a senior loan up to 60% LTV covers the down
+                payment, closing costs, and initial CapEx — with the seller
+                carrying the balance as secured preferred equity in the
+                deal entity.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 When sellers, agents, and brokers bring deals to Marss Real

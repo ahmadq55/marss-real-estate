@@ -8,12 +8,12 @@ const steps = [
     number: "01",
     icon: Building,
     title: "Acquisition",
-    subtitle: "No Cash at Close",
+    subtitle: "Senior Loan + Seller Equity",
     description:
-      "Buyer takes title. Seller equity is converted to a carried interest with clearly defined terms and milestones. No immediate full-price financing required.",
+      "A senior loan up to 60% LTV covers the down payment, closing costs, and initial CapEx at close. The seller's remaining equity is converted to secured preferred equity in the deal entity — with clearly defined governance, milestones, and step-in rights.",
     highlights: [
-      "Title transfers to buyer at close",
-      "Seller equity becomes structured carried interest",
+      "Senior loan (up to 60% LTV) funds the close",
+      "Seller carries balance as secured preferred equity",
       "Terms documented in legally binding agreement",
     ],
   },

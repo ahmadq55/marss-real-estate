@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { X, CheckCircle, TrendingUp, Shield, DollarSign, ArrowRight } from "lucide-react";
 
 const problems = [
-  "Banks require 65–75% LTV, forcing sellers to accept steep discounts",
+  "Traditional buyers demand steep discounts to offset their all-in capital outlay",
   "Under-occupied or transitional assets fail conventional underwriting",
   "Sellers lose long-term upside on assets with strong stabilization potential",
   "Traditional closings create adversarial buyer-seller dynamics",
@@ -106,12 +106,14 @@ export function Strategy() {
               </h3>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
-              The buyer acquires the asset{" "}
+              A{" "}
               <span className="text-yellow-400 font-semibold">
-                without requiring immediate full-price financing
+                senior loan up to 60% LTV
               </span>{" "}
-              by carrying the seller equity as a structured instrument tied
-              directly to asset performance.
+              covers the down payment, closing costs, and initial CapEx at
+              close. The seller carries the remaining balance as secured
+              preferred equity in the deal entity — tied directly to asset
+              performance, with full value realization at exit.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[

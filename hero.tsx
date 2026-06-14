@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Building, Shield, TrendingUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/button";
 
 const stats = [
   { label: "Investment Strategy", value: "Equity Carry" },
