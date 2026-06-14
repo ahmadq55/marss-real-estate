@@ -12,8 +12,6 @@ import {
   CheckCircle2,
   Building2,
   Banknote,
-  Home,
-  Wifi,
 } from "lucide-react";
 
 const fadeUp = {
@@ -35,7 +33,7 @@ const structures = [
     benefits: [
       "Monthly income without management obligations",
       "Negotiated rate, term, and payment schedule",
-      "No bank approval required — faster closing",
+      "Faster close — deal structure bypasses institutional approval timelines",
       "Expanded buyer pool vs. traditional listing",
       "Ideal for free-and-clear assets with strong cash flow",
     ],
@@ -47,7 +45,7 @@ const structures = [
     title: "Equity Carry Structure",
     label: "Marss Flagship — Secured Preferred Equity",
     description:
-      "Marss brings institutional capital to the closing table — no appraisal contingency, no bank approval delay. The seller converts their equity into a secured preferred equity position within the deal entity: earning passive income, deferring capital gains through installment sale treatment, and retaining governance protections and step-in rights. The highest-value structure for commercial and business acquisitions.",
+      "Marss brings a structured capital position to the closing table — delivering closing certainty without subjecting the seller to traditional buyer financing timelines or contingencies. The seller converts their equity into a secured preferred equity position within the deal entity: earning passive income, deferring capital gains through installment sale treatment, and retaining governance protections and step-in rights. The highest-value structure for commercial and business acquisitions.",
     benefits: [
       "Full or near-full asking price at close",
       "Secured preferred equity — not a subordinated note",

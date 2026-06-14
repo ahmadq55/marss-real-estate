@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building, MapPin, DollarSign, Package, CheckCircle, ArrowRight } from "lucide-react";
+import { Building, MapPin, DollarSign, Package, CheckCircle, ArrowRight, Hotel } from "lucide-react";
 
 const criteria = [
   {
@@ -11,6 +11,8 @@ const criteria = [
       "Multi-family (5+ units)",
       "Short-Term Rentals (STR / vacation rental)",
       "Pad Split / Co-Living properties",
+      "Self-Storage facilities",
+      "RV Parks / RV Resorts",
       "Mixed-use & commercial / retail",
       "Office, light industrial & warehousing",
       "Hotels, motels & hospitality (value-add)",
@@ -62,6 +64,27 @@ const dealQualifiers = [
   "STR & pad split: local STR regulations permit short-term or shared-housing operations",
 ];
 
+const repositioningPhases = [
+  {
+    phase: "Phase 1",
+    title: "Stabilize & Optimize",
+    description:
+      "Streamline operations for improved efficiency under current branding. Recruit and install top-tier management talent. Execute targeted CapEx for renovation and property improvements — driving ADR, occupancy, and NOI from day one.",
+  },
+  {
+    phase: "Phase 2",
+    title: "Boutique Repositioning",
+    description:
+      "Reposition the asset as a boutique hotel or motel under Marss proprietary branding. Curate a distinct guest experience that commands premium rates and repeat bookings in the local market.",
+  },
+  {
+    phase: "Phase 3",
+    title: "Conversion Analysis",
+    description:
+      "If zoning and economic analysis support it, evaluate conversion to multifamily residential — unlocking a higher and better use that maximizes the underlying real estate value.",
+  },
+];
+
 export function BuyBox() {
   return (
     <section id="buy-box" className="py-24 bg-[#0a0a0a]">
@@ -82,7 +105,7 @@ export function BuyBox() {
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
             We are active acquirers across commercial real estate, operating businesses,
-            short-term rentals, and pad split properties. If your deal matches
+            short-term rentals, self-storage, RV parks, and pad split properties. If your deal matches
             these criteria, we want to hear from you — fast.
           </p>
         </motion.div>
@@ -115,6 +138,57 @@ export function BuyBox() {
             </motion.div>
           ))}
         </div>
+
+        {/* Hotel / Motel Repositioning Strategy */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <div className="bg-gradient-to-br from-[#0f0d08] to-[#0f0f0f] border border-yellow-900/40 rounded-2xl p-8 lg:p-12">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2.5 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
+                <Hotel className="h-5 w-5 text-yellow-400" />
+              </div>
+              <div>
+                <div className="text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase">
+                  Featured Strategy
+                </div>
+                <h3 className="text-white text-2xl font-bold">
+                  Hotel & Motel Repositioning
+                </h3>
+              </div>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-3xl">
+              Marss acquires underperforming hotels and motels with a disciplined three-phase repositioning
+              playbook — from operational stabilization to boutique brand repositioning, with a multifamily
+              conversion pathway where the economics and zoning support it.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {repositioningPhases.map((phase, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="bg-[#111111] border border-[#222222] rounded-xl p-6 relative overflow-hidden"
+                >
+                  <div className="text-yellow-500/40 text-5xl font-black absolute top-3 right-4 select-none">
+                    {i + 1}
+                  </div>
+                  <div className="text-yellow-500 text-xs font-bold tracking-[0.25em] uppercase mb-2">
+                    {phase.phase}
+                  </div>
+                  <h4 className="text-white font-bold text-lg mb-3">{phase.title}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">{phase.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
 
         {/* Deal Qualifiers */}
         <motion.div
