@@ -1,167 +1,299 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Linkedin,
-  MapPin,
-  Briefcase,
-  TrendingUp,
-  Building,
-  ChevronRight,
-  ExternalLink,
-} from "lucide-react";
+import { Linkedin, MapPin, ArrowRight, CheckCircle2, BarChart3, Building2, Layers, Zap } from "lucide-react";
 
-const expertise = [
-  { icon: Building, label: "Multi-Family & Commercial Real Estate" },
-  { icon: Briefcase, label: "Operating Business Acquisitions (gas stations, car washes, auto dealers, motels, light manufacturing)" },
-  { icon: TrendingUp, label: "Creative Capital Structures — Equity Carry, Owner Financing, Hybrid Stack" },
+const credentials = [
+  {
+    icon: BarChart3,
+    title: "Institutional-Grade Underwriting",
+    body: "Every deal is stress-tested across Cap Rate, DSCR, IRR, CoC, and equity multiples — evaluated against T-12 actuals, rent rolls, and bank statements before any commitment.",
+  },
+  {
+    icon: Layers,
+    title: "Creative Capital Architecture",
+    body: "Equity Carry, owner financing, hybrid stacks, and OpCo/PropCo structures deployed where each fits best. Built to close — not contingent on bank timelines.",
+  },
+  {
+    icon: Building2,
+    title: "Multi-Asset Class Coverage",
+    body: "Multifamily · Commercial · Gas Stations · Car Washes · Auto Dealers · Motels & Hotels · Self-Storage · RV Parks · Pad Splits · Light Manufacturing",
+  },
+  {
+    icon: Zap,
+    title: "Direct Principal. Fast Decisions.",
+    body: "No investment committee cycles. No fund approval layers. Ahmad underwrites every deal personally and moves at the speed operators demand — typically within 48 hours.",
+  },
 ];
 
 const stats = [
-  { value: "10–12", label: "Deals Screened Weekly" },
-  { value: "DFW+", label: "Primary Market" },
-  { value: "3–10Y", label: "Hold Horizon" },
-  { value: "Texas", label: "Base Market" },
+  { value: "10–12+", label: "Deals Screened Weekly" },
+  { value: "5+", label: "Asset Classes Covered" },
+  { value: "3–10 Yr", label: "Hold Horizon" },
+  { value: "IC-Ready", label: "Underwriting Standard" },
+];
+
+const assetClasses = [
+  "Multifamily (5+ Units)",
+  "NNN & Mixed-Use Commercial",
+  "Gas Stations & C-Stores",
+  "Car Washes",
+  "Auto Dealers & Garages",
+  "Motels & Hotels",
+  "Self-Storage",
+  "RV Parks",
+  "Pad Splits / STR",
+  "Light Manufacturing",
+  "HVAC & Plumbing Firms",
+  "Laundromats",
 ];
 
 export function Principal() {
   return (
     <section
       id="principal"
-      className="relative py-24 overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(135deg, #050505 0%, #0a0800 50%, #050505 100%)",
-      }}
+      className="relative overflow-hidden"
+      style={{ background: "linear-gradient(160deg, #060606 0%, #0c0900 40%, #060606 100%)" }}
     >
+      {/* Subtle grid texture */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=60&auto=format&fit=crop')",
+            "linear-gradient(rgba(212,175,55,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.6) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-transparent" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-500/20 to-transparent" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <div className="inline-block text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4">
-            The Principal
+      {/* HERO STRIP */}
+      <div className="relative grid lg:grid-cols-5 min-h-[80vh]">
+        {/* LEFT - Large Photo Column */}
+        <div className="relative lg:col-span-2 min-h-[50vh] lg:min-h-full overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-top"
+            style={{
+              backgroundImage:
+                "url('https://galaxy-prod.tlcdn.com/view/user_372EAGt89yD821sKcMySYfKrZna/bde94d41e1ab40ffa00d7e9c10ac56d9.png')",
+              filter: "grayscale(100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, transparent 60%, #060606 100%), linear-gradient(to top, #060606 0%, transparent 40%)",
+            }}
+          />
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-yellow-400 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-10">
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-yellow-400 text-xs font-bold tracking-[0.25em] uppercase mb-2"
+            >
+              Founder & Managing Principal
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-white text-3xl lg:text-4xl font-bold tracking-tight leading-none mb-1"
+            >
+              Ahmad Qawasmeh
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-zinc-400 text-sm flex items-center gap-1.5 mt-2"
+            >
+              <MapPin className="w-3.5 h-3.5 text-yellow-500/70" />
+              Frisco, Texas · Sunbelt Markets
+            </motion.p>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Who You're{" "}
-            <span className="gold-gradient">Dealing With</span>
-          </h2>
-          <p className="max-w-xl mx-auto text-gray-400 text-lg">
-            Institutional-grade analysis and acquisition execution — without the committee delays.
-          </p>
-        </motion.div>
+        </div>
 
-        <div className="grid lg:grid-cols-5 gap-10 items-start">
+        {/* RIGHT - Bio & Credentials */}
+        <div className="relative lg:col-span-3 flex flex-col justify-center px-8 py-16 lg:px-16 lg:py-20">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-2"
           >
-            <div className="bg-[#111] border border-yellow-900/40 rounded-2xl p-8 text-center">
-              <div className="relative inline-block mb-5">
-                <div className="h-28 w-28 rounded-full border-2 border-yellow-500/50 overflow-hidden mx-auto shadow-lg shadow-yellow-900/20">
-                  <img
-                    src="https://galaxy-prod.tlcdn.com/view/user_372EAGt89yD821sKcMySYfKrZna/bde94d41e1ab40ffa00d7e9c10ac56d9.png"
-                    alt="Ahmad Qawasmeh"
-                    className="h-full w-full object-cover object-center"
-                  />
-                </div>
-                <div className="absolute bottom-1 right-1 h-5 w-5 rounded-full bg-green-500 border-2 border-[#111]" />
-              </div>
-              <h3 className="text-white font-black text-xl tracking-wide mb-1">Ahmad Qawasmeh</h3>
-              <div className="text-yellow-500 text-sm font-semibold mb-1">Principal — Acquisition Specialist</div>
-              <div className="flex items-center justify-center gap-1.5 text-gray-500 text-xs mb-6">
-                <MapPin className="h-3.5 w-3.5" />
-                Frisco, Texas
-              </div>
-              <div className="grid grid-cols-2 gap-2 mb-6">
-                {stats.map((s, i) => (
-                  <div key={i} className="bg-black/40 border border-white/5 rounded-lg p-3">
-                    <div className="text-yellow-400 font-bold text-lg leading-tight">{s.value}</div>
-                    <div className="text-gray-600 text-[10px] uppercase tracking-wide mt-0.5">{s.label}</div>
-                  </div>
-                ))}
-              </div>
-              <a
-                href="https://www.linkedin.com/in/ahmadqawasmeh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 border border-[#0A66C2]/40 rounded-lg px-4 py-2.5 text-blue-400 text-sm font-semibold transition-all group"
-              >
-                <Linkedin className="h-4 w-4" />
-                Connect on LinkedIn
-                <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </a>
-            </div>
+            <p className="text-yellow-400/80 text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+              Investor · Operator · Deal Architect
+            </p>
+          </motion.div>
+
+          <motion.blockquote
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="relative border-l-2 border-yellow-400 pl-6 mb-10"
+          >
+            <p className="text-white text-xl lg:text-2xl font-light leading-relaxed">
+              &ldquo;I don&rsquo;t just buy properties and businesses — I engineer acquisitions that work for both sides of the table. My edge is structure, speed, and the conviction to close without contingencies.&rdquo;
+            </p>
+          </motion.blockquote>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="space-y-4 mb-10"
+          >
+            <p className="text-zinc-300 text-base leading-relaxed">
+              Ahmad Qawasmeh is the Founder and Managing Principal of Marss Real Estate, a Frisco-based acquisition platform targeting commercial real estate and cash-flowing operating businesses across Texas and the broader Sunbelt. He leads every deal from initial screen through close — personally underwriting each opportunity to institutional Investment Committee standards.
+            </p>
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              With a pipeline that spans multifamily, NNN commercial, gas stations, car washes, auto dealerships, motels, self-storage, and light manufacturing, Ahmad applies the same rigorous analytical framework to a $1M business acquisition as to a $15M commercial asset — stress-testing every deal at –10% and –20% revenue scenarios, verifying T-12 actuals against bank statements, and modeling exit feasibility at multiple cap rate scenarios before committing a dollar.
+            </p>
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              His proprietary Equity Carry structure enables sellers to close at full or near-full asking price, receive a secured equity position in the acquiring entity, and participate in long-term upside — without the delays and uncertainty of traditional bank-financed transactions. This positions Marss as a differentiated buyer in markets where certainty of close and deal complexity are what separate real offers from noise.
+            </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-3 space-y-7"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-yellow-400/10 rounded-lg overflow-hidden mb-10"
           >
-            <div className="border-l-2 border-yellow-500 pl-6">
-              <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                Ahmad Qawasmeh is a multifamily, commercial real estate, and
-                business acquisition specialist based in Frisco, Texas. He
-                evaluates value-add and stabilized properties across Texas and
-                surrounding markets — screening 10–12 deals weekly against
-                rigorous financial metrics and a clear investment thesis.
-              </p>
-              <p className="text-gray-400 leading-relaxed">
-                Unlike institutional buyers who move through committee approvals and
-                financing contingencies, Ahmad brings the speed of a principal
-                operator with the analytical discipline of an institutional
-                underwriter. Sellers and brokers get direct access, fast decisions,
-                and deal structures engineered to deliver maximum value on both
-                sides of the table.
+            {stats.map((s, i) => (
+              <div key={i} className="bg-zinc-950/60 px-4 py-4 text-center">
+                <p className="text-yellow-400 text-lg font-bold tracking-tight">{s.value}</p>
+                <p className="text-zinc-500 text-[11px] uppercase tracking-wider mt-0.5">{s.label}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap items-center gap-4"
+          >
+            <a
+              href="https://www.linkedin.com/in/ahmadqawasmeh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 bg-yellow-400 hover:bg-yellow-300 text-black text-sm font-bold px-6 py-3 rounded transition-colors duration-200"
+            >
+              <Linkedin className="w-4 h-4" />
+              Connect on LinkedIn
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 text-zinc-400 hover:text-yellow-400 text-sm font-medium transition-colors duration-200"
+            >
+              Start a Conversation
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* CREDENTIAL PILLARS */}
+      <div className="relative border-t border-zinc-800/60">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <p className="text-yellow-400 text-xs font-bold tracking-[0.25em] uppercase mb-3">
+              What Sets Marss Apart
+            </p>
+            <h3 className="text-white text-2xl lg:text-3xl font-bold">
+              Four Reasons Sellers &amp; Investors Choose Ahmad
+            </h3>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {credentials.map((c, i) => {
+              const Icon = c.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative rounded-lg border border-zinc-800 bg-zinc-950/50 p-6 hover:border-yellow-400/40 transition-colors duration-300"
+                >
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-yellow-400/10 mb-4 group-hover:bg-yellow-400/20 transition-colors duration-300">
+                    <Icon className="w-5 h-5 text-yellow-400" />
+                  </div>
+                  <h4 className="text-white text-sm font-bold mb-2 leading-snug">{c.title}</h4>
+                  <p className="text-zinc-500 text-xs leading-relaxed">{c.body}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* ASSET CLASS COVERAGE */}
+      <div
+        className="relative border-t border-zinc-800/60"
+        style={{ background: "linear-gradient(90deg, #0a0800 0%, #080808 100%)" }}
+      >
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="flex flex-col lg:flex-row lg:items-start gap-10">
+            <div className="lg:w-72 shrink-0">
+              <p className="text-yellow-400 text-xs font-bold tracking-[0.25em] uppercase mb-3">Buy Box</p>
+              <h3 className="text-white text-xl font-bold leading-snug mb-4">Asset Classes Under Active Coverage</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">
+                Marss evaluates acquisitions across a broad multi-asset mandate — prioritizing cash flow, asset security, and value-add potential in Texas and Sunbelt markets.
               </p>
             </div>
+            <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              {assetClasses.map((ac, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: i * 0.04 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-2.5 bg-zinc-900/50 border border-zinc-800/60 rounded px-3 py-2.5 hover:border-yellow-400/30 transition-colors duration-200"
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5 text-yellow-400/70 shrink-0" />
+                  <span className="text-zinc-300 text-xs font-medium leading-tight">{ac}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA BAND */}
+      <div className="relative border-t border-zinc-800/60 bg-zinc-950/80">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <div>
-              <div className="text-yellow-500 text-xs font-bold tracking-[0.25em] uppercase mb-4">Acquisition Focus</div>
-              <div className="space-y-3">
-                {expertise.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-yellow-500/10 border border-yellow-500/20 shrink-0 mt-0.5">
-                      <item.icon className="h-4 w-4 text-yellow-400" />
-                    </div>
-                    <span className="text-gray-300 text-sm leading-relaxed pt-1.5">{item.label}</span>
-                  </div>
-                ))}
-              </div>
+              <p className="text-white text-lg font-bold mb-1">Considering a Sale or Partnership?</p>
+              <p className="text-zinc-500 text-sm">
+                Ahmad reviews every qualified opportunity personally. Initial conversations are confidential and commitment-free.
+              </p>
             </div>
-            <div className="bg-gradient-to-r from-yellow-500/10 to-transparent border border-yellow-500/20 rounded-xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div>
-                <div className="text-white font-bold mb-1">Evaluating a sale? Raise your hand.</div>
-                <div className="text-gray-400 text-sm">Direct access. 48-hour response. No committee.</div>
-              </div>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-5 py-2.5 rounded-lg text-sm shrink-0 transition-colors"
-              >
-                Talk to Ahmad
-                <ChevronRight className="h-4 w-4" />
-              </a>
-            </div>
-          </motion.div>
+            <a
+              href="#contact"
+              className="inline-flex shrink-0 items-center gap-2.5 border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-bold text-sm px-8 py-3 rounded transition-all duration-200"
+            >
+              Raise Your Hand
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
