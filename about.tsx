@@ -159,7 +159,7 @@ export function About() {
                   <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/marss-real-estate/"
+                  href="https://www.linkedin.com/in/ahmadqawasmeh/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors group"
