@@ -8,12 +8,12 @@ const steps = [
     number: "01",
     icon: Building,
     title: "Acquisition",
-    subtitle: "Senior Loan + Seller Equity",
+    subtitle: "Capital Stack + Equity Partnership",
     description:
-      "A senior loan up to 60% LTV covers the down payment, closing costs, and initial CapEx at close. The seller's remaining equity is converted to secured preferred equity in the deal entity — with clearly defined governance, milestones, and step-in rights.",
+      "Our creative capital stacking structure delivers real cash to the closing table. The seller's equity converts to a secured preferred equity position in the deal entity — with clearly defined governance, performance milestones, and step-in rights protecting the seller throughout.",
     highlights: [
-      "Senior loan (up to 60% LTV) funds the close",
-      "Seller carries balance as secured preferred equity",
+      "Creative capital stack delivers cash at close",
+      "Seller converts equity to secured preferred position",
       "Terms documented in legally binding agreement",
     ],
   },
@@ -49,7 +49,7 @@ const steps = [
     title: "Exit",
     subtitle: "Full Realization",
     description:
-      "Asset is sold or refinanced at stabilized value. Seller carry pays out at full value — no discounts, no haircuts. Aligned exit for all parties.",
+      "Asset is sold or refinanced at stabilized value. Seller carry pays out at full value — no forced discounts, no haircuts. Aligned exit for all parties.",
     highlights: [
       "Sale or refinance triggers payout",
       "Seller receives full carry value",

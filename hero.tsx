@@ -6,7 +6,7 @@ import { Button } from "@/button";
 
 const stats = [
   { label: "Investment Strategy", value: "Equity Carry" },
-  { label: "Seller Discount Required", value: "0%" },
+  { label: "Seller Cash at Closing", value: "Day 1" },
   { label: "Typical Hold Period", value: "3–5 Yrs" },
   { label: "Upside Participation", value: "100%" },
 ];
@@ -62,12 +62,13 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-2xl mx-auto text-lg text-gray-400 leading-relaxed mb-10"
         >
-          Marss Real Estate partners with agents, brokers, and sellers to create
-          win-win real estate transactions through innovative{" "}
+          Marss Real Estate partners with sellers, agents, and brokers to create
+          win-win transactions through{" "}
           <span className="text-yellow-400 font-medium">
             Equity Carry Financing
           </span>{" "}
-          — no forced discounts, full value realization, aligned incentives.
+          — full or near-full asking price, immediate liquidity at close, and
+          passive income for sellers.
         </motion.p>
 
         {/* CTAs */}

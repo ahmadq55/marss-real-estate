@@ -13,23 +13,23 @@ const problems = [
 const benefits = [
   {
     icon: DollarSign,
-    title: "Full Value Realization",
+    title: "Full or Near-Full Value",
     description:
-      "No forced discounting. Seller receives full market value upon stabilization and exit rather than a distressed sale price.",
-    tag: "Fair market exit guaranteed",
+      "No adversarial discount demands. Sellers receive full or near-full asking value — and continue participating in the asset's upside through the hold period.",
+    tag: "Strong pricing, no forced haircut",
   },
   {
     icon: Shield,
     title: "Equity Protection",
     description:
-      "Seller retains a legally structured equity interest — not an unsecured note — protecting their capital through the hold period.",
-    tag: "Secured instrument, not a promise",
+      "Seller retains a legally structured preferred equity interest — not an unsecured note — protecting their capital with governance rights and step-in protections through the hold period.",
+    tag: "Secured position, not a promise",
   },
   {
     icon: TrendingUp,
     title: "Tax Deferral",
     description:
-      "Capital gains are deferred until actual cash is received, providing significant tax planning advantages vs. an immediate sale.",
+      "Capital gains are deferred until actual cash is received, providing significant tax planning advantages vs. an immediate lump-sum sale.",
     tag: "Installment sale treatment applies",
   },
 ];
@@ -106,18 +106,20 @@ export function Strategy() {
               </h3>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
-              A{" "}
+              Our{" "}
               <span className="text-yellow-400 font-semibold">
-                senior loan up to 60% LTV
+                Equity Carry structure
               </span>{" "}
-              covers the down payment, closing costs, and initial CapEx at
-              close. The seller carries the remaining balance as secured
-              preferred equity in the deal entity — tied directly to asset
-              performance, with full value realization at exit.
+              is a creative capital stacking approach that brings a strong
+              cash position to the closing table. The seller converts their
+              equity into a secured preferred equity position in the deal
+              entity — earning passive income, deferring capital gains, and
+              maintaining governance protections and step-in rights throughout
+              the hold period.
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[
-                { value: "0%", label: "Upfront Price Discount" },
+                { value: "Day 1", label: "Seller Liquidity" },
                 { value: "100%", label: "Upside Participation" },
                 { value: "3–5 Yrs", label: "Typical Hold Period" },
               ].map((stat, i) => (

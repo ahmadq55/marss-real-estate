@@ -6,7 +6,7 @@ import { CheckCircle, Building, Briefcase, Globe } from "lucide-react";
 const credentials = [
   "Real estate investor backed by business operations",
   "Specializes in value-add and transitional commercial assets",
-  "Equity Carry Financing — senior loan up to 60% LTV funds down payment, closing costs & initial CapEx",
+  "Equity Carry Financing — creative capital stacking that delivers cash at close and converts equity into secured passive income",
   "Aligned incentives: buyer and seller win together",
   "Transparent milestone-based performance tracking",
   "Acquires real estate and operating businesses — gas stations, car washes, auto dealerships, motels, light manufacturing & more",
@@ -77,16 +77,19 @@ export function About() {
                 <span className="text-yellow-400 font-semibold">
                   Equity Carry Financing
                 </span>{" "}
-                structure: a senior loan up to 60% LTV covers the down
-                payment, closing costs, and initial CapEx — with the seller
-                carrying the balance as secured preferred equity in the
-                deal entity.
+                structure. Our creative capital stacking approach delivers
+                immediate cash to the seller at the closing table, while
+                converting their equity into a secured, income-earning
+                preferred equity position — complete with governance
+                protections and step-in rights built into the deal entity.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                When sellers, agents, and brokers bring deals to Marss Real
-                Estate, they're working with an investor who is transparent,
-                credible, and committed to delivering full value — not forcing
-                discounts or playing adversarial games.
+                Sellers receive immediate liquidity, ongoing passive income,
+                and capital gains tax deferral. Brokers get commission
+                protection and a repeat buyer who closes. When you work with
+                Marss Real Estate, you're working with a partner committed
+                to delivering full or near-full value — not forcing discounts
+                or playing adversarial games.
               </p>
             </div>
 
