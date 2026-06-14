@@ -9,10 +9,12 @@ const criteria = [
     title: "Asset Types",
     items: [
       "Multi-family (5+ units)",
-      "Mixed-use properties",
-      "Commercial / Retail",
-      "Office & Light Industrial",
-      "Hotels / Hospitality (value-add)",
+      "Short-Term Rentals (STR / vacation rental)",
+      "Pad Split / Co-Living properties",
+      "Mixed-use & commercial / retail",
+      "Office, light industrial & warehousing",
+      "Hotels, motels & hospitality (value-add)",
+      "Operating businesses backed by real estate",
     ],
   },
   {
@@ -24,38 +26,40 @@ const criteria = [
       "Transitional or repositioning plays",
       "Light to moderate distress",
       "Stabilization upside required",
+      "STR-conversion or co-living-conversion ready",
     ],
   },
   {
     icon: DollarSign,
     title: "Deal Size",
     items: [
-      "Minimum: $500,000",
+      "Minimum: $300,000 (STR & pad split)",
+      "Minimum: $500,000 (commercial & business)",
       "Preferred: $1M – $10M+",
       "Larger deals considered case-by-case",
-      "All-cash or equity carry structure",
-      "No hard cap on portfolio size",
+      "Creative structure — equity carry, owner financing, or hybrid",
     ],
   },
   {
     icon: MapPin,
     title: "Geography",
     items: [
-      "Primary: Southeast & Southwest US",
-      "Sunbelt growth markets preferred",
+      "Primary: Texas (DFW, Houston, Austin, SA)",
+      "Sunbelt & Southeast growth markets",
       "Emerging & secondary markets welcome",
-      "No geographic exclusions for strong deals",
+      "STR: high-tourism & business travel corridors",
       "National reach via partner network",
     ],
   },
 ];
 
 const dealQualifiers = [
-  "Seller willing to carry equity interest (not a seller note)",
-  "Asset has clear value-add or stabilization path",
+  "Seller open to creative financing — equity carry, owner financing, or hybrid capital stack",
+  "Asset has clear value-add, STR-conversion, or stabilization path",
   "No major environmental or title encumbrances",
-  "Motivated seller aligned on long-term payout",
+  "Motivated seller aligned on structured, long-term payout",
   "Agent / broker fully representing the transaction",
+  "STR & pad split: local STR regulations permit short-term or shared-housing operations",
 ];
 
 export function BuyBox() {
@@ -77,8 +81,9 @@ export function BuyBox() {
             Our <span className="gold-gradient">Buy Box</span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
-            We are active acquirers. If your deal matches these criteria,
-            we want to hear from you — fast.
+            We are active acquirers across commercial real estate, operating businesses,
+            short-term rentals, and pad split properties. If your deal matches
+            these criteria, we want to hear from you — fast.
           </p>
         </motion.div>
 

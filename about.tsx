@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle, Building, Briefcase, Globe } from "lucide-react";
+import { CheckCircle, Building, Briefcase, Globe, Linkedin, ExternalLink } from "lucide-react";
 
 const credentials = [
   "Real estate investor backed by business operations",
-  "Specializes in value-add and transitional commercial assets",
-  "Equity Carry Financing — creative capital stacking that delivers cash at close and converts equity into secured passive income",
-  "Aligned incentives: buyer and seller win together",
+  "Specializes in value-add, STR, pad split, and commercial acquisitions",
+  "Creative Financing Suite — Equity Carry (flagship), Owner Financing, and Hybrid Capital Stacks",
+  "Aligned incentives: buyer and seller win together at every closing",
   "Transparent milestone-based performance tracking",
   "Acquires real estate and operating businesses — gas stations, car washes, auto dealerships, motels, light manufacturing & more",
 ];
@@ -17,19 +17,19 @@ const pillars = [
     icon: Building,
     title: "Real Estate Expertise",
     description:
-      "Deep knowledge of commercial and multi-family asset classes, deal structures, and value-add execution strategies.",
+      "Deep knowledge of commercial, multi-family, short-term rental, and co-living asset classes, deal structures, and value-add execution strategies.",
   },
   {
     icon: Briefcase,
     title: "Business-Backed Capital",
     description:
-      "Our investment activity is supported by active business operations, providing operational credibility and stable deal execution.",
+      "Our investment activity is supported by active business operations, providing operational credibility and stable deal execution across real estate and business acquisitions.",
   },
   {
     icon: Globe,
     title: "Strategic Partnerships",
     description:
-      "We build long-term relationships with agents, brokers, and sellers — not one-off transactions.",
+      "We build long-term relationships with agents, brokers, and sellers — not one-off transactions. Repeat business is how we measure success.",
   },
 ];
 
@@ -54,7 +54,7 @@ export function About() {
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
             Marss Real Estate was founded on the belief that sellers, agents,
-            and investors don't have to be on opposite sides of the table.
+            and investors don’t have to be on opposite sides of the table.
           </p>
         </motion.div>
 
@@ -70,24 +70,23 @@ export function About() {
             <div className="border-l-2 border-yellow-500 pl-6 mb-8">
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
                 We are a real estate and business acquisition firm actively
-                acquiring commercial real estate and operating businesses
-                backed by real estate — gas stations, car washes, auto
-                dealerships, motels, light manufacturing, and more — using
-                a proprietary{" "}
+                acquiring commercial real estate, operating businesses backed
+                by real estate, short-term rentals, and co-living properties —
+                including gas stations, car washes, auto dealerships, motels,
+                light manufacturing, and more — using a suite of{" "}
                 <span className="text-yellow-400 font-semibold">
-                  Equity Carry Financing
+                  creative financing structures
                 </span>{" "}
-                structure. Our creative capital stacking approach delivers
-                immediate cash to the seller at the closing table, while
-                converting their equity into a secured, income-earning
-                preferred equity position — complete with governance
-                protections and step-in rights built into the deal entity.
+                with Equity Carry as our flagship approach. We select the
+                right structure for each deal: Equity Carry, Owner Financing,
+                or a Hybrid Capital Stack — based on the asset type, seller’s
+                goals, and verified cash flow profile.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Sellers receive immediate liquidity, ongoing passive income,
                 and capital gains tax deferral. Brokers get commission
                 protection and a repeat buyer who closes. When you work with
-                Marss Real Estate, you're working with a partner committed
+                Marss Real Estate, you’re working with a partner committed
                 to delivering full or near-full value — not forcing discounts
                 or playing adversarial games.
               </p>
@@ -131,20 +130,44 @@ export function About() {
               </div>
             ))}
 
-            {/* Logo panel */}
-            <div className="bg-[#111] border border-yellow-900/30 rounded-xl p-6 flex items-center gap-5">
-              <img
-                src="https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg"
-                alt="Marss Real Estate"
-                className="h-16 w-16 object-contain rounded-lg"
-              />
-              <div>
-                <div className="text-white font-bold text-lg tracking-widest">
-                  MARSS REAL ESTATE
+            {/* Logo + Links panel */}
+            <div className="bg-[#111] border border-yellow-900/30 rounded-xl p-6">
+              <div className="flex items-center gap-5 mb-5">
+                <img
+                  src="https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg"
+                  alt="Marss Real Estate"
+                  className="h-16 w-16 object-contain rounded-lg"
+                />
+                <div>
+                  <div className="text-white font-bold text-lg tracking-widest">
+                    MARSS REAL ESTATE
+                  </div>
+                  <div className="text-yellow-500 text-sm italic">
+                    Transforming Property Into Possibilities
+                  </div>
                 </div>
-                <div className="text-yellow-500 text-sm italic">
-                  Transforming Property Into Possibilities
-                </div>
+              </div>
+              <div className="flex flex-col gap-3 border-t border-white/8 pt-4">
+                <a
+                  href="https://www.marssrealestate.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-yellow-400 text-sm font-medium hover:text-yellow-300 transition-colors group"
+                >
+                  <Globe className="h-4 w-4 shrink-0" />
+                  www.marssrealestate.com
+                  <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/marss-real-estate/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors group"
+                >
+                  <Linkedin className="h-4 w-4 shrink-0" />
+                  Connect on LinkedIn
+                  <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
               </div>
             </div>
           </motion.div>

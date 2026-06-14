@@ -12,6 +12,8 @@ import {
   CheckCircle2,
   Building2,
   Banknote,
+  Home,
+  Wifi,
 } from "lucide-react";
 
 const fadeUp = {
@@ -29,22 +31,23 @@ const structures = [
     title: "Owner / Seller Financing",
     label: "Seller Acts as Lender",
     description:
-      "The seller extends financing directly to the buyer — eliminating dependence on institutional lenders and their timelines. The seller converts a traditional exit into a structured income stream: monthly payments, negotiated interest, and a defined payoff horizon — without handing over the keys for zero ongoing return.",
+      "Marss acquires the asset using seller-extended financing — eliminating bank dependency and creating a recurring monthly income stream for the seller. Negotiated rate, term, and payment schedule. No institutional timeline. The seller's cash flow starts immediately from day one of the deal, funded directly by the asset's own operating income.",
     benefits: [
       "Monthly income without management obligations",
       "Negotiated rate, term, and payment schedule",
       "No bank approval required — faster closing",
       "Expanded buyer pool vs. traditional listing",
+      "Ideal for free-and-clear assets with strong cash flow",
     ],
+    deployedFor: ["Short-Term Rentals (STR)", "Pad Split / Co-Living", "Free-and-Clear SFRs", "Small commercial RE"],
     accent: "from-yellow-400/20 to-yellow-400/5",
-    badge: "Owner Financing",
   },
   {
     icon: Shield,
     title: "Equity Carry Structure",
     label: "Marss Flagship — Secured Preferred Equity",
     description:
-      "Marss brings institutional capital to the closing table — no lengthy bank approval, no appraisal contingency. The seller converts their equity into a secured preferred equity position within the deal entity: earning passive income, deferring capital gains through installment sale treatment, and retaining governance protections and step-in rights throughout the hold period.",
+      "Marss brings institutional capital to the closing table — no appraisal contingency, no bank approval delay. The seller converts their equity into a secured preferred equity position within the deal entity: earning passive income, deferring capital gains through installment sale treatment, and retaining governance protections and step-in rights. The highest-value structure for commercial and business acquisitions.",
     benefits: [
       "Full or near-full asking price at close",
       "Secured preferred equity — not a subordinated note",
@@ -52,8 +55,8 @@ const structures = [
       "Capital gains deferral via installment sale treatment",
       "Step-in rights activate if performance milestones aren't met",
     ],
+    deployedFor: ["Commercial RE & mixed-use", "Operating businesses", "Multi-family (5+)", "Hotels & hospitality"],
     accent: "from-yellow-400/30 to-yellow-400/10",
-    badge: "Marss Flagship",
     featured: true,
   },
   {
@@ -61,16 +64,26 @@ const structures = [
     title: "Hybrid Capital Stack",
     label: "Custom Multi-Layer Structure",
     description:
-      "Not every deal fits a single template. Hybrid structures combine multiple financing layers — institutional debt, seller participation, preferred equity tranches, and performance-linked earnouts — engineered to the seller's specific income requirements, tax situation, and risk tolerance. Maximum flexibility for complex assets.",
+      "Not every deal fits a single template. Hybrid structures combine multiple financing layers — institutional DSCR debt, seller carry, preferred equity tranches, and performance-linked earnouts — engineered to the seller's specific income requirements, tax situation, and risk tolerance. Particularly effective for STR portfolios and co-living properties where verified room-level cash flows support multiple debt layers.",
     benefits: [
       "Custom-engineered to seller's income goals",
+      "DSCR loan qualifies on verified rental cash flow",
       "Multiple capital layers for full deal coverage",
       "Performance milestones tied to real NOI",
-      "Ideal for complex or multi-asset transactions",
+      "Ideal for high-cash-flow alternative asset classes",
     ],
+    deployedFor: ["STR portfolios", "Pad split acquisitions", "Large multi-asset deals", "Complex seller requirements"],
     accent: "from-yellow-400/20 to-yellow-400/5",
-    badge: "Custom Structure",
   },
+];
+
+const assetMatrix = [
+  { asset: "Commercial RE & Businesses", ownerFin: false, equityCarry: true, hybrid: true, flagship: true },
+  { asset: "Multi-Family (5+ units)", ownerFin: false, equityCarry: true, hybrid: true, flagship: true },
+  { asset: "Short-Term Rentals (STR)", ownerFin: true, equityCarry: true, hybrid: true, flagship: false },
+  { asset: "Pad Split / Co-Living", ownerFin: true, equityCarry: true, hybrid: true, flagship: false },
+  { asset: "Hotels & Hospitality", ownerFin: false, equityCarry: true, hybrid: true, flagship: true },
+  { asset: "Mixed-Use Properties", ownerFin: false, equityCarry: true, hybrid: true, flagship: true },
 ];
 
 const audienceBenefits = [
@@ -103,7 +116,7 @@ const audienceBenefits = [
     audience: "Investors & JV Partners",
     points: [
       "Preferred equity access with institutional governance",
-      "Scalable deal flow across commercial and business assets",
+      "Scalable deal flow: commercial, STR, and co-living",
       "Performance-linked return structure",
       "Co-investment opportunities in stabilized assets",
       "Tax-efficient structure via entity design",
@@ -136,25 +149,25 @@ export function CreativeFinancing() {
         >
           <motion.div variants={fadeUp}>
             <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-yellow-400 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-1.5 mb-6">
-              Creative Financing Solutions
+              Active Acquisition Strategies
             </span>
           </motion.div>
           <motion.h2
             variants={fadeUp}
             className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
           >
-            Beyond Traditional
-            <span className="block text-yellow-400">Bank Closings</span>
+            The Structures We
+            <span className="block text-yellow-400">Deploy on Every Deal</span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
             className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed"
           >
-            Creative financing structures have transformed how institutional-grade
-            commercial real estate and business assets change hands. When
-            traditional bank financing creates friction, contingencies, or
-            impossible requirements, purpose-built capital structures deliver
-            closings that work for every stakeholder at the table.
+            These are not educational concepts — they are the three acquisition
+            structures Marss actively deploys across commercial real estate,
+            operating businesses, short-term rentals, and pad split properties.
+            Each is selected based on the asset, the seller’s goals, and the
+            deal’s verified cash flow profile.
           </motion.p>
         </motion.div>
 
@@ -199,11 +212,11 @@ export function CreativeFinancing() {
                   <h3 className="text-xl font-bold text-white mt-1">{s.title}</h3>
                 </div>
 
-                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                <p className="text-gray-400 text-sm leading-relaxed mb-5">
                   {s.description}
                 </p>
 
-                <ul className="space-y-2.5 mt-auto">
+                <ul className="space-y-2.5 mb-6">
                   {s.benefits.map((b) => (
                     <li key={b} className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
@@ -211,9 +224,64 @@ export function CreativeFinancing() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-auto">
+                  <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-2">Deployed For</div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {s.deployedFor.map((tag) => (
+                      <span key={tag} className="text-[10px] bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 px-2 py-0.5 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             );
           })}
+        </motion.div>
+
+        {/* Strategy Fit Matrix */}
+        <motion.div
+          className="rounded-2xl border border-yellow-400/20 bg-[#111111] p-8 md:p-10 mb-20 overflow-x-auto"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="mb-6">
+            <h3 className="text-xl font-bold text-white mb-1">Strategy Fit by Asset Class</h3>
+            <p className="text-gray-500 text-sm">Which structure Marss deploys for each acquisition target. ★ = Primary fit.</p>
+          </div>
+          <table className="w-full min-w-[480px] text-sm">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left text-gray-400 font-medium py-3 pr-4">Asset Class</th>
+                <th className="text-center text-yellow-400 font-semibold py-3 px-3">Owner Financing</th>
+                <th className="text-center text-yellow-400 font-semibold py-3 px-3">Equity Carry</th>
+                <th className="text-center text-yellow-400 font-semibold py-3 px-3">Hybrid Stack</th>
+              </tr>
+            </thead>
+            <tbody>
+              {assetMatrix.map((row, i) => (
+                <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                  <td className="py-3 pr-4 text-white font-medium">{row.asset}</td>
+                  <td className="py-3 px-3 text-center">
+                    {row.ownerFin ? <span className="text-yellow-400">★ Primary</span> : <span className="text-gray-600">—</span>}
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    {row.equityCarry ? (
+                      row.flagship
+                        ? <span className="text-yellow-400">★ Flagship</span>
+                        : <span className="text-green-400">✓ Available</span>
+                    ) : <span className="text-gray-600">—</span>}
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    {row.hybrid ? <span className="text-green-400">✓ Available</span> : <span className="text-gray-600">—</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </motion.div>
 
         {/* Why Creative Financing Banner */}
@@ -231,20 +299,20 @@ export function CreativeFinancing() {
                 <span className="text-yellow-400"> Creative Structures</span>
               </h3>
               <p className="text-gray-400 leading-relaxed mb-6">
-                A traditional sale offers one outcome: cash at close, capital
+                A traditional sale offers one outcome: cash at close, a capital
                 gains tax hit, and zero ongoing return on an asset you spent
-                years building. Creative financing gives sellers a third option —
+                years building. Creative financing gives sellers a third path —
                 one that delivers immediate liquidity{" "}
                 <span className="text-white font-medium">and</span> a continuing
                 income stream, with the same legal protections a secured lender
                 would demand.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Sellers who work with Marss don't have to choose between price
+                Sellers who work with Marss don’t have to choose between price
                 and certainty. Our structures are engineered to deliver both —
                 full or near-full asking price at the closing table, passive
                 income ongoing, and governance protections that activate the
-                moment performance milestones aren't met.
+                moment performance milestones aren’t met.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -258,7 +326,7 @@ export function CreativeFinancing() {
                 return (
                   <div
                     key={item.label}
-                    className="bg-[#111111] rounded-xl p-4 border border-white/8"
+                    className="bg-[#0a0a0a] rounded-xl p-4 border border-white/8"
                   >
                     <ItemIcon className="w-5 h-5 text-yellow-400 mb-2" />
                     <div className="text-white text-sm font-semibold">{item.label}</div>

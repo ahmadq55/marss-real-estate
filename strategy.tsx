@@ -1,13 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { X, CheckCircle, TrendingUp, Shield, DollarSign, ArrowRight } from "lucide-react";
+import { X, CheckCircle, TrendingUp, Shield, DollarSign, Layers, Banknote } from "lucide-react";
 
 const problems = [
   "Traditional buyers demand steep discounts to offset their all-in capital outlay",
   "Under-occupied or transitional assets fail conventional underwriting",
   "Sellers lose long-term upside on assets with strong stabilization potential",
   "Traditional closings create adversarial buyer-seller dynamics",
+];
+
+const strategies = [
+  {
+    icon: Shield,
+    title: "Equity Carry",
+    badge: "Flagship",
+    featured: true,
+    description:
+      "Marss brings institutional capital to the closing table. The seller converts equity into a secured preferred equity position in the deal entity — earning passive income, deferring capital gains, and retaining governance protections and step-in rights throughout the hold period.",
+    bestFor: ["Commercial RE & businesses", "Value-add & stabilization plays", "Sellers seeking price + income"],
+  },
+  {
+    icon: Banknote,
+    title: "Owner / Seller Financing",
+    badge: "Direct Income",
+    featured: false,
+    description:
+      "The seller extends structured financing directly to Marss — converting a lump-sum exit into a recurring monthly income stream. Negotiated rate, term, and schedule. No bank dependency. Preferred where sellers own assets free-and-clear or with minimal existing debt.",
+    bestFor: ["Free-and-clear assets", "Short-term rentals & pad splits", "Sellers prioritizing monthly income"],
+  },
+  {
+    icon: Layers,
+    title: "Hybrid Capital Stack",
+    badge: "Maximum Flexibility",
+    featured: false,
+    description:
+      "Multiple financing layers precisely engineered for each asset — institutional DSCR debt, seller carry, preferred equity tranches, and performance-linked earnouts. Each layer sized to verified cash flow. Deployed where a single structure leaves value on the table.",
+    bestFor: ["STR portfolios & co-living", "Complex multi-asset deals", "Custom seller income requirements"],
+  },
 ];
 
 const benefits = [
@@ -47,34 +77,35 @@ export function Strategy() {
           className="text-center mb-16"
         >
           <div className="inline-block text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4">
-            Investment Strategy
+            Acquisition Strategy
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Equity Carry{" "}
-            <span className="gold-gradient">Financing</span>
+            Creative Financing{" "}
+            <span className="gold-gradient">Strategy Suite</span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
-            A structured deal approach that aligns buyer and seller toward one
-            shared goal — maximizing the stabilized asset value.
+            No single structure fits every deal. Marss deploys three complementary
+            acquisition strategies — each applied where it creates the most value
+            for sellers, brokers, and all parties at the closing table.
           </p>
         </motion.div>
 
-        {/* Challenge vs. Solution */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        {/* Challenge vs. Strategy Suite */}
+        <div className="grid lg:grid-cols-5 gap-6 mb-16">
           {/* Challenge */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#0f0f0f] border border-red-900/30 rounded-2xl p-8"
+            className="lg:col-span-2 bg-[#0f0f0f] border border-red-900/30 rounded-2xl p-8"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="h-8 w-8 rounded-full bg-red-500/20 flex items-center justify-center">
                 <X className="h-4 w-4 text-red-400" />
               </div>
               <h3 className="text-white font-bold text-lg uppercase tracking-wide">
-                The Problem with Traditional Financing
+                Traditional Financing
               </h3>
             </div>
             <ul className="space-y-4">
@@ -89,51 +120,50 @@ export function Strategy() {
             </ul>
           </motion.div>
 
-          {/* Solution */}
+          {/* Strategy Suite */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#0f0f0f] border border-yellow-900/40 rounded-2xl p-8"
+            className="lg:col-span-3 grid gap-4"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-8 w-8 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                <CheckCircle className="h-4 w-4 text-yellow-400" />
-              </div>
-              <h3 className="text-white font-bold text-lg uppercase tracking-wide">
-                The Equity Carry Solution
-              </h3>
-            </div>
-            <p className="text-gray-300 leading-relaxed mb-6">
-              Our{" "}
-              <span className="text-yellow-400 font-semibold">
-                Equity Carry structure
-              </span>{" "}
-              is a creative capital stacking approach that brings a strong
-              cash position to the closing table. The seller converts their
-              equity into a secured preferred equity position in the deal
-              entity — earning passive income, deferring capital gains, and
-              maintaining governance protections and step-in rights throughout
-              the hold period.
-            </p>
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                { value: "Day 1", label: "Seller Liquidity" },
-                { value: "100%", label: "Upside Participation" },
-                { value: "3–5 Yrs", label: "Typical Hold Period" },
-              ].map((stat, i) => (
+            {strategies.map((s, i) => {
+              const Icon = s.icon;
+              return (
                 <div
                   key={i}
-                  className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-3 text-center"
+                  className={`relative rounded-xl border p-5 ${
+                    s.featured
+                      ? "border-yellow-500/40 bg-gradient-to-r from-yellow-500/10 to-[#0f0f0f]"
+                      : "border-[#1f1f1f] bg-[#0f0f0f]"
+                  }`}
                 >
-                  <div className="text-yellow-400 font-bold text-lg">
-                    {stat.value}
+                  {s.featured && (
+                    <span className="absolute top-3 right-3 text-[9px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">
+                      Flagship
+                    </span>
+                  )}
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="p-2 rounded-lg bg-yellow-500/10 border border-yellow-500/20 shrink-0">
+                      <Icon className="h-4 w-4 text-yellow-400" />
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-yellow-400/70 mb-0.5">{s.badge}</div>
+                      <h4 className="text-white font-bold text-base">{s.title}</h4>
+                    </div>
                   </div>
-                  <div className="text-gray-500 text-xs mt-1">{stat.label}</div>
+                  <p className="text-gray-400 text-xs leading-relaxed mb-3">{s.description}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {s.bestFor.map((tag) => (
+                      <span key={tag} className="text-[10px] bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </motion.div>
         </div>
 
@@ -147,17 +177,17 @@ export function Strategy() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <div className="bg-red-950/50 border border-red-800/40 rounded-lg px-6 py-3 text-red-400 font-bold">
-              ✗ TRADITIONAL: Win-Lose
+              ✗ TRADITIONAL: One-Size, Win-Lose
             </div>
             <div className="text-yellow-500 font-black text-xl">VS</div>
             <div className="bg-green-950/50 border border-green-800/40 rounded-lg px-6 py-3 text-green-400 font-bold">
-              ✓ EQUITY CARRY: Win-Win
+              ✓ MARSS: Deal-Fitted, Win-Win
             </div>
           </div>
           <p className="text-gray-400 text-sm mt-4 max-w-xl mx-auto">
-            Unlike a distressed sale or seller financing, Equity Carry aligns
-            the buyer and seller toward a single shared goal — eliminating
-            adversarial dynamics entirely.
+            Marss selects and engineers the right structure for each deal —
+            aligning buyer, seller, and broker toward one goal: maximum value,
+            minimum friction, certain close.
           </p>
         </motion.div>
 
