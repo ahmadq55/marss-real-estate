@@ -3,8 +3,8 @@ import { Navbar } from "@/navbar";
 import { Hero } from "@/hero";
 import { About } from "@/about";
 import { SellerPaths } from "@/seller-paths";
+import { BusinessAcquisition } from "@/business-acquisition";
 
-// Lazy-load below-the-fold sections to reduce initial JS bundle
 const Strategy = dynamic(() => import("@/strategy").then((m) => m.Strategy));
 const CreativeFinancing = dynamic(() => import("@/creative-financing").then((m) => m.CreativeFinancing));
 const BuyBox = dynamic(() => import("@/buy-box").then((m) => m.BuyBox));
@@ -24,6 +24,7 @@ export default function Home() {
       <Hero />
       <About />
       <SellerPaths />
+      <BusinessAcquisition />
       <Strategy />
       <CreativeFinancing />
       <BuyBox />
