@@ -9,7 +9,7 @@ import { BuyBox } from "@/buy-box";
 import { Process } from "@/process";
 import { Advisory } from "@/advisory";
 import { BrokerPartner } from "@/broker-partner";
-import { ForAgents } from "@/for-agents";
+import { JvPartners } from "@/jv-partners";
 import { Testimonials } from "@/testimonials";
 import { Contact } from "@/contact";
 import { EmailOptin } from "@/email-optin";
@@ -27,7 +27,7 @@ export default function Home() {
       <Process />
       <Advisory />
       <BrokerPartner />
-      <ForAgents />
+      <JvPartners />
       <Testimonials />
       <Contact />
       <EmailOptin />

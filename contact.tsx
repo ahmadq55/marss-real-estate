@@ -278,7 +278,7 @@ export function Contact() {
                     "Submitting..."
                   ) : (
                     <>
-                      Submit Inquiry{" "}
+                      Submit a Deal{" "}
                       <Send className="ml-2 h-4 w-4" />
                     </>
                   )}

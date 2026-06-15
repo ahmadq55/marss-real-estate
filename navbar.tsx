@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#advisory", label: "Advisory" },
   { href: "#for-brokers", label: "For Brokers" },
+  { href: "#jv-partners", label: "JV Partners" },
   { href: "#strategy", label: "Strategy" },
   { href: "#buy-box", label: "Buy Box" },
   { href: "#process", label: "How It Works" },

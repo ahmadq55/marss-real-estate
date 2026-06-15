@@ -281,7 +281,7 @@ export function About() {
                   href="#contact"
                   className="inline-flex items-center gap-2 text-zinc-400 hover:text-yellow-400 text-sm font-medium transition-colors duration-200"
                 >
-                  Start a Conversation
+                  Start the Conversation
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

@@ -364,7 +364,7 @@ export function Advisory() {
               <Button type="submit" disabled={loading}
                 className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-6 text-base tracking-wide">
                 {loading ? "Submitting..." : (
-                  <><span>Request Consultation</span><Send className="ml-2 h-4 w-4" /></>
+                  <><span>Request a Consultation</span><Send className="ml-2 h-4 w-4" /></>
                 )}
               </Button>
               <p className="text-gray-600 text-xs text-center">

@@ -211,7 +211,7 @@ export function BuyBox() {
                 deal can be under LOI within days, not months.
               </p>
               <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold text-sm hover:text-yellow-300 transition-colors">
-                Submit Your Deal <ArrowRight className="h-4 w-4" />
+                Submit a Deal <ArrowRight className="h-4 w-4" />
               </a>
             </div>
             <div className="lg:w-2/3">
