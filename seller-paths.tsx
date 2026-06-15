@@ -21,12 +21,12 @@ const paths = [
     iconBg: "bg-yellow-500/10 border-yellow-500/20",
     iconColor: "text-yellow-400",
     title: "Equity Carry",
-    tagline: "Full price. No bank. Your position is protected.",
+    tagline: "Full price at close. You hold equity, not a note.",
     description:
-      "We acquire at full or near-full asking price at closing. A portion of the purchase price is structured as a preferred equity position for you within the acquiring entity — giving you a protected ownership interest, priority distributions, governance rights, and step-in rights if we ever fail to perform.",
+      "We acquire at full or near-full asking price at closing. A portion of the purchase price is structured as a preferred equity position for you within the acquiring entity — giving you a protected ownership interest, priority distributions, governance rights, and step-in rights if we ever fail to perform. You are not a lender. There is no promissory note, no deed of trust.",
     best: [
       "Value-add or repositioning assets",
-      "Sellers who want full price without a price cut",
+      "Sellers who want full price without a forced discount",
       "Owners who want income during the hold period",
       "Anyone who wants protection stronger than a note",
     ],
@@ -154,18 +154,10 @@ export function SellerPaths() {
               )}
 
               <div className="flex items-start justify-between mb-4">
-                <div
-                  className={`p-2.5 rounded-xl border ${
-                    path.iconBg
-                  } shrink-0`}
-                >
+                <div className={`p-2.5 rounded-xl border ${path.iconBg} shrink-0`}>
                   <path.icon className={`h-5 w-5 ${path.iconColor}`} />
                 </div>
-                <span
-                  className={`text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full ${
-                    path.badgeStyle
-                  }`}
-                >
+                <span className={`text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full ${path.badgeStyle}`}>
                   {path.badge}
                 </span>
               </div>
@@ -175,9 +167,7 @@ export function SellerPaths() {
               <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">{path.description}</p>
 
               <div className="mb-4">
-                <div className="text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-2">
-                  Best For
-                </div>
+                <div className="text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-2">Best For</div>
                 <ul className="space-y-1.5">
                   {path.best.map((item, j) => (
                     <li key={j} className="flex items-start gap-2">
