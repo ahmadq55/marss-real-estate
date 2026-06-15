@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle, Building, Briefcase, Globe, Linkedin, ExternalLink } from "lucide-react";
+import { CheckCircle, Building, Briefcase, Globe, Linkedin, Facebook, ExternalLink } from "lucide-react";
 
 const credentials = [
   "Real estate and business acquisition firm — not a wholesaler or retail flipper",
@@ -87,11 +87,29 @@ export function About() {
                   <span key={a} className="text-xs font-medium text-yellow-300/90 bg-yellow-500/10 border border-yellow-500/20 rounded-full px-3 py-1">{a}</span>
                 ))}
               </div>
-              <a href="https://www.linkedin.com/in/ahmadqawasmeh/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors group">
-                <Linkedin className="h-4 w-4 shrink-0" />
-                Connect on LinkedIn
-                <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </a>
+              <div className="flex flex-wrap items-center gap-5">
+                <a
+                  href="https://www.linkedin.com/in/ahmadqawasmeh/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors group"
+                >
+                  <Linkedin className="h-4 w-4 shrink-0" />
+                  Connect on LinkedIn
+                  <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+                <span className="text-gray-700 text-sm hidden sm:inline">&bull;</span>
+                <a
+                  href="https://www.facebook.com/people/Marss-Real-Estate/61590642727358/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-500 text-sm font-medium hover:text-blue-400 transition-colors group"
+                >
+                  <Facebook className="h-4 w-4 shrink-0" />
+                  Marss Real Estate on Facebook
+                  <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
