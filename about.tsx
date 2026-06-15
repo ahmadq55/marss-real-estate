@@ -8,8 +8,6 @@ import {
   Globe,
   Linkedin,
   ExternalLink,
-  MapPin,
-  ArrowRight,
 } from "lucide-react";
 
 const credentials = [
@@ -42,12 +40,6 @@ const pillars = [
   },
 ];
 
-const founderStats = [
-  { value: "10–12+", label: "Deals Screened Weekly" },
-  { value: "5+", label: "Asset Classes Covered" },
-  { value: "3–10 Yr", label: "Hold Horizon" },
-  { value: "IC-Ready", label: "Underwriting Standard" },
-];
 
 export function About() {
   return (
@@ -146,145 +138,76 @@ export function About() {
               </div>
             ))}
 
-            {/* Logo + Links panel */}
-            <div className="bg-[#111] border border-yellow-900/30 rounded-xl p-6">
-              <div className="flex items-center gap-5 mb-5">
-                <img
-                  src="https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg"
-                  alt="Marss Real Estate"
-                  className="h-16 w-16 object-contain rounded-lg"
-                />
-                <div>
-                  <div className="text-white font-bold text-lg tracking-widest">
-                    MARSS REAL ESTATE
-                  </div>
-                  <div className="text-yellow-500 text-sm italic">
-                    Transforming Property Into Possibilities
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3 border-t border-white/8 pt-4">
-
-                <a
-                  href="https://www.linkedin.com/in/ahmadqawasmeh/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors group"
-                >
-                  <Linkedin className="h-4 w-4 shrink-0" />
-                  Connect on LinkedIn
-                  <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
-              </div>
-            </div>
           </motion.div>
         </div>
 
-        {/* ── FOUNDER SUMMARY ── (merged from former Principal section) */}
+        {/* ── FIRM + FOUNDER IDENTITY ── (logo + profile photo + purpose) */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-[#0c0900] via-[#0a0a0a] to-[#060606] overflow-hidden"
+          className="rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-[#0c0900] via-[#0a0a0a] to-[#060606] p-8 lg:p-10"
         >
-          <div className="grid lg:grid-cols-5">
-            {/* Photo column */}
-            <div className="relative lg:col-span-2 min-h-[340px] lg:min-h-full overflow-hidden">
-              <div
-                className="absolute inset-0 bg-cover bg-top"
-                style={{
-                  backgroundImage:
-                    "url('https://galaxy-prod.tlcdn.com/view/user_372EAGt89yD821sKcMySYfKrZna/bde94d41e1ab40ffa00d7e9c10ac56d9.png')",
-                  filter: "grayscale(100%)",
-                }}
+          <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
+            {/* Logo + profile photo */}
+            <div className="flex items-center gap-6 shrink-0">
+              <img
+                src="https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg"
+                alt="Marss Real Estate"
+                className="h-20 w-20 object-contain rounded-lg"
               />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(to right, transparent 55%, #0a0a0a 100%), linear-gradient(to top, #0a0a0a 0%, transparent 45%)",
-                }}
+              <div className="h-16 w-px bg-yellow-400/20" />
+              <img
+                src="https://galaxy-prod.tlcdn.com/view/user_372EAGt89yD821sKcMySYfKrZna/bde94d41e1ab40ffa00d7e9c10ac56d9.png"
+                alt="Ahmad Qawasmeh"
+                className="h-20 w-20 object-cover object-top rounded-full border border-yellow-400/30 grayscale"
               />
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-yellow-400 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-7 lg:p-8">
-                <p className="text-yellow-400 text-[11px] font-bold tracking-[0.25em] uppercase mb-2">
-                  Founder & Managing Principal
-                </p>
-                <h3 className="text-white text-2xl lg:text-3xl font-bold tracking-tight leading-none mb-2">
-                  Ahmad Qawasmeh
-                </h3>
-                <p className="text-zinc-400 text-sm flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-yellow-500/70" />
-                  Frisco, Texas · Sunbelt Markets
-                </p>
-              </div>
             </div>
 
-            {/* Bio column */}
-            <div className="lg:col-span-3 flex flex-col justify-center px-7 py-10 lg:px-10 lg:py-12">
-              <p className="text-yellow-400/80 text-[11px] font-semibold tracking-[0.2em] uppercase mb-5">
-                Investor · Operator · Deal Architect
+            {/* Identity + purpose */}
+            <div className="flex-1">
+              <div className="text-white font-bold text-lg tracking-widest mb-0.5">
+                MARSS REAL ESTATE
+              </div>
+              <p className="text-yellow-500 text-sm mb-3">
+                Ahmad Qawasmeh — Founder &amp; Managing Principal
+              </p>
+              <p className="text-gray-300 text-sm leading-relaxed mb-5 max-w-2xl">
+                This platform exists for direct outreach — connecting Marss Real
+                Estate with the people who move deals: investors, real estate and
+                business sellers, brokers and agents, and capital JV partners.
+                If that&apos;s you, this is where the conversation starts.
               </p>
 
-              <blockquote className="border-l-2 border-yellow-400 pl-5 mb-7">
-                <p className="text-white text-lg lg:text-xl font-light leading-relaxed">
-                  “I don’t just buy properties and businesses — I engineer
-                  acquisitions that work for both sides of the table. My edge is
-                  structure, speed, and the conviction to close without
-                  contingencies.”
-                </p>
-              </blockquote>
-
-              <p className="text-zinc-300 text-sm leading-relaxed mb-3">
-                Ahmad Qawasmeh is the Founder and Managing Principal of Marss
-                Real Estate, a Frisco-based acquisition platform targeting
-                commercial real estate and cash-flowing operating businesses
-                across Texas and the broader Sunbelt. He leads every deal from
-                initial screen through close — personally underwriting each
-                opportunity to institutional Investment Committee standards.
-              </p>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-7">
-                His proprietary Equity Carry structure lets sellers close at
-                full or near-full asking price, take a secured equity position
-                in the acquiring entity, and participate in long-term upside —
-                without the delays and uncertainty of conventional acquisition
-                timelines.
-              </p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-yellow-400/10 rounded-lg overflow-hidden mb-7">
-                {founderStats.map((s, i) => (
-                  <div key={i} className="bg-zinc-950/60 px-4 py-3.5 text-center">
-                    <p className="text-yellow-400 text-base font-bold tracking-tight">
-                      {s.value}
-                    </p>
-                    <p className="text-zinc-500 text-[10px] uppercase tracking-wider mt-0.5">
-                      {s.label}
-                    </p>
-                  </div>
+              {/* Audience tags */}
+              <div className="flex flex-wrap gap-2 mb-5">
+                {[
+                  "Investors",
+                  "Real Estate Sellers",
+                  "Business Sellers",
+                  "Brokers & Agents",
+                  "Capital / JV Partners",
+                ].map((a) => (
+                  <span
+                    key={a}
+                    className="text-xs font-medium text-yellow-300/90 bg-yellow-500/10 border border-yellow-500/20 rounded-full px-3 py-1"
+                  >
+                    {a}
+                  </span>
                 ))}
               </div>
 
-              {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href="https://www.linkedin.com/in/ahmadqawasmeh/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 bg-yellow-400 hover:bg-yellow-300 text-black text-sm font-bold px-6 py-3 rounded transition-colors duration-200"
-                >
-                  <Linkedin className="w-4 h-4" />
-                  Connect on LinkedIn
-                </a>
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 text-zinc-400 hover:text-yellow-400 text-sm font-medium transition-colors duration-200"
-                >
-                  Start the Conversation
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
+              <a
+                href="https://www.linkedin.com/in/ahmadqawasmeh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors group"
+              >
+                <Linkedin className="h-4 w-4 shrink-0" />
+                Connect on LinkedIn
+                <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
             </div>
           </div>
         </motion.div>
