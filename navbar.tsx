@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/button";
 import { cn } from "@/utils";
@@ -37,7 +38,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 py-3">
           <a href="#" className="flex items-center gap-3 group">
-            <img src="https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg" alt="Marss Real Estate" className="h-11 w-11 object-contain rounded" />
+            <Image
+              src="https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg"
+              alt="Marss Real Estate"
+              width={44}
+              height={44}
+              className="h-11 w-11 object-contain rounded"
+              priority
+            />
             <div>
               <div className="text-white font-bold text-base tracking-widest leading-tight">MARSS</div>
               <div className="text-yellow-500 text-xs tracking-[0.2em] font-medium">REAL ESTATE</div>

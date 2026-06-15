@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { CheckCircle, Building, Briefcase, Globe, Linkedin, ExternalLink } from "lucide-react";
 
 const credentials = [
@@ -61,9 +62,21 @@ export function About() {
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-[#0c0900] via-[#0a0a0a] to-[#060606] p-8 lg:p-10">
           <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
             <div className="flex items-center gap-6 shrink-0">
-              <img src="https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg" alt="Marss Real Estate" className="h-20 w-20 object-contain rounded-lg" />
+              <Image
+                src="https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg"
+                alt="Marss Real Estate"
+                width={80}
+                height={80}
+                className="h-20 w-20 object-contain rounded-lg"
+              />
               <div className="h-16 w-px bg-yellow-400/20" />
-              <img src="https://galaxy-prod.tlcdn.com/view/user_372EAGt89yD821sKcMySYfKrZna/bde94d41e1ab40ffa00d7e9c10ac56d9.png" alt="Ahmad Qawasmeh" className="h-20 w-20 object-cover object-top rounded-full border border-yellow-400/30 grayscale" />
+              <Image
+                src="https://galaxy-prod.tlcdn.com/view/user_372EAGt89yD821sKcMySYfKrZna/bde94d41e1ab40ffa00d7e9c10ac56d9.png"
+                alt="Ahmad Qawasmeh"
+                width={80}
+                height={80}
+                className="h-20 w-20 object-cover object-top rounded-full border border-yellow-400/30 grayscale"
+              />
             </div>
             <div className="flex-1">
               <div className="text-white font-bold text-lg tracking-widest mb-0.5">MARSS REAL ESTATE</div>
