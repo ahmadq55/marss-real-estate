@@ -3,6 +3,7 @@
 import { Navbar } from "@/navbar";
 import { Hero } from "@/hero";
 import { About } from "@/about";
+import { SellerPaths } from "@/seller-paths";
 import { Strategy } from "@/strategy";
 import { CreativeFinancing } from "@/creative-financing";
 import { BuyBox } from "@/buy-box";
@@ -21,6 +22,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <SellerPaths />
       <Strategy />
       <CreativeFinancing />
       <BuyBox />
