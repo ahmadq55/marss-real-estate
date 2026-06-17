@@ -1,5 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 
+/** Escape user input before embedding in HTML emails */
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
+/** Basic email format check */
+function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 const CHECKLIST_HTML = `
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 640px; margin: 0 auto; background: #0a0a0a; color: #e5e5e5; padding: 40px;">
   <div style="text-align: center; margin-bottom: 32px;">
@@ -76,18 +91,28 @@ const CHECKLIST_HTML = `
 `;
 
 export async function POST(req: NextRequest) {
-  const { name, email } = await req.json();
+  let body: Record<string, unknown>;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ ok: false, error: "Invalid JSON" }, { status: 400 });
+  }
+
+  const name  = typeof body.name  === "string" ? body.name.trim().slice(0, 120) : "";
+  const email = typeof body.email === "string" ? body.email.trim().slice(0, 254) : "";
 
   if (!name || !email) {
     return NextResponse.json({ ok: false, error: "Missing fields" }, { status: 400 });
   }
 
+  if (!isValidEmail(email)) {
+    return NextResponse.json({ ok: false, error: "Invalid email address" }, { status: 400 });
+  }
+
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
-  // Notify support@marssrealestate.com of new lead
   if (RESEND_API_KEY) {
     try {
-      // 1. Send checklist to the subscriber
       await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
@@ -97,14 +122,13 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           from: "Marss Real Estate <onboarding@resend.dev>",
           to: email,
-          subject: `${name}, here's your Deal Screening Checklist — Marss Real Estate`,
-          html: `<p style="font-family:sans-serif;color:#e5e5e5;background:#0a0a0a;padding:20px;">Hi ${name},</p>
+          subject: `${escapeHtml(name)}, here’s your Deal Screening Checklist — Marss Real Estate`,
+          html: `<p style="font-family:sans-serif;color:#e5e5e5;background:#0a0a0a;padding:20px;">Hi ${escapeHtml(name)},</p>
                  <p style="font-family:sans-serif;color:#9ca3af;padding:0 20px;">Thanks for requesting our Deal Screening Checklist. Here it is:</p>
                  ${CHECKLIST_HTML}`,
         }),
       });
 
-      // 2. Notify Ahmad of new lead
       await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
@@ -114,16 +138,14 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           from: "Marss Website <onboarding@resend.dev>",
           to: "support@marssrealestate.com",
-          subject: `New Checklist Lead: ${name} <${email}>`,
-          html: `<p>New checklist download request:</p><p><strong>Name:</strong> ${name}<br/><strong>Email:</strong> ${email}</p>`,
+          subject: `New Checklist Lead: ${escapeHtml(name)} <${escapeHtml(email)}>`,
+          html: `<p>New checklist download request:</p><p><strong>Name:</strong> ${escapeHtml(name)}<br/><strong>Email:</strong> ${escapeHtml(email)}</p>`,
         }),
       });
     } catch (err) {
       console.error("Resend error:", err);
-      // Still return success — lead is logged in server logs
     }
   } else {
-    // No API key configured — log to server console (visible in Vercel logs)
     console.log(`[CHECKLIST LEAD] Name: ${name} | Email: ${email}`);
     console.log("Add RESEND_API_KEY to Vercel environment variables to enable email delivery.");
   }
