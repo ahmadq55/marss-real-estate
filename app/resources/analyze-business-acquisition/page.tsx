@@ -132,9 +132,9 @@ export default function AnalyzeBusinessAcquisitionPage() {
             </div>
             <div>
               <span className="text-gray-500 text-xs font-bold uppercase tracking-widest block mb-1">Recommended Resource</span>
-              <h4 className="text-white font-bold text-sm mb-1">Solar Innovator — Renewable Energy System Guide</h4>
-              <p className="text-gray-400 text-sm leading-relaxed mb-3">For owners and operators of industrial, manufacturing, or commercial properties: reducing operating costs through on-site renewable energy generation is an increasingly viable strategy for improving NOI and asset value. This guide covers the fundamentals of building a low-cost solar energy system.</p>
-              <a href="https://32f24f-2sbpirjlgpfrf4078xe.hop.clickbank.net" target="_blank" rel="noopener noreferrer" className="text-yellow-500 text-sm font-bold hover:text-yellow-400 transition-colors">Learn More →</a>
+              <h4 className="text-white font-bold text-sm mb-1">FXLIFE — VIP Algos Trading Indicators</h4>
+              <p className="text-gray-400 text-sm leading-relaxed mb-3">Proprietary algorithmic trading indicators designed for investors actively managing capital alongside their acquisition portfolio. Overlay your acquisition strategy with precision market signals across equities and currency pairs.</p>
+              <a href="https://6a89466x-9dcjnlkhn4ashlefn.hop.clickbank.net" target="_blank" rel="noopener noreferrer" className="text-yellow-500 text-sm font-bold hover:text-yellow-400 transition-colors">Explore FXLIFE →</a>
             </div>
           </div>
           {/* CTA */}
