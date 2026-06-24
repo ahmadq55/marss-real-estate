@@ -123,7 +123,7 @@ export default function EquityCarryGuidePage() {
               <span className="text-gray-500 text-xs font-bold uppercase tracking-widest block mb-1">Recommended Resource</span>
               <h4 className="text-white font-bold text-sm mb-1">LeskoHelp — The #1 Grant Finding Community</h4>
               <p className="text-gray-400 text-sm leading-relaxed mb-3">A searchable database of thousands of grants, government funding programs, and no-repayment capital sources for business owners and real estate investors — directly relevant for sellers evaluating exit options and buyers sourcing acquisition capital.</p>
-              <a href="https://321997590gs9mlj89dndotfvft.hop.clickbank.net" target="_blank" rel="noopener noreferrer" className="text-yellow-500 text-sm font-bold hover:text-yellow-400 transition-colors">Find Free Funding →</a>
+              <a href="https://6a89466x-9dcjnlkhn4ashlefn.hop.clickbank.net" target="_blank" rel="noopener noreferrer" className="text-yellow-500 text-sm font-bold hover:text-yellow-400 transition-colors">Find Free Funding →</a>
             </div>
           </div>
           {/* CTA */}
