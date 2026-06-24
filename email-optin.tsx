@@ -14,7 +14,7 @@ const checklistItems = [
   { icon: Download, text: "Capital Stack Templates & DSCR Stress Tests" },
 ];
 
-export default function EmailOptin() {
+export function EmailOptin() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
