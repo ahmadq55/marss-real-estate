@@ -114,6 +114,18 @@ export default function EquityCarryGuidePage() {
 
           </div>
 
+          {/* Affiliate Resource */}
+          <div className="mt-10 p-6 bg-gray-900/40 border border-gray-800 rounded-lg flex items-start gap-4">
+            <div className="shrink-0 w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center">
+              <span className="text-yellow-500 text-lg font-bold">↗</span>
+            </div>
+            <div>
+              <span className="text-gray-500 text-xs font-bold uppercase tracking-widest block mb-1">Recommended Resource</span>
+              <h4 className="text-white font-bold text-sm mb-1">Triple Threat Flipping — Digital Book</h4>
+              <p className="text-gray-400 text-sm leading-relaxed mb-3">For investors looking to complement creative financing with traditional acquisition strategies, this digital guide covers a three-pronged approach to real estate flipping — wholesale, retail, and subject-to structures.</p>
+              <a href="https://32c43ja-tghcklfh591oh5fibn.hop.clickbank.net" target="_blank" rel="noopener noreferrer" className="text-yellow-500 text-sm font-bold hover:text-yellow-400 transition-colors">Get the Guide →</a>
+            </div>
+          </div>
           {/* CTA */}
           <div className="mt-16 p-8 bg-gray-900/80 border border-yellow-900/30 rounded-xl">
             <h3 className="text-white font-bold text-xl mb-2">Want the Full Deal Structure Template?</h3>

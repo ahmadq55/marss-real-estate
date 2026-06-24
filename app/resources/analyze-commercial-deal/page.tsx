@@ -123,6 +123,18 @@ export default function AnalyzeCommercialDealPage() {
 
           </div>
 
+          {/* Affiliate Resource */}
+          <div className="mt-10 p-6 bg-gray-900/40 border border-gray-800 rounded-lg flex items-start gap-4">
+            <div className="shrink-0 w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center">
+              <span className="text-yellow-500 text-lg font-bold">↗</span>
+            </div>
+            <div>
+              <span className="text-gray-500 text-xs font-bold uppercase tracking-widest block mb-1">Recommended Resource</span>
+              <h4 className="text-white font-bold text-sm mb-1">RELand — Real Estate Career Prep Suite</h4>
+              <p className="text-gray-400 text-sm leading-relaxed mb-3">Building your foundation in commercial real estate? The RELand career prep suite by iPassed covers licensing exam preparation, market fundamentals, and core concepts for professionals entering the commercial space.</p>
+              <a href="https://12a7ec05z4idkkh8w6-im01p5i.hop.clickbank.net" target="_blank" rel="noopener noreferrer" className="text-yellow-500 text-sm font-bold hover:text-yellow-400 transition-colors">Explore RELand →</a>
+            </div>
+          </div>
           {/* CTA */}
           <div className="mt-16 p-8 bg-gray-900/80 border border-yellow-900/30 rounded-xl">
             <h3 className="text-white font-bold text-xl mb-2">Download the Deal Screening Checklist</h3>
