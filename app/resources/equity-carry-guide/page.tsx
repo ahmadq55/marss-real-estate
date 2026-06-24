@@ -39,7 +39,7 @@ export default function EquityCarryGuidePage() {
 
             <h2 className="text-2xl font-bold text-white pt-6">What Is Equity Carry Financing?</h2>
             <p>
-              Equity Carry is a creative acquisition structure in which the seller receives a meaningful cash payment at closing and is simultaneously installed as a secured equity partner in the acquiring entity. Rather than receiving a single lump sum and exiting entirely, the seller carries a preferred equity position that generates ongoing income — structured, documented, and protected through the operating agreement.
+              Equity Carry is a creative acquisition structure in which the seller receives a meaningful cash payment at closing and is simultaneously established as a secured equity partner in the acquiring entity. Rather than receiving a single lump sum and exiting entirely, the seller carries a preferred equity position that generates ongoing income — structured, documented, and protected through the operating agreement.
             </p>
             <p>
               In practical terms: the seller does not take a discount. They receive full or near-full value — part in cash at closing, and the remainder structured as a preferred equity position within the LLC that owns the acquired business or property.
@@ -85,7 +85,7 @@ export default function EquityCarryGuidePage() {
               A commercial laundromat is listed at $1.8M with verified trailing EBITDA of $310K. A traditional buyer offers $1.6M contingent on bank financing. The bank appraises at $1.55M. The deal falls apart after 90 days.
             </p>
             <p>
-              Under an Equity Carry structure: the acquirer closes at the agreed price. Cash is funded at closing from senior debt secured against the real estate. The remaining balance is structured as a preferred equity position paying 6–8% preferred return, with distributions beginning in month 3 post-close as operations stabilize. The seller receives more total value over the hold period — with structural protections that a discounted all-cash offer cannot provide.
+              Under an Equity Carry structure: the acquirer closes at the agreed price. Cash is funded at closing from senior debt secured against the real estate. The remaining balance is structured as a preferred equity position, with seller distributions determined by the asset\'s actual income and the capacity to service both the senior note and the seller carry — typically commencing within 90 days of closing, subject to a stabilization period where payments may be deferred until agreed-upon performance milestones are reached. The seller receives more total value over the hold period — with structural protections that a discounted all-cash offer cannot provide.
             </p>
 
             <h2 className="text-2xl font-bold text-white pt-6">Is Equity Carry Right for Your Situation?</h2>

@@ -4,8 +4,8 @@ import { Navbar } from "@/navbar";
 import { Footer } from "@/footer";
 
 export const metadata: Metadata = {
-  title: "How to Analyze a Commercial Deal in Under 15 Minutes | Marss Real Estate",
-  description: "A step-by-step framework for screening commercial real estate and business acquisition deals — covering NOI, DSCR, cap rate, and red flag identification.",
+  title: "How to Analyze a Multifamily or Commercial Real Estate Deal in Under 15 Minutes | Marss Real Estate",
+  description: "A step-by-step framework for screening multifamily and commercial real estate — income-producing properties with tenants — covering NOI, cap rate, DSCR, and red flag identification.",
 };
 
 const steps = [
@@ -60,10 +60,11 @@ export default function AnalyzeCommercialDealPage() {
             <span>Insights</span>
           </div>
 
-          <span className="text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Deal Analysis</span>
+          <span className="text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Deal Analysis — Real Estate</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-            How to Analyze a Commercial Deal in Under 15 Minutes
+            How to Analyze a Multifamily or Commercial Real Estate Deal in Under 15 Minutes
           </h1>
+          <p className="text-gray-500 text-base mt-2 mb-6 italic">For income-producing properties with tenants — multifamily, retail, office, industrial, and mixed-use assets. Analyzing a business acquisition? <Link href="/resources/analyze-business-acquisition" className="text-yellow-500 hover:text-yellow-400 transition-colors">See that framework here.</Link></p>
           <div className="flex items-center gap-4 text-gray-500 text-sm mb-12 pb-12 border-b border-gray-800">
             <span>Ahmad Qawasmeh — MARSS Real Estate</span>
             <span>·</span>
@@ -73,7 +74,7 @@ export default function AnalyzeCommercialDealPage() {
           <div className="space-y-6 text-gray-300 leading-relaxed">
 
             <p className="text-lg">
-              Screening 10 or more deals per week is not possible if each deal takes half a day to evaluate. The framework below compresses the initial screening process to 15 minutes — enough to make a confident go/no-go decision on whether a deal deserves deeper due diligence.
+              Screening 10 or more commercial real estate deals per week is not possible if each deal takes half a day to evaluate. This framework applies specifically to income-producing real estate — multifamily, retail, office, industrial, and mixed-use properties with active tenants generating rental income. It compresses the initial screening process to 15 minutes — enough to make a confident go/no-go decision on whether a deal deserves deeper due diligence.
             </p>
             <p>
               This is not a replacement for full underwriting. It is a rapid triage system designed to protect your most valuable resource: time.
@@ -134,7 +135,7 @@ export default function AnalyzeCommercialDealPage() {
 
           <div className="mt-12 pt-8 border-t border-gray-800 flex justify-between items-center">
             <Link href="/resources/ai-tools-2026" className="text-gray-500 text-sm hover:text-yellow-400 transition-colors">← AI Tools for 2026</Link>
-            <Link href="/resources" className="text-yellow-500 text-sm hover:text-yellow-400 font-medium">Back to Resources →</Link>
+            <Link href="/resources/analyze-business-acquisition" className="text-yellow-500 text-sm hover:text-yellow-400 font-medium">Next: Analyzing a Business →</Link>
           </div>
 
         </div>

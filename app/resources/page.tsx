@@ -25,10 +25,17 @@ const articles = [
   },
   {
     slug: "analyze-commercial-deal",
-    title: "How to Analyze a Commercial Deal in Under 15 Minutes",
-    excerpt: "A step-by-step framework for screening 10+ deals per week — covering NOI, DSCR, cap rate, and red flag identification before committing to full due diligence.",
-    category: "Deal Analysis",
+    title: "How to Analyze a Multifamily or Commercial Real Estate Deal in Under 15 Minutes",
+    excerpt: "A step-by-step screening framework for income-producing properties with tenants — multifamily, retail, office, and industrial assets — covering NOI, DSCR, cap rate, and red flag identification.",
+    category: "Deal Analysis — Real Estate",
     readTime: "7 min read",
+  },
+  {
+    slug: "analyze-business-acquisition",
+    title: "How to Analyze a Business Acquisition in Under 15 Minutes",
+    excerpt: "Rapid-triage framework for screening service-based and cash flow businesses — SDE, EBITDA multiples, operator dependency risk, and hard gates before committing to full due diligence.",
+    category: "Deal Analysis — Business",
+    readTime: "8 min read",
   },
 ];
 
