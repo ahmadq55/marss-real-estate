@@ -10,10 +10,11 @@ import { Label } from "@/label";
 const checklistItems = [
   { icon: FileText, text: "25-Point Deal Screen (Go / No-Go Framework)" },
   { icon: BarChart3, text: "EBITDA / SDE Extraction & Normalization Guide" },
-  { icon: Target, text: "Asset-Class Benchmarks — RE + 7 Business Types" },
+  { icon: Target, text: "Asset-Class Benchmarks & Red Flag Thresholds" },
+  { icon: Download, text: "Capital Stack Templates & DSCR Stress Tests" },
 ];
 
-export function EmailOptin() {
+export default function EmailOptin() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -71,7 +72,7 @@ export function EmailOptin() {
               <div className="space-y-3">
                 {checklistItems.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <div className="p-1.5 rounded-md bg-yellow-500/10 border border-yellow-500/20 shrink-0">
+                    <div className="p-1.5 rounded-md bg-yellow-500/10 border border-yellow-500/30">
                       <item.icon className="h-3.5 w-3.5 text-yellow-400" />
                     </div>
                     <span className="text-gray-300 text-sm">{item.text}</span>
@@ -87,11 +88,19 @@ export function EmailOptin() {
                   <div className="h-14 w-14 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-7 w-7 text-yellow-400" />
                   </div>
-                  <h3 className="text-white text-xl font-bold mb-2">Check Your Inbox</h3>
-                  <p className="text-gray-400 text-sm">
-                    The checklist is on its way to <span className="text-yellow-400">{email}</span>.
-                    Check your spam folder if you don&apos;t see it within a few minutes.
+                  <h3 className="text-white text-xl font-bold mb-2">Your Checklist Is Ready</h3>
+                  <p className="text-gray-400 text-sm mb-6">
+                    Thanks, <span className="text-yellow-400">{name}</span>. Click below to download your
+                    25-point Deal Screening Checklist instantly.
                   </p>
+                  <a
+                    href="/deal-screening-checklist.pdf"
+                    download="Deal-Screening-Checklist-MARSS.pdf"
+                    className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-6 py-3 rounded-lg transition-colors"
+                  >
+                    <Download className="h-4 w-4" />
+                    Download Checklist (PDF)
+                  </a>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-2xl p-8 space-y-4">
@@ -108,9 +117,9 @@ export function EmailOptin() {
                   {error && <p className="text-red-400 text-xs">{error}</p>}
                   <Button type="submit" disabled={loading}
                     className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold tracking-wide w-full py-5">
-                    {loading ? "Sending..." : <><span>Send Me the Checklist</span><ArrowRight className="ml-2 h-4 w-4" /></>}
+                    {loading ? "Sending..." : <><span>Get Free Download</span><ArrowRight className="ml-2 h-4 w-4" /></>}
                   </Button>
-                  <p className="text-gray-600 text-xs">No spam. Unsubscribe anytime. Your information is never shared.</p>
+                  <p className="text-gray-600 text-xs">Instant access. No spam. Your information is never shared.</p>
                 </form>
               )}
             </div>
