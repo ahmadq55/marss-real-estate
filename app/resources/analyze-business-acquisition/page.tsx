@@ -141,10 +141,21 @@ export default function AnalyzeBusinessAcquisitionPage() {
           <div className="mt-16 p-8 bg-gray-900/80 border border-yellow-900/30 rounded-xl">
             <h3 className="text-white font-bold text-xl mb-2">Download the Business Acquisition Screening Checklist</h3>
             <p className="text-gray-400 text-sm mb-5">The complete business acquisition triage checklist — SDE/EBITDA extraction, add-back validation, red flag scoring, and hard gate reference. Formatted for rapid use during broker calls and CIM reviews.</p>
-            <form className="flex flex-col sm:flex-row gap-3">
-              <input type="email" placeholder="Your email address" className="flex-1 px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 text-sm" />
-              <button type="submit" className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg text-sm tracking-wide transition-colors whitespace-nowrap">Download Free</button>
-            </form>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="/#checklist"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg text-sm tracking-wide transition-colors"
+              >
+                Get Free Download →
+              </a>
+              <a
+                href="/deal-screening-checklist.pdf"
+                download="Deal-Screening-Checklist-MARSS.pdf"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-yellow-500/40 hover:border-yellow-500 text-yellow-400 hover:text-yellow-300 font-medium rounded-lg text-sm tracking-wide transition-colors"
+              >
+                Direct PDF Download
+              </a>
+            </div>
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-800 flex justify-between items-center">

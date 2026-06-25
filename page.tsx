@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { Navbar } from "@/navbar";
 import { Hero } from "@/hero";
+import { ResourceStrip } from "@/resource-strip";
 import { About } from "@/about";
 import { SellerPaths } from "@/seller-paths";
 import { BusinessAcquisition } from "@/business-acquisition";
@@ -22,6 +23,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#0a0a0a]">
       <Navbar />
       <Hero />
+      <ResourceStrip />
       <About />
       <SellerPaths />
       <BusinessAcquisition />

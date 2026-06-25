@@ -141,10 +141,21 @@ export default function AiTools2026Page() {
           <div className="mt-16 p-8 bg-gray-900/80 border border-yellow-900/30 rounded-xl">
             <h3 className="text-white font-bold text-xl mb-2">Get the Full AI Tools Resource Kit</h3>
             <p className="text-gray-400 text-sm mb-5">Download the complete toolkit — including the deal screening checklist, cap rate reference card, and a curated list of affiliate-priced tool access links. Free.</p>
-            <form className="flex flex-col sm:flex-row gap-3">
-              <input type="email" placeholder="Your email address" className="flex-1 px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 text-sm" />
-              <button type="submit" className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg text-sm tracking-wide transition-colors whitespace-nowrap">Download Free</button>
-            </form>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="/#checklist"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg text-sm tracking-wide transition-colors"
+              >
+                Get Free Download →
+              </a>
+              <a
+                href="/deal-screening-checklist.pdf"
+                download="Deal-Screening-Checklist-MARSS.pdf"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-yellow-500/40 hover:border-yellow-500 text-yellow-400 hover:text-yellow-300 font-medium rounded-lg text-sm tracking-wide transition-colors"
+              >
+                Direct PDF Download
+              </a>
+            </div>
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-800 flex justify-between items-center">
