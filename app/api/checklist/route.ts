@@ -16,8 +16,8 @@ function isValidEmail(email: string): boolean {
 // ----------------------------------------------------------------
 // MailerLite v3 helper — adds subscriber to "Checklist Leads" group
 // Creates the group automatically if it doesn't exist yet
-// IMPORTANT: This function is awaited (not fire-and-forget) so that
-// Vercel serverless keeps the function alive until MailerLite responds
+// IMPORTANT: This function is awaited so Vercel keeps the function
+// alive until MailerLite responds before returning the response
 // ----------------------------------------------------------------
 async function addToMailerLite(name: string, email: string): Promise<void> {
   const API_KEY = process.env.MAILERLITE_API_KEY;
@@ -108,27 +108,74 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "Invalid email address" }, { status: 400 });
   }
 
-  // Add to MailerLite — AWAITED so Vercel keeps function alive
+  // Add to MailerLite — awaited so Vercel keeps function alive
   await addToMailerLite(name, email);
 
   console.log(`[CHECKLIST LEAD] Name: ${name} | Email: ${email}`);
 
-  // Optional Resend delivery (if RESEND_API_KEY is configured)
+  // Resend email delivery
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
   if (RESEND_API_KEY) {
     try {
-      await fetch("https://api.resend.com/emails", {
+      // 1. Send PDF download link to the lead
+      const leadRes = await fetch("https://api.resend.com/emails", {
         method: "POST",
-        headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" },
+        headers: {
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           from: "Marss Real Estate <onboarding@resend.dev>",
-          to: email,
-          subject: `${escapeHtml(name)}, here's your Deal Screening Checklist — Marss Real Estate`,
-          html: `<p>Hi ${escapeHtml(name)},</p><p>Download your checklist here: <a href="https://marssrealestate.com/deal-screening-checklist.pdf">Deal Screening Checklist (PDF)</a></p>`,
+          to: [email],
+          subject: `${escapeHtml(name)}, here is your Deal Screening Checklist`,
+          html: `
+            <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+              <h2 style="color:#1a1a1a;">Your Deal Screening Checklist</h2>
+              <p>Hi ${escapeHtml(name)},</p>
+              <p>Thank you for your interest in MARSS Real Estate. Your checklist is ready to download:</p>
+              <p style="text-align:center;margin:32px 0;">
+                <a href="https://marssrealestate.com/deal-screening-checklist.pdf"
+                   style="background:#d4a017;color:#000;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:bold;font-size:16px;">
+                  Download Checklist (PDF)
+                </a>
+              </p>
+              <p style="color:#666;font-size:13px;">MARSS Real Estate &mdash; Commercial &amp; Multifamily Acquisitions<br/>
+              <a href="https://marssrealestate.com" style="color:#d4a017;">marssrealestate.com</a></p>
+            </div>
+          `,
         }),
       });
+      const leadData = await leadRes.json();
+      console.log(`[Resend] Lead email: HTTP ${leadRes.status} | ID: ${leadData.id || JSON.stringify(leadData)}`);
+
+      // 2. Send lead notification to Ahmad
+      const notifyRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "MARSS Website <onboarding@resend.dev>",
+          to: ["marss.realestate@gmail.com"],
+          subject: `New Lead: ${escapeHtml(name)} — Checklist Download`,
+          html: `
+            <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+              <h3 style="color:#1a1a1a;">New Checklist Lead</h3>
+              <table style="border-collapse:collapse;width:100%;">
+                <tr><td style="padding:8px;border:1px solid #eee;"><strong>Name</strong></td><td style="padding:8px;border:1px solid #eee;">${escapeHtml(name)}</td></tr>
+                <tr><td style="padding:8px;border:1px solid #eee;"><strong>Email</strong></td><td style="padding:8px;border:1px solid #eee;">${escapeHtml(email)}</td></tr>
+                <tr><td style="padding:8px;border:1px solid #eee;"><strong>Time</strong></td><td style="padding:8px;border:1px solid #eee;">${new Date().toISOString()}</td></tr>
+              </table>
+              <p style="color:#666;font-size:12px;">Sent from marssrealestate.com</p>
+            </div>
+          `,
+        }),
+      });
+      const notifyData = await notifyRes.json();
+      console.log(`[Resend] Notify email: HTTP ${notifyRes.status} | ID: ${notifyData.id || JSON.stringify(notifyData)}`);
     } catch (err) {
-      console.error("Resend error:", err);
+      console.error("[Resend] Error:", err);
     }
   }
 
