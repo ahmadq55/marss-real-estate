@@ -81,7 +81,7 @@ async function addToMailerLite(name: string, email: string): Promise<void> {
           headers,
         });
       }
-      console.log(`[MailerLite] Subscriber added: ${email} → group "${GROUP_NAME}"`);
+      console.log(`[MailerLite] Subscriber added: ${email} — group "${GROUP_NAME}"`);
     } else {
       console.error("[MailerLite] Subscriber error:", JSON.stringify(subData));
     }
@@ -108,8 +108,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "Invalid email address" }, { status: 400 });
   }
 
-  // Add to MailerLite (non-blocking — don't fail the request if ML is down)
-  void addToMailerLite(name, email);
+  // Add to MailerLite (awaited so Vercel serverless keeps the function alive until complete)
+  await addToMailerLite(name, email);
 
   // Log the lead
   console.log(`[CHECKLIST LEAD] Name: ${name} | Email: ${email}`);
