@@ -16,6 +16,8 @@ function isValidEmail(email: string): boolean {
 // ----------------------------------------------------------------
 // MailerLite v3 helper — adds subscriber to "Checklist Leads" group
 // Creates the group automatically if it doesn't exist yet
+// IMPORTANT: This function is awaited (not fire-and-forget) so that
+// Vercel serverless keeps the function alive until MailerLite responds
 // ----------------------------------------------------------------
 async function addToMailerLite(name: string, email: string): Promise<void> {
   const API_KEY = process.env.MAILERLITE_API_KEY;
@@ -24,7 +26,7 @@ async function addToMailerLite(name: string, email: string): Promise<void> {
     return;
   }
 
-  const headers = {
+  const headers: Record<string, string> = {
     Authorization: `Bearer ${API_KEY}`,
     "Content-Type": "application/json",
     Accept: "application/json",
@@ -46,7 +48,6 @@ async function addToMailerLite(name: string, email: string): Promise<void> {
     }
 
     if (!groupId) {
-      // Create the group
       const createRes = await fetch(`${BASE}/groups`, {
         method: "POST",
         headers,
@@ -73,7 +74,6 @@ async function addToMailerLite(name: string, email: string): Promise<void> {
 
     const subData = await subRes.json();
     if (subRes.ok || subRes.status === 409) {
-      // 409 = subscriber already exists — still update their group
       const subId = subData.data?.id;
       if (subId && groupId && subRes.status === 409) {
         await fetch(`${BASE}/subscribers/${subId}/groups/${groupId}`, {
@@ -81,9 +81,9 @@ async function addToMailerLite(name: string, email: string): Promise<void> {
           headers,
         });
       }
-      console.log(`[MailerLite] Subscriber added: ${email} — group "${GROUP_NAME}"`);
+      console.log(`[MailerLite] Subscriber captured: ${email} — group "${GROUP_NAME}"`);
     } else {
-      console.error("[MailerLite] Subscriber error:", JSON.stringify(subData));
+      console.error("[MailerLite] Subscriber error:", subRes.status, JSON.stringify(subData));
     }
   } catch (err) {
     console.error("[MailerLite] Integration error:", err);
@@ -108,37 +108,23 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "Invalid email address" }, { status: 400 });
   }
 
-  // Add to MailerLite (awaited so Vercel serverless keeps the function alive until complete)
+  // Add to MailerLite — AWAITED so Vercel keeps function alive
   await addToMailerLite(name, email);
 
-  // Log the lead
   console.log(`[CHECKLIST LEAD] Name: ${name} | Email: ${email}`);
 
-  // Optional: Resend email delivery (if RESEND_API_KEY is set)
+  // Optional Resend delivery (if RESEND_API_KEY is configured)
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
   if (RESEND_API_KEY) {
     try {
       await fetch("https://api.resend.com/emails", {
         method: "POST",
-        headers: {
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
+        headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" },
         body: JSON.stringify({
           from: "Marss Real Estate <onboarding@resend.dev>",
           to: email,
           subject: `${escapeHtml(name)}, here's your Deal Screening Checklist — Marss Real Estate`,
           html: `<p>Hi ${escapeHtml(name)},</p><p>Download your checklist here: <a href="https://marssrealestate.com/deal-screening-checklist.pdf">Deal Screening Checklist (PDF)</a></p>`,
-        }),
-      });
-      await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          from: "Marss Website <onboarding@resend.dev>",
-          to: "support@marssrealestate.com",
-          subject: `New Checklist Lead: ${escapeHtml(name)} <${escapeHtml(email)}>`,
-          html: `<p><strong>Name:</strong> ${escapeHtml(name)}<br/><strong>Email:</strong> ${escapeHtml(email)}</p>`,
         }),
       });
     } catch (err) {
