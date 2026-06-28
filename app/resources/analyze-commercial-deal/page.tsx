@@ -1,169 +1,89 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { Navbar } from "@/navbar";
-import { Footer } from "@/footer";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How to Analyze a Multifamily or Commercial Real Estate Deal in Under 15 Minutes | Marss Real Estate",
-  description: "A step-by-step framework for screening multifamily and commercial real estate — income-producing properties with tenants — covering NOI, cap rate, DSCR, and red flag identification.",
+  title: "How to Analyze a Commercial Real Estate Deal in Under 15 Minutes | Marss Real Estate",
+  description: "A step-by-step framework for rapid triage of multifamily and commercial real estate deals — Cap Rate, NOI stress testing, DSCR hard gates, and a disciplined Go/No-Go decision.",
 };
-
-const steps = [
-  {
-    time: "0–2 min",
-    title: "First Filter: Price, Location, Asset Class",
-    description: "Before opening a single financial document, answer three questions: Is the asking price within your target range? Is the asset class in your buy box? Is the market one you understand or can research quickly? If any answer is no, stop here. Time spent underwriting a deal outside your criteria is time not spent on deals that fit.",
-    keyAction: "Compare asking price to your target acquisition range. Confirm asset class matches your buy box. Check market fundamentals at a 30,000-foot level.",
-  },
-  {
-    time: "2–5 min",
-    title: "NOI Calculation from the T-12",
-    description: "Request the trailing 12-month (T-12) financial statement. If it isn't provided immediately, that is itself a signal. Calculate Net Operating Income: Gross Revenue minus Operating Expenses (excluding debt service and depreciation). Do not use the broker's stated NOI — calculate it yourself from the line items. Add back only defensible, transferable income. Remove owner compensation and any non-recurring revenue.",
-    keyAction: "NOI = Gross Revenue − Operating Expenses. Verify each revenue line is transferable. Challenge any add-back not supported by documentation.",
-  },
-  {
-    time: "5–7 min",
-    title: "Cap Rate Check Against Market",
-    description: "Divide your calculated NOI by the asking price to get the in-place cap rate. Compare this against current market cap rates for the asset class and submarket — pull benchmarks from LoopNet or CoStar. A cap rate significantly below market means you're being asked to pay a premium on projected performance, not trailing reality. That premium requires justification.",
-    keyAction: "In-Place Cap Rate = NOI ÷ Asking Price. If cap rate is below market, identify the specific thesis that justifies the premium. If no clear thesis exists, flag as a red flag.",
-  },
-  {
-    time: "7–10 min",
-    title: "DSCR Quick Calculation",
-    description: "Estimate the senior debt service based on current lending rates for the asset class — assume 6.5–7.5% for most commercial deals in the current rate environment, 25-year amortization, 70% LTV. Divide your NOI by the estimated annual debt service. Target: 1.40x or higher for the senior position. If DSCR falls below 1.20x, the deal doesn't survive a moderate NOI stress test. Stop unless there is a documented short path to NOI improvement.",
-    keyAction: "DSCR = NOI ÷ Annual Debt Service. Must clear 1.40x target. 1.20x is the floor. Below 1.20x = no-go unless extraordinary circumstances are documented.",
-  },
-  {
-    time: "10–13 min",
-    title: "Red Flag Scan",
-    description: "Quickly scan for the five most common deal-killers: (1) Revenue concentration — does more than 30% of revenue come from a single tenant, customer, or contract? (2) Deferred maintenance signals — are CapEx needs visible in the financials or property description? (3) Lease rollover risk — what percentage of leases expire within 24 months? (4) Environmental or regulatory exposure — any mentions of remediation, zoning changes, or license dependencies? (5) Operator dependency — can the business operate without the current owner's relationships or licenses?",
-    keyAction: "Score each flag: Low / Medium / High probability of materializing. One high-severity flag with no clear mitigation = conditional go at best.",
-  },
-  {
-    time: "13–15 min",
-    title: "Decision: Go / No-Go / Conditional",
-    description: "Based on the above, assign one of three outcomes. Go: financials are clean, cap rate is market or better, DSCR clears 1.40x, no material red flags — proceed to request full due diligence package. No-Go: any hard gate is missed, red flags are unresolvable, or the deal structure doesn't fit your criteria — decline politely and move on. Conditional Go: financials require verification, one flag is present but manageable — proceed to a discovery call but do not commit time or capital until the condition is resolved.",
-    keyAction: "Document your reasoning in two sentences. This note becomes the basis for your LOI or decline communication.",
-  },
-];
 
 export default function AnalyzeCommercialDealPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a]">
-      <Navbar />
-      <article className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-
-          <div className="flex items-center gap-2 text-sm text-gray-600 mb-10">
-            <Link href="/resources" className="hover:text-yellow-400 transition-colors">Resources</Link>
-            <span>›</span>
-            <span>Insights</span>
-          </div>
-
-          <span className="text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Deal Analysis — Real Estate</span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-            How to Analyze a Multifamily or Commercial Real Estate Deal in Under 15 Minutes
-          </h1>
-          <p className="text-gray-500 text-base mt-2 mb-6 italic">For income-producing properties with tenants — multifamily, retail, office, industrial, and mixed-use assets. Analyzing a business acquisition? <Link href="/resources/analyze-business-acquisition" className="text-yellow-500 hover:text-yellow-400 transition-colors">See that framework here.</Link></p>
-          <div className="flex items-center gap-4 text-gray-500 text-sm mb-12 pb-12 border-b border-gray-800">
-            <span>Ahmad Qawasmeh — MARSS Real Estate</span>
-            <span>·</span>
-            <span>7 min read</span>
-          </div>
-
-          <div className="space-y-6 text-gray-300 leading-relaxed">
-
-            <p className="text-lg">
-              Screening 10 or more commercial real estate deals per week is not possible if each deal takes half a day to evaluate. This framework applies specifically to income-producing real estate — multifamily, retail, office, industrial, and mixed-use properties with active tenants generating rental income. It compresses the initial screening process to 15 minutes — enough to make a confident go/no-go decision on whether a deal deserves deeper due diligence.
-            </p>
-            <p>
-              This is not a replacement for full underwriting. It is a rapid triage system designed to protect your most valuable resource: time.
-            </p>
-
-            <div className="space-y-6 mt-8">
-              {steps.map((step, i) => (
-                <div key={i} className="border border-gray-800 rounded-lg overflow-hidden">
-                  <div className="bg-gray-900/60 px-6 py-4 flex items-center gap-4 border-b border-gray-800">
-                    <span className="bg-yellow-500/10 text-yellow-500 text-xs font-bold tracking-wide px-3 py-1 rounded whitespace-nowrap">{step.time}</span>
-                    <h2 className="text-white font-bold text-base">{step.title}</h2>
-                  </div>
-                  <div className="px-6 py-5 space-y-4">
-                    <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
-                    <div className="bg-black/40 rounded-lg p-4">
-                      <span className="text-gray-500 text-xs font-bold uppercase tracking-wide block mb-1">Key Action</span>
-                      <p className="text-gray-300 text-sm leading-relaxed">{step.keyAction}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <h2 className="text-2xl font-bold text-white pt-6">What This Framework Is Not</h2>
-            <p>
-              This 15-minute screen is a triage tool, not a substitute for site visits, bank statement verification, environmental review, or a full lease abstract. Its purpose is to eliminate the 80% of deals that don&apos;t meet baseline criteria before you invest significant time — so you can concentrate full underwriting effort on the 20% that might actually close.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white pt-6">Hard Gates — Non-Negotiable</h2>
-            <p>The following thresholds are not starting points for negotiation. They are the minimum baseline for proceeding:</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-              {[
-                { label: "Entry Cap Rate", value: "≥ 6.0% on verified trailing NOI" },
-                { label: "Senior DSCR Target", value: "≥ 1.40x" },
-                { label: "Senior DSCR Floor", value: "1.20x minimum" },
-                { label: "NOI Stress Test", value: "Must survive −10% NOI" },
-                { label: "T-12 Requirement", value: "Required within 48 hours" },
-                { label: "Bank Statements", value: "Required pre-LOI" },
-              ].map((gate, i) => (
-                <div key={i} className="bg-gray-900/60 border border-gray-800 rounded-lg p-4">
-                  <span className="text-gray-500 text-xs font-bold uppercase tracking-wide block mb-1">{gate.label}</span>
-                  <span className="text-yellow-400 text-sm font-semibold">{gate.value}</span>
-                </div>
-              ))}
-            </div>
-
-          </div>
-
-          {/* Affiliate Resource */}
-          <div className="mt-10 p-6 bg-gray-900/40 border border-gray-800 rounded-lg flex items-start gap-4">
-            <div className="shrink-0 w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center">
-              <span className="text-yellow-500 text-lg font-bold">↗</span>
-            </div>
-            <div>
-              <span className="text-gray-500 text-xs font-bold uppercase tracking-widest block mb-1">Recommended Resource</span>
-              <h4 className="text-white font-bold text-sm mb-1">RELand — Real Estate Career Prep Suite</h4>
-              <p className="text-gray-400 text-sm leading-relaxed mb-3">Building your foundation in commercial real estate? The RELand career prep suite by iPassed covers licensing exam preparation, market fundamentals, and core concepts for professionals entering the commercial space.</p>
-              <a href="https://12a7ec05z4idkkh8w6-im01p5i.hop.clickbank.net" target="_blank" rel="noopener noreferrer" className="text-yellow-500 text-sm font-bold hover:text-yellow-400 transition-colors">Explore RELand →</a>
-            </div>
-          </div>
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-gray-900/80 border border-yellow-900/30 rounded-xl">
-            <h3 className="text-white font-bold text-xl mb-2">Download the Deal Screening Checklist</h3>
-            <p className="text-gray-400 text-sm mb-5">The complete commercial deal screening checklist — T-12 review, rent roll analysis, red flag identification, and hard gate reference. Formatted for rapid use during broker calls.</p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="/#checklist"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg text-sm tracking-wide transition-colors"
-              >
-                Get Free Download →
-              </a>
-              <a
-                href="/deal-screening-checklist.pdf"
-                download="Deal-Screening-Checklist-MARSS.pdf"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-yellow-500/40 hover:border-yellow-500 text-yellow-400 hover:text-yellow-300 font-medium rounded-lg text-sm tracking-wide transition-colors"
-              >
-                Direct PDF Download
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-800 flex justify-between items-center">
-            <Link href="/resources/ai-tools-2026" className="text-gray-500 text-sm hover:text-yellow-400 transition-colors">← AI Tools for 2026</Link>
-            <Link href="/resources/analyze-business-acquisition" className="text-yellow-500 text-sm hover:text-yellow-400 font-medium">Next: Analyzing a Business →</Link>
-          </div>
-
+    <article className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+      <div className="mb-10">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-xs font-semibold text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-2.5 py-0.5 rounded-full">Underwriting Framework</span>
+          <span className="text-gray-500 text-xs">10 min read</span>
         </div>
-      </article>
-      <Footer />
-    </main>
+        <h1 className="text-4xl font-bold text-white mb-4 leading-tight">How to Analyze a Multifamily or Commercial Real Estate Deal in Under 15 Minutes</h1>
+        <p className="text-gray-400 text-lg leading-relaxed">You can&apos;t start fresh with every OM. You need a first-pass filter that eliminates deals on fundamentals before you invest serious time or capital. Here is the 6-step triage framework Marss uses to screen income-producing properties.</p>
+      </div>
+
+      <div className="prose prose-invert prose-yellow max-w-none space-y-10 text-gray-300">
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">What This Framework Covers</h2>
+          <p className="leading-relaxed text-gray-400">This is a screening framework for income-producing properties with tenants — multifamily (5+ units), retail, office, industrial, and mixed-use. It is designed for first-pass triage: identify whether a deal clears your hard gates before you spend time on site visits, third-party reports, or full underwriting models.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-6">
+            {["Multifamily 5+ units","Retail / Strip","Office","Light Industrial","Mixed-Use","Self-Storage"].map((t) => (
+              <div key={t} className="border border-[#1f1f1f] bg-[#0d0d0d] rounded-lg px-3 py-2 text-center">
+                <span className="text-gray-300 text-sm">{t}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {[{step:"1",title:"Calculate Trailing 12-Month NOI",content:"Start with the T-12 financials. Net Operating Income = Gross Rental Income (actual collected, not pro forma) minus Vacancy (actual, not market assumption) minus Operating Expenses (taxes, insurance, maintenance, management, utilities). Do NOT use projected rents or pro forma occupancy for your baseline NOI. If the broker is quoting you a \"stabilized\" or \"market\" NOI that is higher than trailing actuals, flag it — the trailing number is your underwriting anchor.",hardgate:"Require T-12 actuals and reconcile to bank deposit statements. If the seller cannot provide bank statements, pass."},{step:"2",title:"Validate the Entry Cap Rate",content:"Entry Cap Rate = Trailing NOI ÷ Asking Price. Your minimum: 6.0% on verified trailing NOI. A 6% cap rate means the property produces $1 of NOI for every $16.70 of purchase price. Below 6%, you are depending on future rent growth or cost reductions to justify the price — that is a bet, not a buy. Calculate both the in-place cap rate (trailing NOI) and the broker-quoted cap rate. If they differ by more than 50–75 basis points, ask for the reconciliation.",hardgate:"Entry cap rate < 6.0% on verified T-12 NOI = conditional or pass, unless there is a documented, near-term path to 6.0%+."},{step:"3",title:"Stress NOI at -10% and -20%",content:"Apply two revenue shocks before you run any return metrics. Stress 1: NOI × 0.90 — vacancy up 500 bps or rents down 5%. Stress 2: NOI × 0.80 — vacancy up 1,000 bps or rents down 10%. Now re-run DSCR and cash-on-cash return at both stress scenarios. A deal that only works at full occupancy and market rents is fragile. A deal that works at -20% NOI has real margin of safety.",hardgate:"If the deal does not produce positive cash flow after debt service at -10% NOI, it does not pass without a compelling value-add thesis backed by executed leases."},{step:"4",title:"Calculate DSCR",content:"DSCR = NOI ÷ Annual Debt Service. Use your actual proposed loan terms — not broker assumptions. If you do not have terms yet, use a conservative proxy: 7.25% rate, 25-year amortization, 65% LTV. Target: 1.40x at baseline NOI. Floor: 1.20x at -10% stress. Seller carry payments and any subordinate debt should NEVER count toward NOI in your DSCR calculation — senior debt service is covered only by operating NOI.",hardgate:"DSCR < 1.20x at -10% stress scenario = pass unless seller carry is structured to subordinate below senior debt with income-contingent terms."},{step:"5",title:"Benchmark Against the Market",content:"Pull comp cap rates for the submarket. If your entry cap rate is at or below market, you have no valuation cushion. Check: average market occupancy vs. subject property, rent/SF vs. comparable properties, expense ratio vs. market norms (expense ratios above 50% of EGI for multifamily or 40% for NNN-adjacent retail are red flags), and supply pipeline — new inventory within 1 mile under construction.",hardgate:"If the subject property is occupancy-lagging the market by 500+ bps without a documented operational reason, investigate before proceeding."},{step:"6",title:"Go / No-Go Decision",content:"",hardgate:""}].map((item) => (
+          <section key={item.step}>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-8 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center shrink-0">
+                <span className="text-yellow-400 font-bold text-sm">{item.step}</span>
+              </div>
+              <h2 className="text-2xl font-bold text-white">{item.title}</h2>
+            </div>
+            {item.content && <p className="leading-relaxed text-gray-400 mb-4">{item.content}</p>}
+            {item.step === "6" && (
+              <div className="grid sm:grid-cols-3 gap-4">
+                {[{label:"GREEN — Proceed to LOI",color:"border-green-900/50 bg-green-950/30",text:"text-green-400",items:["Cap rate ≥ 6.0% on T-12 NOI","DSCR ≥ 1.40x baseline","DSCR ≥ 1.20x at -10% stress","T-12 reconciles to bank statements","At or below market cap rate"]},{label:"YELLOW — Conditional",color:"border-yellow-900/50 bg-yellow-950/20",text:"text-yellow-400",items:["Cap rate 5.5–5.9% with clear value-add","DSCR 1.25–1.39x baseline","Occupancy below market by 300–500 bps","Missing one financial document","Expense ratio slightly elevated"]},{label:"RED — Pass or Restructure",color:"border-red-900/50 bg-red-950/20",text:"text-red-400",items:["Cap rate < 5.5% with no value-add","DSCR < 1.20x at -10% stress","T-12 doesn't reconcile to deposits","No bank statements available","Occupancy 500+ bps below market"]}].map((box) => (
+                  <div key={box.label} className={`border ${box.color} rounded-xl p-5`}>
+                    <div className={`text-xs font-bold uppercase tracking-wide ${box.text} mb-3`}>{box.label}</div>
+                    <ul className="space-y-1.5">
+                      {box.items.map((item) => <li key={item} className="text-gray-400 text-xs leading-relaxed">&#x2022; {item}</li>)}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+            {item.hardgate && (
+              <div className="border-l-2 border-red-500/50 pl-4 mt-4">
+                <div className="text-red-400 text-xs font-bold uppercase tracking-wide mb-1">Hard Gate</div>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.hardgate}</p>
+              </div>
+            )}
+          </section>
+        ))}
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">Red Flags That Auto-Fail a Deal</h2>
+          <div className="space-y-2">
+            {["Seller cannot provide T-12 financials or bank statements","Trailing NOI is materially lower than asking price implies (cap rate < 4.5%)","Occupancy > 20% below market with no operational explanation","Undisclosed liens, pending litigation, or title defects","Environmental issues not in disclosed Phase I","Lease rollover > 40% in next 24 months with no renewal probability","Major deferred CapEx exceeding 2 years of NOI"].map((flag) => (
+              <div key={flag} className="flex items-start gap-3 border border-red-900/30 bg-red-950/10 rounded-lg px-4 py-3">
+                <span className="text-red-500 mt-0.5 shrink-0">&#9888;</span>
+                <span className="text-gray-400 text-sm">{flag}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="border border-yellow-900/30 bg-gradient-to-br from-[#0d0900] to-[#0a0a0a] rounded-2xl p-8 mt-10">
+          <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-2">Have a Deal That Clears the Gates?</div>
+          <h3 className="text-xl font-bold text-white mb-2">Submit to Marss for a Full Underwriting Review</h3>
+          <p className="text-gray-400 text-sm mb-5">We screen, underwrite, and issue a Go/No-Go with LOI within 48 hours. Commission protected for brokers from day one.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/#contact" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg text-sm transition-colors text-center">Submit a Deal</Link>
+            <a href="tel:9727796787" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-center">Call 972.779.6787</a>
+          </div>
+        </div>
+      </div>
+    </article>
   );
 }

@@ -1,160 +1,119 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { Navbar } from "@/navbar";
-import { Footer } from "@/footer";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "How Equity Carry Financing Works | Marss Real Estate",
-  description: "A complete guide to Equity Carry financing for business sellers — how it works, why it delivers full value, and how it eliminates bank-dependent closing risk.",
+  description: "A complete guide to Equity Carry financing for business sellers — how it delivers full or near-full asking price, how seller protections are documented, and how and when you get paid.",
 };
 
 export default function EquityCarryGuidePage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a]">
-      <Navbar />
-      <article className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-
-          <div className="flex items-center gap-2 text-sm text-gray-600 mb-10">
-            <Link href="/resources" className="hover:text-yellow-400 transition-colors">Resources</Link>
-            <span>›</span>
-            <span>Insights</span>
-          </div>
-
-          <span className="text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Creative Financing</span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-            How Equity Carry Financing Works: A Complete Guide for Business Sellers
-          </h1>
-          <div className="flex items-center gap-4 text-gray-500 text-sm mb-12 pb-12 border-b border-gray-800">
-            <span>Ahmad Qawasmeh — MARSS Real Estate</span>
-            <span>·</span>
-            <span>8 min read</span>
-          </div>
-
-          <div className="space-y-6 text-gray-300 leading-relaxed">
-
-            <p className="text-lg">
-              Most business sales fail at the finish line — not because of valuation disagreements, but because of financing contingencies. Bank appraisals come in low, lenders pull commitments, and sellers who had mentally moved on find themselves back at square one. Equity Carry financing was designed to eliminate that risk entirely.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white pt-6">What Is Equity Carry Financing?</h2>
-            <p>
-              Equity Carry is a creative acquisition structure in which the seller receives a meaningful cash payment at closing and is simultaneously established as a secured equity partner in the acquiring entity. Rather than receiving a single lump sum and exiting entirely, the seller carries a preferred equity position that generates ongoing income — structured, documented, and protected through the operating agreement.
-            </p>
-            <p>
-              In practical terms: the seller does not take a discount. They receive full or near-full value — part in cash at closing, and the remainder structured as a preferred equity position within the LLC that owns the acquired business or property.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white pt-6">How It Works: The Three Components</h2>
-
-            <div className="bg-gray-900/60 border border-gray-800 rounded-lg p-6">
-              <h3 className="text-yellow-400 font-bold text-base mb-2">Component 1 — Cash at Close</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">A senior debt facility — typically covering the down payment, closing costs, and initial capital expenditures at up to 60% LTV of the real estate value — funds the immediate cash payment to the seller at closing. The structure is underwritten against the asset&apos;s verified trailing income, not projected performance.</p>
-            </div>
-
-            <div className="bg-gray-900/60 border border-gray-800 rounded-lg p-6">
-              <h3 className="text-yellow-400 font-bold text-base mb-2">Component 2 — Preferred Equity Position</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">The seller&apos;s remaining value is structured as a preferred equity stake in the LLC. This is a documented governance position with priority distributions, performance milestones, and step-in rights if the acquirer underperforms. The seller earns preferred returns tied to the business&apos;s actual cash flow — not a fixed promise from a buyer who may or may not perform.</p>
-            </div>
-
-            <div className="bg-gray-900/60 border border-gray-800 rounded-lg p-6">
-              <h3 className="text-yellow-400 font-bold text-base mb-2">Component 3 — Step-In Rights &amp; Governance Protection</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">The operating agreement includes documented protections: if net income falls below defined thresholds or debt service is not maintained, the seller&apos;s step-in rights activate within 60 days. The seller doesn&apos;t just exit and hope — they remain structurally protected with the right to resume operational control if performance declines.</p>
-            </div>
-
-            <h2 className="text-2xl font-bold text-white pt-6">Why Sellers Choose This Over a Traditional Sale</h2>
-            <p>Traditional bank-dependent acquisitions carry three risks sellers frequently underestimate:</p>
-            <ul className="space-y-3 mt-4">
-              {[
-                "Bank appraisals frequently come in 10–20% below agreed purchase price, forcing renegotiation after a seller has mentally committed to a number.",
-                "Lenders impose operational conditions and due diligence requirements that delay close 60–120 days — during which businesses often experience performance degradation.",
-                "Financing contingencies give buyers an exit mechanism that is not always used in good faith."
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-400 text-sm">
-                  <span className="text-yellow-500 font-bold mt-0.5 shrink-0">→</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-4">
-              Equity Carry eliminates all three. The deal closes on a defined timeline. The price is not subject to appraisal contingency. And the seller&apos;s ongoing equity position means their financial outcome is tied to the asset&apos;s actual performance.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white pt-6">A Practical Example</h2>
-            <p>
-              A commercial laundromat is listed at $1.8M with verified trailing EBITDA of $310K. A traditional buyer offers $1.6M contingent on bank financing. The bank appraises at $1.55M. The deal falls apart after 90 days.
-            </p>
-            <p>
-              Under an Equity Carry structure: the acquirer closes at the agreed price. Cash is funded at closing from senior debt secured against the real estate. The remaining balance is structured as a preferred equity position, with seller distributions determined by the asset\'s actual income and the capacity to service both the senior note and the seller carry — typically commencing within 90 days of closing, subject to a stabilization period where payments may be deferred until agreed-upon performance milestones are reached. The seller receives more total value over the hold period — with structural protections that a discounted all-cash offer cannot provide.
-            </p>
-
-            <h2 className="text-2xl font-bold text-white pt-6">Is Equity Carry Right for Your Situation?</h2>
-            <p>This structure works best when:</p>
-            <ul className="space-y-2 mt-4">
-              {[
-                "The seller is motivated by total value received, not solely speed of exit",
-                "The business or property has verified, documentable trailing cash flow",
-                "The seller has interest in tax-deferral — structured payments can defer income recognition",
-                "The seller values certainty of close over maximizing the cash-at-close percentage"
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-400 text-sm">
-                  <span className="text-yellow-500 mt-1 shrink-0">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <h2 className="text-2xl font-bold text-white pt-6">The Bottom Line</h2>
-            <p>
-              Equity Carry is not seller financing in the traditional sense. It is a sophisticated capital structure — adapted from private equity and institutional acquisition practices — applied to the operating business and commercial real estate market. It protects sellers, eliminates bank contingency risk, and delivers full or near-full asking value on a defined timeline.
-            </p>
-            <p>
-              For sellers who have been disappointed by deals that fell apart at the bank, this structure offers a fundamentally different path to closing.
-            </p>
-
-          </div>
-
-          {/* Affiliate Resource */}
-          <div className="mt-10 p-6 bg-gray-900/40 border border-gray-800 rounded-lg flex items-start gap-4">
-            <div className="shrink-0 w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center">
-              <span className="text-yellow-500 text-lg font-bold">↗</span>
-            </div>
-            <div>
-              <span className="text-gray-500 text-xs font-bold uppercase tracking-widest block mb-1">Recommended Resource</span>
-              <h4 className="text-white font-bold text-sm mb-1">LeskoHelp — The #1 Grant Finding Community</h4>
-              <p className="text-gray-400 text-sm leading-relaxed mb-3">A searchable database of thousands of grants, government funding programs, and no-repayment capital sources for business owners and real estate investors — directly relevant for sellers evaluating exit options and buyers sourcing acquisition capital.</p>
-              <a href="https://6a89466x-9dcjnlkhn4ashlefn.hop.clickbank.net" target="_blank" rel="noopener noreferrer" className="text-yellow-500 text-sm font-bold hover:text-yellow-400 transition-colors">Find Free Funding →</a>
-            </div>
-          </div>
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-gray-900/80 border border-yellow-900/30 rounded-xl">
-            <h3 className="text-white font-bold text-xl mb-2">Want the Full Deal Structure Template?</h3>
-            <p className="text-gray-400 text-sm mb-5">Download the free Equity Carry deal framework — a one-pager explaining how the structure is documented, with governance provisions and step-in rights outlined. No cost, no obligation.</p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="/#checklist"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg text-sm tracking-wide transition-colors"
-              >
-                Get Free Download →
-              </a>
-              <a
-                href="/deal-screening-checklist.pdf"
-                download="Deal-Screening-Checklist-MARSS.pdf"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-yellow-500/40 hover:border-yellow-500 text-yellow-400 hover:text-yellow-300 font-medium rounded-lg text-sm tracking-wide transition-colors"
-              >
-                Direct PDF Download
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-800 flex justify-between items-center">
-            <Link href="/resources" className="text-gray-500 text-sm hover:text-yellow-400 transition-colors">← Back to Resources</Link>
-            <Link href="/resources/ai-tools-2026" className="text-yellow-500 text-sm hover:text-yellow-400 font-medium">Next: AI Tools for 2026 →</Link>
-          </div>
-
+    <article className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+      <div className="mb-10">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-xs font-semibold text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-2.5 py-0.5 rounded-full">Seller Guide</span>
+          <span className="text-gray-500 text-xs">8 min read</span>
         </div>
-      </article>
-      <Footer />
-    </main>
+        <h1 className="text-4xl font-bold text-white mb-4 leading-tight">How Equity Carry Financing Works — A Complete Guide for Business Sellers</h1>
+        <p className="text-gray-400 text-lg leading-relaxed">Most business sales fail at the finish line — not because of valuation, but because of bank contingencies. Equity Carry eliminates that risk. Here is exactly how it works.</p>
+      </div>
+
+      <div className="prose prose-invert prose-yellow max-w-none space-y-10 text-gray-300">
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">The Problem With Traditional Business Sales</h2>
+          <p className="leading-relaxed mb-4">When a buyer depends on a bank loan to acquire your business, you are not really selling to the buyer — you are selling to the bank. The lender controls the timeline, the appraisal, the underwriting criteria, and the final approval. Deals that are fully negotiated and under contract routinely collapse after 60–90 days because:</p>
+          <ul className="space-y-2 text-gray-400">
+            <li className="flex items-start gap-2"><span className="text-yellow-500 mt-1 shrink-0">&#x2022;</span>The appraisal comes in below the negotiated price</li>
+            <li className="flex items-start gap-2"><span className="text-yellow-500 mt-1 shrink-0">&#x2022;</span>The lender changes its underwriting criteria mid-process</li>
+            <li className="flex items-start gap-2"><span className="text-yellow-500 mt-1 shrink-0">&#x2022;</span>The buyer&apos;s credit profile shifts or DSCR comes in short</li>
+            <li className="flex items-start gap-2"><span className="text-yellow-500 mt-1 shrink-0">&#x2022;</span>The bank adds conditions the seller won&apos;t accept</li>
+          </ul>
+          <p className="leading-relaxed mt-4">Sellers who mentally moved on find themselves back at square one — having lost months, potentially lost other buyers, and often having disclosed sensitive financials to a buyer who never closed.</p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">What Is Equity Carry?</h2>
+          <p className="leading-relaxed mb-4">Equity Carry is Marss Real Estate&apos;s flagship acquisition structure. Instead of asking you to discount your price to accommodate bank financing constraints, we close at full or near-full asking price and convert your equity into a <strong className="text-white">secured preferred equity position</strong> inside the acquiring entity.</p>
+          <p className="leading-relaxed">You are not a lender. There is no promissory note. There is no deed of trust. You become an equity partner — with governance rights, performance milestones, and step-in rights — in the same entity that now owns your business or property.</p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">The Capital Stack</h2>
+          <p className="leading-relaxed mb-6">Every Equity Carry transaction is structured across three layers:</p>
+          <div className="space-y-4">
+            <div className="border border-[#1f1f1f] bg-[#0d0d0d] rounded-xl p-6">
+              <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-1">Layer 1 — Senior Debt</div>
+              <h3 className="text-white font-bold text-lg mb-2">Bank Financing (35–45% LTV)</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Marss secures a senior bank loan at a conservative loan-to-value ratio. This provides immediate liquidity at close for both parties and establishes institutional-grade underwriting on the deal. The lender holds the senior secured position.</p>
+            </div>
+            <div className="border border-yellow-900/40 bg-[#0d0900] rounded-xl p-6">
+              <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-1">Layer 2 — Seller Preferred Equity (Flagship)</div>
+              <h3 className="text-white font-bold text-lg mb-2">Your Equity Position</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Your equity converts to a preferred equity position inside the acquiring LLC. You hold governance rights — including approval rights on major asset decisions, performance milestone requirements, and step-in rights that activate within 60 days if Marss fails to perform. You earn passive income from operations and participate in the eventual sale or refinance.</p>
+            </div>
+            <div className="border border-[#1f1f1f] bg-[#0d0d0d] rounded-xl p-6">
+              <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-1">Layer 3 — Buyer Equity</div>
+              <h3 className="text-white font-bold text-lg mb-2">Marss Operating Capital</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">Marss contributes its own capital to fund operational improvements, stabilization, and any deferred capital expenditures. This aligns our incentives: we only earn our return if the asset performs and your equity carries its full value.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">How and When You Get Paid</h2>
+          <p className="leading-relaxed mb-6">Your payoff happens across a defined, documented schedule — not on a vague &quot;future date.&quot; Here is the typical timeline:</p>
+          <div className="space-y-0">
+            {[{phase:"Close",label:"Day 1",desc:"Cash proceeds from senior debt layer delivered at closing table. This covers the agreed cash-at-close component of your price — typically 35–50% of agreed value, funded by the bank."},{phase:"Stabilization",label:"Months 1–24",desc:"Marss executes the value-add or stabilization plan. Preferred equity earns a documented preferred return (typically 6–9% annualized) that accrues during this period. Distributions begin when cash flow supports them — often from month one on stabilized assets."},{phase:"Refinance",label:"Year 2–4",desc:"Marss executes a refinance at the stabilized valuation. Net proceeds from the refinance are used to redeem seller preferred equity at the agreed full price — delivering your remaining balance in a single lump sum."},{phase:"Sale Exit",label:"Alternative Path",desc:"If Marss sells the asset before refinancing, seller preferred equity is redeemed from sale proceeds with full priority over Marss equity. You receive your full balance before Marss captures any equity profit."}].map((item, i) => (
+              <div key={i} className="flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="w-3 h-3 rounded-full bg-yellow-500 mt-1.5 shrink-0" />
+                  {i < 3 && <div className="w-0.5 bg-yellow-500/20 flex-1 mt-1" />}
+                </div>
+                <div className="pb-8">
+                  <div className="text-yellow-400 text-xs font-bold uppercase tracking-wide">{item.phase} &bull; {item.label}</div>
+                  <p className="text-gray-400 text-sm leading-relaxed mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">Seller Protections — Built Into the Operating Agreement</h2>
+          <div className="grid gap-4">
+            {[{t:"Governance Rights",d:"You hold approval rights on major decisions: asset sale, additional debt beyond agreed thresholds, changes to the business operating model, and distributions above the agreed waterfall."},{t:"Step-In Rights",d:"If Marss misses performance milestones or fails to make required preferred distributions within 60 days of due date, your step-in rights activate. You can re-assume operational control without additional cost."},{t:"Priority Waterfall",d:"Your preferred equity position is senior to all Marss equity in both distributions and liquidation. You get paid before Marss captures any profit."},{t:"Full Accounting",d:"Quarterly financial reporting is required under the OA. You receive full visibility into revenue, expenses, debt service, and asset performance."}].map((item, i) => (
+              <div key={i} className="border border-[#1f1f1f] bg-[#0d0d0d] rounded-xl p-5">
+                <h3 className="text-white font-bold mb-1">{item.t}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">Tax Advantage — Installment Sale Treatment</h2>
+          <p className="leading-relaxed text-gray-400">Because your proceeds arrive across multiple tax years (cash at close + accrued preferred return + refinance/sale redemption), the transaction may qualify for installment sale treatment under IRS rules — spreading your capital gains tax liability across the periods in which you actually receive cash. This can meaningfully reduce your effective tax rate versus a single-year lump-sum sale. Consult your CPA for specifics applicable to your situation.</p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">Is Equity Carry Right for You?</h2>
+          <div className="space-y-3">
+            <p className="text-gray-400 leading-relaxed"><strong className="text-white">Best for:</strong> Sellers who want full or near-full asking price, don&apos;t want to accept a forced discount from traditional financing constraints, and are willing to receive a portion of proceeds over a 2–5 year documented schedule.</p>
+            <p className="text-gray-400 leading-relaxed"><strong className="text-white">Not ideal for:</strong> Sellers who need 100% of their proceeds at close and have no flexibility on timeline. In that case, Owner Financing or a Hybrid Capital Stack may be a better fit — and Marss offers both.</p>
+          </div>
+        </section>
+
+        <div className="border border-yellow-900/30 bg-gradient-to-br from-[#0d0900] to-[#0a0a0a] rounded-2xl p-8 mt-10">
+          <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-2">Free Resource</div>
+          <h3 className="text-xl font-bold text-white mb-2">Download the Full Overview PDF</h3>
+          <p className="text-gray-400 text-sm mb-5">Plain-language explanation of the Equity Carry structure, seller protections, capital stack, and payoff timeline — formatted for your attorney or financial advisor to review.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a href="/equity-carry-overview.pdf" download className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg text-sm transition-colors text-center">&darr; Download PDF Overview</a>
+            <Link href="/#contact" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-center">Discuss Your Deal &rarr;</Link>
+          </div>
+        </div>
+      </div>
+    </article>
   );
 }
