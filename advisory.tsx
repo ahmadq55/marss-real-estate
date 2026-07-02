@@ -149,7 +149,7 @@ export function Advisory() {
               <div className="text-2xl lg:text-3xl font-bold text-yellow-400 mb-1">
                 {stat.value}
               </div>
-              <div className="text-xs text-gray-500 tracking-widest uppercase">
+              <div className="text-xs text-gray-400 tracking-widest uppercase">
                 {stat.label}
               </div>
             </div>
@@ -193,7 +193,7 @@ export function Advisory() {
                   <pkg.icon className="h-5 w-5 text-yellow-400" />
                 </div>
                 <h4 className="text-white font-bold text-lg mb-1">{pkg.name}</h4>
-                <p className="text-gray-500 text-xs mb-5">{pkg.tag}</p>
+                <p className="text-gray-400 text-xs mb-5">{pkg.tag}</p>
                 <ul className="space-y-2.5 mb-6">
                   {pkg.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2.5">
@@ -283,13 +283,13 @@ export function Advisory() {
                   <Label className="text-gray-300 text-sm">Full Name *</Label>
                   <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
                     placeholder="John Smith"
-                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Email *</Label>
                   <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
                     placeholder="john@example.com"
-                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
               </div>
 
@@ -298,7 +298,7 @@ export function Advisory() {
                   <Label className="text-gray-300 text-sm">Phone</Label>
                   <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
                     placeholder="(555) 000-0000"
-                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Your Role *</Label>
@@ -358,7 +358,7 @@ export function Advisory() {
                   onChange={(e) => handleChange("message", e.target.value)}
                   placeholder="Describe the deal, asset class, timeline, and what you need."
                   rows={4}
-                  className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50 resize-none" />
+                  className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50 resize-none" />
               </div>
 
               <Button type="submit" disabled={loading}
@@ -367,7 +367,7 @@ export function Advisory() {
                   <><span>Request a Consultation</span><Send className="ml-2 h-4 w-4" /></>
                 )}
               </Button>
-              <p className="text-gray-600 text-xs text-center">
+              <p className="text-gray-400 text-xs text-center">
                 We respond within 48 hours. Your information is never shared.
               </p>
             </form>

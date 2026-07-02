@@ -167,7 +167,7 @@ export function SellerPaths() {
               <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">{path.description}</p>
 
               <div className="mb-4">
-                <div className="text-gray-500 text-[10px] font-bold tracking-widest uppercase mb-2">Best For</div>
+                <div className="text-gray-400 text-[10px] font-bold tracking-widest uppercase mb-2">Best For</div>
                 <ul className="space-y-1.5">
                   {path.best.map((item, j) => (
                     <li key={j} className="flex items-start gap-2">

@@ -67,7 +67,7 @@ export function CaseStudies() {
                 <TrendingUp className="h-3.5 w-3.5" /> {c.structure}
               </div>
               <h3 className="text-white text-xl font-bold mb-1">{c.assetType}</h3>
-              <div className="flex items-center gap-1.5 text-gray-500 text-sm mb-4">
+              <div className="flex items-center gap-1.5 text-gray-400 text-sm mb-4">
                 <MapPin className="h-3.5 w-3.5" /> {c.location}
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">{c.summary}</p>
@@ -75,7 +75,7 @@ export function CaseStudies() {
                 {c.metrics.map((m, j) => (
                   <div key={j} className="bg-[#0b0b0b] px-3 py-3 text-center">
                     <div className="text-yellow-400 text-sm font-bold">{m.value}</div>
-                    <div className="text-gray-600 text-[10px] uppercase tracking-wider mt-0.5">{m.label}</div>
+                    <div className="text-gray-400 text-[10px] uppercase tracking-wider mt-0.5">{m.label}</div>
                   </div>
                 ))}
               </div>
@@ -130,9 +130,9 @@ export function TestimonialsLayout() {
               <Quote className="h-6 w-6 text-yellow-500/50 mb-4" />
               <p className="text-gray-300 text-base leading-relaxed mb-6">{t.quote}</p>
               <div className="text-white font-bold text-sm">{t.name}</div>
-              <div className="text-gray-500 text-xs">{t.role} · {t.location}</div>
+              <div className="text-gray-400 text-xs">{t.role} · {t.location}</div>
               {t.disclosure && (
-                <div className="text-gray-600 text-[11px] mt-2 italic">{t.disclosure}</div>
+                <div className="text-gray-400 text-[11px] mt-2 italic">{t.disclosure}</div>
               )}
             </div>
           ))}

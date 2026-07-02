@@ -56,7 +56,7 @@ export function JvPartners() {
                   <div className="p-1.5 rounded-md bg-yellow-500/10 shrink-0 mt-0.5"><b.icon className="h-3.5 w-3.5 text-yellow-400" /></div>
                   <div>
                     <div className="text-white text-sm font-semibold mb-0.5">{b.title}</div>
-                    <div className="text-gray-500 text-xs leading-relaxed">{b.description}</div>
+                    <div className="text-gray-400 text-xs leading-relaxed">{b.description}</div>
                   </div>
                 </div>
               ))}
@@ -75,7 +75,7 @@ export function JvPartners() {
                   <div className="p-1.5 rounded-md bg-blue-500/10 shrink-0 mt-0.5"><b.icon className="h-3.5 w-3.5 text-blue-400" /></div>
                   <div>
                     <div className="text-white text-sm font-semibold mb-0.5">{b.title}</div>
-                    <div className="text-gray-500 text-xs leading-relaxed">{b.description}</div>
+                    <div className="text-gray-400 text-xs leading-relaxed">{b.description}</div>
                   </div>
                 </div>
               ))}

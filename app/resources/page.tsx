@@ -53,12 +53,12 @@ export default function ResourcesPage() {
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-semibold text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-2.5 py-0.5 rounded-full">{article.tag}</span>
-                    <span className="text-gray-600 text-xs">{article.readTime}</span>
+                    <span className="text-gray-400 text-xs">{article.readTime}</span>
                   </div>
                   <h2 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors mb-2">{article.title}</h2>
                   <p className="text-gray-400 text-sm leading-relaxed">{article.description}</p>
                 </div>
-                <div className="shrink-0 text-gray-600 group-hover:text-yellow-400 transition-colors mt-1">
+                <div className="shrink-0 text-gray-400 group-hover:text-yellow-400 transition-colors mt-1">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 </div>
               </div>

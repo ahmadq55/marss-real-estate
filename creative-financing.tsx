@@ -225,7 +225,7 @@ export function CreativeFinancing() {
                 </ul>
 
                 <div className="mt-auto">
-                  <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-500 mb-2">Deployed For</div>
+                  <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-400 mb-2">Deployed For</div>
                   <div className="flex flex-wrap gap-1.5">
                     {s.deployedFor.map((tag) => (
                       <span key={tag} className="text-[10px] bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 px-2 py-0.5 rounded-full">
@@ -249,7 +249,7 @@ export function CreativeFinancing() {
         >
           <div className="mb-6">
             <h3 className="text-xl font-bold text-white mb-1">Strategy Fit by Asset Class</h3>
-            <p className="text-gray-500 text-sm">Which structure Marss deploys for each acquisition target. ★ = Primary fit.</p>
+            <p className="text-gray-400 text-sm">Which structure Marss deploys for each acquisition target. ★ = Primary fit.</p>
           </div>
           <table className="w-full min-w-[480px] text-sm">
             <thead>
@@ -265,17 +265,17 @@ export function CreativeFinancing() {
                 <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
                   <td className="py-3 pr-4 text-white font-medium">{row.asset}</td>
                   <td className="py-3 px-3 text-center">
-                    {row.ownerFin ? <span className="text-yellow-400">★ Primary</span> : <span className="text-gray-600">—</span>}
+                    {row.ownerFin ? <span className="text-yellow-400">★ Primary</span> : <span className="text-gray-400">—</span>}
                   </td>
                   <td className="py-3 px-3 text-center">
                     {row.equityCarry ? (
                       row.flagship
                         ? <span className="text-yellow-400">★ Flagship</span>
                         : <span className="text-green-400">✓ Available</span>
-                    ) : <span className="text-gray-600">—</span>}
+                    ) : <span className="text-gray-400">—</span>}
                   </td>
                   <td className="py-3 px-3 text-center">
-                    {row.hybrid ? <span className="text-green-400">✓ Available</span> : <span className="text-gray-600">—</span>}
+                    {row.hybrid ? <span className="text-green-400">✓ Available</span> : <span className="text-gray-400">—</span>}
                   </td>
                 </tr>
               ))}
@@ -329,7 +329,7 @@ export function CreativeFinancing() {
                   >
                     <ItemIcon className="w-5 h-5 text-yellow-400 mb-2" />
                     <div className="text-white text-sm font-semibold">{item.label}</div>
-                    <div className="text-gray-500 text-xs mt-0.5">{item.sub}</div>
+                    <div className="text-gray-400 text-xs mt-0.5">{item.sub}</div>
                   </div>
                 );
               })}
@@ -401,7 +401,7 @@ export function CreativeFinancing() {
           >
             Start the Conversation <ArrowRight className="w-4 h-4" />
           </a>
-          <p className="text-gray-600 text-xs mt-4">
+          <p className="text-gray-400 text-xs mt-4">
             *Installment sale treatment subject to IRS regulations. Not an offer to sell securities.
           </p>
         </motion.div>

@@ -12,7 +12,7 @@ export default function AnalyzeBusinessAcquisitionPage() {
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-6">
           <span className="text-xs font-semibold text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-2.5 py-0.5 rounded-full">Underwriting Framework</span>
-          <span className="text-gray-500 text-xs">10 min read</span>
+          <span className="text-gray-400 text-xs">10 min read</span>
         </div>
         <h1 className="text-4xl font-bold text-white mb-4 leading-tight">How to Analyze a Business Acquisition in Under 15 Minutes</h1>
         <p className="text-gray-400 text-lg leading-relaxed">Evaluating 10+ business acquisition opportunities a week demands a system. Here is the first-pass triage framework Marss uses to screen cash-flowing businesses — from CIM receipt to Go/No-Go in 15 minutes.</p>
@@ -89,7 +89,7 @@ export default function AnalyzeBusinessAcquisitionPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-gray-500 text-xs mt-3">Source: BizBuySell transaction data, IBBA Market Pulse, Pepperdine Private Capital Markets Report. Multiples vary by location, operator dependency, transferability, and revenue concentration.</p>
+          <p className="text-gray-400 text-xs mt-3">Source: BizBuySell transaction data, IBBA Market Pulse, Pepperdine Private Capital Markets Report. Multiples vary by location, operator dependency, transferability, and revenue concentration.</p>
         </section>
 
         <section>

@@ -113,7 +113,7 @@ export function Hero() {
               </div>
               <div>
                 <div className="text-white text-sm font-semibold leading-snug mb-0.5 group-hover:text-yellow-200 transition-colors">{path.label}</div>
-                <div className="text-gray-500 text-xs leading-relaxed">{path.sub}</div>
+                <div className="text-gray-400 text-xs leading-relaxed">{path.sub}</div>
               </div>
             </a>
           ))}

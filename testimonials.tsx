@@ -65,11 +65,11 @@ export function Testimonials() {
                 <div className="text-yellow-500 text-xs mt-0.5 font-medium">
                   {t.title} &mdash; {t.company}
                 </div>
-                <div className="text-gray-500 text-xs mt-0.5">{t.location}</div>
+                <div className="text-gray-400 text-xs mt-0.5">{t.location}</div>
                 {t.phone && (
                   <a
                     href={`tel:${t.phone.replace(/\./g, "")}`}
-                    className="inline-flex items-center gap-1.5 mt-2 text-gray-600 hover:text-yellow-400 transition-colors text-xs"
+                    className="inline-flex items-center gap-1.5 mt-2 text-gray-400 hover:text-yellow-400 transition-colors text-xs"
                   >
                     <Phone className="h-3 w-3" />
                     {t.phone}

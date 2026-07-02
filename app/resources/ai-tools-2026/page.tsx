@@ -12,7 +12,7 @@ export default function AITools2026Page() {
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-6">
           <span className="text-xs font-semibold text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-2.5 py-0.5 rounded-full">Tools &amp; Technology</span>
-          <span className="text-gray-500 text-xs">7 min read</span>
+          <span className="text-gray-400 text-xs">7 min read</span>
         </div>
         <h1 className="text-4xl font-bold text-white mb-4 leading-tight">5 AI Tools Every Commercial Real Estate Investor Is Using in 2026</h1>
         <p className="text-gray-400 text-lg leading-relaxed">In 2026, AI tools aren&apos;t just for tech companies. Serious real estate and business acquisition professionals are using AI to screen more deals per week, write tighter LOIs faster, and extract financials from CIMs in minutes — not hours.</p>

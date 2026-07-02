@@ -96,11 +96,11 @@ export function BusinessAcquisition() {
             {businessTypes.map((b, i) => (
               <div key={i} className="bg-[#0f0f0f] border border-[#1f1f1f] hover:border-yellow-900/50 rounded-xl p-4 group transition-all duration-300">
                 <div className="text-white text-sm font-semibold mb-1 group-hover:text-yellow-300 transition-colors">{b.name}</div>
-                <div className="text-gray-500 text-xs leading-relaxed">{b.detail}</div>
+                <div className="text-gray-400 text-xs leading-relaxed">{b.detail}</div>
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-600 text-xs mt-4">All targets require a real estate component (owned real estate or eligible for sale-leaseback). Minimum $500K EBITDA.</p>
+          <p className="text-center text-gray-400 text-xs mt-4">All targets require a real estate component (owned real estate or eligible for sale-leaseback). Minimum $500K EBITDA.</p>
         </motion.div>
 
         {/* Underwriting Process */}
@@ -136,13 +136,13 @@ export function BusinessAcquisition() {
                 <div key={i} className="flex items-center justify-between py-3 border-b border-[#1a1a1a] last:border-0">
                   <div>
                     <div className="text-gray-300 text-sm font-medium">{m.label}</div>
-                    <div className="text-gray-600 text-xs">{m.note}</div>
+                    <div className="text-gray-400 text-xs">{m.note}</div>
                   </div>
                   <div className="text-yellow-400 font-bold text-lg tabular-nums">{m.value}</div>
                 </div>
               ))}
             </div>
-            <p className="text-gray-600 text-xs mt-4 italic">These are our hard gates. Deals below threshold are passed or restructured — not rationalized.</p>
+            <p className="text-gray-400 text-xs mt-4 italic">These are our hard gates. Deals below threshold are passed or restructured — not rationalized.</p>
           </motion.div>
 
           {/* Docs + Red Flags */}

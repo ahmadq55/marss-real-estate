@@ -32,10 +32,10 @@ export default function ResourcesLayout({ children }: { children: React.ReactNod
       <main>{children}</main>
       <footer className="border-t border-[#1a1a1a] py-8 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm">Marss Real Estate &bull; Frisco, TX &bull; <a href="tel:9727796787" className="hover:text-yellow-400 transition-colors">972.779.6787</a></p>
+          <p className="text-gray-400 text-sm">Marss Real Estate &bull; Frisco, TX &bull; <a href="tel:9727796787" className="hover:text-yellow-400 transition-colors">972.779.6787</a></p>
           <div className="flex items-center gap-6">
-            <Link href="/resources" className="text-gray-500 text-sm hover:text-yellow-400 transition-colors">All Resources</Link>
-            <Link href="/" className="text-gray-500 text-sm hover:text-yellow-400 transition-colors">marssrealestate.com</Link>
+            <Link href="/resources" className="text-gray-400 text-sm hover:text-yellow-400 transition-colors">All Resources</Link>
+            <Link href="/" className="text-gray-400 text-sm hover:text-yellow-400 transition-colors">marssrealestate.com</Link>
           </div>
         </div>
       </footer>

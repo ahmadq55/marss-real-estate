@@ -190,7 +190,7 @@ export function BrokerPartner() {
               Broker / Agent Portal
             </div>
             <h3 className="text-3xl font-bold text-white">Submit a Deal for Review</h3>
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-gray-400 text-sm mt-2">
               Your commission is protected from the moment you submit.
             </p>
           </div>
@@ -215,13 +215,13 @@ export function BrokerPartner() {
                   <Label className="text-gray-300 text-sm">Your Full Name *</Label>
                   <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
                     placeholder="Jane Smith"
-                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Brokerage / Firm</Label>
                   <Input value={form.brokerage} onChange={(e) => handleChange("brokerage", e.target.value)}
                     placeholder="ABC Realty Group"
-                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
               </div>
 
@@ -230,13 +230,13 @@ export function BrokerPartner() {
                   <Label className="text-gray-300 text-sm">Email *</Label>
                   <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
                     placeholder="jane@brokerage.com"
-                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Phone *</Label>
                   <Input required value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
                     placeholder="(555) 000-0000"
-                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
               </div>
 
@@ -294,7 +294,7 @@ export function BrokerPartner() {
                   <Label className="text-gray-300 text-sm">Asking Price</Label>
                   <Input value={form.askingPrice} onChange={(e) => handleChange("askingPrice", e.target.value)}
                     placeholder="e.g. $2,400,000"
-                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
               </div>
 
@@ -304,7 +304,7 @@ export function BrokerPartner() {
                   onChange={(e) => handleChange("summary", e.target.value)}
                   placeholder="Describe the asset, location, financials, and what you are looking for from us."
                   rows={4}
-                  className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50 resize-none" />
+                  className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50 resize-none" />
               </div>
 
               <Button type="submit" disabled={loading}
@@ -313,7 +313,7 @@ export function BrokerPartner() {
                   <><span>Submit a Deal</span><Send className="ml-2 h-4 w-4" /></>
                 )}
               </Button>
-              <p className="text-gray-600 text-xs text-center">
+              <p className="text-gray-400 text-xs text-center">
                 Your commission is protected from submission. We never share your information.
               </p>
             </form>

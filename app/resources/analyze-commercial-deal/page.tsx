@@ -12,7 +12,7 @@ export default function AnalyzeCommercialDealPage() {
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-6">
           <span className="text-xs font-semibold text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-2.5 py-0.5 rounded-full">Underwriting Framework</span>
-          <span className="text-gray-500 text-xs">10 min read</span>
+          <span className="text-gray-400 text-xs">10 min read</span>
         </div>
         <h1 className="text-4xl font-bold text-white mb-4 leading-tight">How to Analyze a Multifamily or Commercial Real Estate Deal in Under 15 Minutes</h1>
         <p className="text-gray-400 text-lg leading-relaxed">You can&apos;t start fresh with every OM. You need a first-pass filter that eliminates deals on fundamentals before you invest serious time or capital. Here is the 6-step triage framework Marss uses to screen income-producing properties.</p>
@@ -56,7 +56,7 @@ export default function AnalyzeCommercialDealPage() {
             {item.hardgate && (
               <div className="border-l-2 border-red-500/50 pl-4 mt-4">
                 <div className="text-red-400 text-xs font-bold uppercase tracking-wide mb-1">Hard Gate</div>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.hardgate}</p>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.hardgate}</p>
               </div>
             )}
           </section>

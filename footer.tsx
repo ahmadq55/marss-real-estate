@@ -52,7 +52,7 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-5">
+            <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-5">
               Active acquirer of commercial real estate and essential operating
               businesses across Texas and the Sunbelt, using creative capital
               structures built around verified cash flow.
@@ -65,10 +65,10 @@ export function Footer() {
                 <Mail className="h-3.5 w-3.5" /> support@marssrealestate.com
               </a>
               <div className="flex items-center gap-3 pt-2">
-                <a href="https://www.linkedin.com/in/ahmadqawasmeh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-500 hover:text-yellow-400 transition-colors">
+                <a href="https://www.linkedin.com/in/ahmadqawasmeh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   <Linkedin className="h-4 w-4" />
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61590642727358" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-500 hover:text-yellow-400 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61590642727358" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   <Facebook className="h-4 w-4" />
                 </a>
               </div>
@@ -80,7 +80,7 @@ export function Footer() {
             <div className="text-yellow-500 text-xs font-bold tracking-[0.2em] uppercase mb-4">Company</div>
             <ul className="space-y-2.5">
               {company.map((l) => (
-                <li key={l.label}><a href={l.href} className="text-gray-500 hover:text-gray-200 text-sm transition-colors">{l.label}</a></li>
+                <li key={l.label}><a href={l.href} className="text-gray-400 hover:text-gray-200 text-sm transition-colors">{l.label}</a></li>
               ))}
             </ul>
           </div>
@@ -88,7 +88,7 @@ export function Footer() {
             <div className="text-yellow-500 text-xs font-bold tracking-[0.2em] uppercase mb-4">Who We Serve</div>
             <ul className="space-y-2.5">
               {audiences.map((l) => (
-                <li key={l.label}><a href={l.href} className="text-gray-500 hover:text-gray-200 text-sm transition-colors">{l.label}</a></li>
+                <li key={l.label}><a href={l.href} className="text-gray-400 hover:text-gray-200 text-sm transition-colors">{l.label}</a></li>
               ))}
             </ul>
           </div>
@@ -96,7 +96,7 @@ export function Footer() {
             <div className="text-yellow-500 text-xs font-bold tracking-[0.2em] uppercase mb-4">Resources</div>
             <ul className="space-y-2.5">
               {resources.map((l) => (
-                <li key={l.label}><Link href={l.href} className="text-gray-500 hover:text-gray-200 text-sm transition-colors">{l.label}</Link></li>
+                <li key={l.label}><Link href={l.href} className="text-gray-400 hover:text-gray-200 text-sm transition-colors">{l.label}</Link></li>
               ))}
             </ul>
           </div>
@@ -106,32 +106,32 @@ export function Footer() {
         <div className="section-divider mb-6" />
         <div className="grid sm:grid-cols-2 gap-4 mb-8 text-xs">
           <div className="rounded-lg border border-[#161616] bg-[#0b0b0b] px-4 py-3">
-            <div className="text-gray-600 font-bold tracking-widest uppercase mb-1">Entity</div>
-            <div className="text-gray-500">ARMSS LLC — a subsidiary of Marss LLC</div>
+            <div className="text-gray-400 font-bold tracking-widest uppercase mb-1">Entity</div>
+            <div className="text-gray-400">ARMSS LLC — a subsidiary of Marss LLC</div>
           </div>
           <div className="rounded-lg border border-[#161616] bg-[#0b0b0b] px-4 py-3">
-            <div className="text-gray-600 font-bold tracking-widest uppercase mb-1">Registration / EIN</div>
-            <div className="text-gray-500">Texas Registered Company</div>
+            <div className="text-gray-400 font-bold tracking-widest uppercase mb-1">Registration / EIN</div>
+            <div className="text-gray-400">Texas Registered Company</div>
           </div>
         </div>
 
         {/* Legal */}
         <div className="space-y-3 mb-8">
-          <p className="text-gray-600 text-xs leading-relaxed">
-            <span className="text-gray-500 font-semibold">General information only.</span>{" "}
+          <p className="text-gray-400 text-xs leading-relaxed">
+            <span className="text-gray-400 font-semibold">General information only.</span>{" "}
             The content on this website is provided for general educational purposes and does not
             constitute financial, legal, investment, or tax advice. It is not an offer to sell, or a
             solicitation of an offer to buy, any security. No result, return, or outcome is promised
             or guaranteed. Consult your own attorney, CPA, and financial advisor before making any decision.
           </p>
-          <p className="text-gray-600 text-xs leading-relaxed">
-            <span className="text-gray-500 font-semibold">Not a licensed real estate brokerage.</span>{" "}
+          <p className="text-gray-400 text-xs leading-relaxed">
+            <span className="text-gray-400 font-semibold">Not a licensed real estate brokerage.</span>{" "}
             Marss Real Estate is a private equity and real estate investment group that acquires
             assets for its own account. It does not provide brokerage services or represent buyers
             or sellers as a licensed real estate broker or agent.
           </p>
-          <p className="text-gray-600 text-xs leading-relaxed">
-            <span className="text-gray-500 font-semibold">Equal Opportunity.</span>{" "}
+          <p className="text-gray-400 text-xs leading-relaxed">
+            <span className="text-gray-400 font-semibold">Equal Opportunity.</span>{" "}
             Marss Real Estate supports the Fair Housing Act and equal opportunity. We do not
             discriminate on the basis of race, color, religion, sex, disability, familial status,
             national origin, or any other protected class.
@@ -141,10 +141,10 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="section-divider mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-600 text-xs">
+          <p className="text-gray-400 text-xs">
             © {new Date().getFullYear()} Marss Real Estate. All rights reserved.
           </p>
-          <p className="text-gray-700 text-xs">
+          <p className="text-gray-400 text-xs">
             Frisco, Texas · Sunbelt Markets · Commercial &amp; Business Acquisitions
           </p>
         </div>

@@ -15,7 +15,7 @@ export function AdviceDisclaimer({
 
   if (variant === "inline") {
     return (
-      <p className="text-gray-600 text-xs leading-relaxed italic">{text}</p>
+      <p className="text-gray-400 text-xs leading-relaxed italic">{text}</p>
     );
   }
 

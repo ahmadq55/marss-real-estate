@@ -107,19 +107,19 @@ export function EmailOptin() {
                   <div className="space-y-2">
                     <Label className="text-gray-400 text-xs uppercase tracking-wide">First Name *</Label>
                     <Input required value={name} onChange={(e) => setName(e.target.value)} placeholder="Ahmad"
-                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   <div className="space-y-2">
                     <Label className="text-gray-400 text-xs uppercase tracking-wide">Email *</Label>
                     <Input required type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com"
-                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   {error && <p className="text-red-400 text-xs">{error}</p>}
                   <Button type="submit" disabled={loading}
                     className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold tracking-wide w-full py-5">
                     {loading ? "Sending..." : <><span>Get Free Download</span><ArrowRight className="ml-2 h-4 w-4" /></>}
                   </Button>
-                  <p className="text-gray-600 text-xs">Instant access. No spam. Your information is never shared.</p>
+                  <p className="text-gray-400 text-xs">Instant access. No spam. Your information is never shared.</p>
                 </form>
               )}
             </div>

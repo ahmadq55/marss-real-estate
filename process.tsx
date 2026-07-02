@@ -135,7 +135,7 @@ export function Process() {
                     {step.highlights.map((h, j) => (
                       <li key={j} className="flex items-start gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-yellow-500 mt-1.5 shrink-0" />
-                        <span className="text-gray-500 text-xs">{h}</span>
+                        <span className="text-gray-400 text-xs">{h}</span>
                       </li>
                     ))}
                   </ul>

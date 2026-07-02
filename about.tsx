@@ -98,7 +98,7 @@ export function About() {
                   Connect on LinkedIn
                   <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
-                <span className="text-gray-700 text-sm hidden sm:inline">&bull;</span>
+                <span className="text-gray-400 text-sm hidden sm:inline">&bull;</span>
                 <a
                   href="https://www.facebook.com/people/Marss-Real-Estate/61590642727358/"
                   target="_blank"
@@ -138,7 +138,7 @@ export function About() {
                 Founder &amp; Managing Principal
               </div>
               <div className="text-white text-xl font-bold">Ahmad Qawasmeh</div>
-              <div className="text-gray-500 text-sm mb-4">Frisco, Texas</div>
+              <div className="text-gray-400 text-sm mb-4">Frisco, Texas</div>
               <a
                 href="https://www.linkedin.com/in/ahmadqawasmeh/"
                 target="_blank"

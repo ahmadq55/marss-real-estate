@@ -154,7 +154,7 @@ export function Contact() {
                 {["Offering Memoranda (OM)","T-12 / P&L Financials","Rent Roll","3-Year Tax Returns","EBITDA Summary","Franchise Agreement","Equipment List","Appraisal or BOV"].map((d) => (
                   <div key={d} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-yellow-500/60" />
-                    <span className="text-gray-500 text-xs">{d}</span>
+                    <span className="text-gray-400 text-xs">{d}</span>
                   </div>
                 ))}
               </div>
@@ -186,12 +186,12 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Full Name *</Label>
                     <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)} placeholder="John Smith"
-                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Email *</Label>
                     <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="john@example.com"
-                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                 </div>
 
@@ -199,7 +199,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Phone</Label>
                     <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} placeholder="(972) 000-0000"
-                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Your Role *</Label>
@@ -264,7 +264,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Property / Business Location</Label>
                     <Input value={form.location} onChange={(e) => handleChange("location", e.target.value)} placeholder="City, State"
-                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Annual Revenue / EBITDA</Label>
@@ -307,7 +307,7 @@ export function Contact() {
                   <Label className="text-gray-300 text-sm">Tell Us About the Deal *</Label>
                   <Textarea required value={form.message} onChange={(e) => handleChange("message", e.target.value)}
                     placeholder="Asset address, current EBITDA / NOI, asking price, timeline, what you need from the buyer..."
-                    rows={4} className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50 resize-none" />
+                    rows={4} className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50 resize-none" />
                 </div>
 
                 {error && <p className="text-red-400 text-sm">{error}</p>}
@@ -316,7 +316,7 @@ export function Contact() {
                   className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-6 text-base tracking-wide">
                   {loading ? "Submitting..." : <><span>Submit a Deal</span><Send className="ml-2 h-4 w-4" /></>}
                 </Button>
-                <p className="text-gray-600 text-xs text-center">By submitting, you agree to be contacted by Marss Real Estate. We never share your information.</p>
+                <p className="text-gray-400 text-xs text-center">By submitting, you agree to be contacted by Marss Real Estate. We never share your information.</p>
                 <AdviceDisclaimer variant="inline" />
               </form>
             )}

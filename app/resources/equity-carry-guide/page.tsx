@@ -13,10 +13,14 @@ export default function EquityCarryGuidePage() {
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-6">
           <span className="text-xs font-semibold text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-2.5 py-0.5 rounded-full">Seller Guide</span>
-          <span className="text-gray-500 text-xs">8 min read</span>
+          <span className="text-gray-400 text-xs">8 min read</span>
         </div>
         <h1 className="text-4xl font-bold text-white mb-4 leading-tight">How Equity Carry Financing Works — A Complete Guide for Business Sellers</h1>
         <p className="text-gray-400 text-lg leading-relaxed">Most business sales fail at the finish line — not because of valuation, but because of third-party financing contingencies. Equity Carry is designed to reduce that risk. Here is exactly how it works.</p>
+        <div className="mt-6 rounded-xl border border-yellow-900/40 bg-[#0d0900] px-5 py-4">
+          <div className="text-yellow-500 text-[11px] font-bold tracking-[0.2em] uppercase mb-1.5">Important Notice</div>
+          <p className="text-gray-400 text-xs leading-relaxed">This guide is provided for general educational purposes only and does not constitute financial, investment, legal, or tax advice. It is not an offer to sell, or a solicitation of an offer to buy, any security or investment. Any structure described is illustrative; actual terms are subject to due diligence and definitive written agreements. No result or return is promised or guaranteed. Consult your own attorney, CPA, and financial advisor before acting. See the full disclaimer below.</p>
+        </div>
       </div>
 
       <div className="prose prose-invert prose-yellow max-w-none space-y-10 text-gray-300">
