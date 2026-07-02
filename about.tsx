@@ -115,6 +115,73 @@ export function About() {
         </motion.div>
         <div className="section-divider" />
       </div>
-    </section>
+    
+        {/* Founder bio */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-[#0c0900] via-[#0a0a0a] to-[#060606] p-8 lg:p-10"
+        >
+          <div className="grid lg:grid-cols-3 gap-8 items-start">
+            <div className="flex flex-col items-start">
+              <img
+                src="https://galaxy-prod.tlcdn.com/view/user_372EAGt89yD821sKcMySYfKrZna/bde94d41e1ab40ffa00d7e9c10ac56d9.png"
+                alt="Ahmad Qawasmeh"
+                className="h-28 w-28 object-cover object-top rounded-xl border border-yellow-400/30 grayscale mb-4"
+              />
+              <div className="text-yellow-400 text-[11px] font-bold tracking-[0.25em] uppercase mb-1">
+                Founder &amp; Managing Principal
+              </div>
+              <div className="text-white text-xl font-bold">Ahmad Qawasmeh</div>
+              <div className="text-gray-500 text-sm mb-4">Frisco, Texas</div>
+              <a
+                href="https://www.linkedin.com/in/ahmadqawasmeh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors"
+              >
+                <Linkedin className="h-4 w-4" /> Connect on LinkedIn <ExternalLink className="h-3 w-3" />
+              </a>
+            </div>
+
+            <div className="lg:col-span-2 space-y-4">
+              <div className="text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase">
+                Meet the Founder
+              </div>
+              <p className="text-gray-300 text-base leading-relaxed">
+                Ahmad Qawasmeh is the Founder and Managing Principal of Marss Real Estate, a private
+                equity and real estate investment group based in Frisco, Texas. With{" "}
+                <span className="text-yellow-400">[X years]</span> in real estate and business
+                acquisitions, he has <span className="text-yellow-400">[personally evaluated /
+                underwritten [X]+ deals]</span> across multi-family, commercial, and essential
+                operating businesses.
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Ahmad personally underwrites every acquisition to institutional Investment Committee
+                standards — analyzing T-12 financials, rent rolls, and bank statements, and
+                stress-testing each opportunity at −10% and −20% revenue before committing. His focus
+                is on real estate–anchored assets and cash-flowing operating businesses with a minimum
+                of roughly <span className="text-yellow-400">$500K EBITDA</span>.
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                <span className="text-gray-300 font-semibold">Background:</span>{" "}
+                <span className="text-yellow-400">[Prior experience / track record — e.g. former
+                role, sectors, notable transactions: ____________]</span>.{" "}
+                <span className="text-gray-300 font-semibold">Education &amp; credentials:</span>{" "}
+                <span className="text-yellow-400">[Degrees, designations, memberships: ____________]</span>.
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                <span className="text-gray-300 font-semibold">Mission:</span> To give sellers a
+                full-value, structured exit and to give brokers and capital partners aligned,
+                transparent access to institutional-quality deals —{" "}
+                <span className="text-yellow-400">[refine mission statement in your words: ____________]</span>.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+      </section>
   );
 }

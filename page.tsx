@@ -13,6 +13,7 @@ const Advisory = dynamic(() => import("@/advisory").then((m) => m.Advisory));
 const BrokerPartner = dynamic(() => import("@/broker-partner").then((m) => m.BrokerPartner));
 const JvPartners = dynamic(() => import("@/jv-partners").then((m) => m.JvPartners));
 const Testimonials = dynamic(() => import("@/testimonials").then((m) => m.Testimonials));
+const Faq = dynamic(() => import("@/faq").then((m) => m.Faq));
 const Contact = dynamic(() => import("@/contact").then((m) => m.Contact));
 const EmailOptin = dynamic(() => import("@/email-optin").then((m) => m.EmailOptin));
 const Footer = dynamic(() => import("@/footer").then((m) => m.Footer));
@@ -33,6 +34,7 @@ export default function Home() {
       <BrokerPartner />
       <JvPartners />
       <Testimonials />
+      <Faq />
       <Contact />
       <EmailOptin />
       <Footer />

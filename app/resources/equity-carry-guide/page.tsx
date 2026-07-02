@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdviceDisclaimer } from "@/disclaimer";
 
 export const metadata: Metadata = {
   title: "How Equity Carry Financing Works | Marss Real Estate",
@@ -44,7 +45,7 @@ export default function EquityCarryGuidePage() {
           <div className="space-y-4">
             <div className="border border-[#1f1f1f] bg-[#0d0d0d] rounded-xl p-6">
               <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-1">Layer 1 — Senior Debt</div>
-              <h3 className="text-white font-bold text-lg mb-2">Bank Financing (35–45% LTV)</h3>
+              <h3 className="text-white font-bold text-lg mb-2">Senior Financing Layer</h3>
               <p className="text-gray-400 text-sm leading-relaxed">Marss secures a senior bank loan at a conservative loan-to-value ratio. This provides immediate liquidity at close for both parties and establishes institutional-grade underwriting on the deal. The lender holds the senior secured position.</p>
             </div>
             <div className="border border-yellow-900/40 bg-[#0d0900] rounded-xl p-6">
@@ -113,6 +114,7 @@ export default function EquityCarryGuidePage() {
             <Link href="/#contact" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-center">Discuss Your Deal &rarr;</Link>
           </div>
         </div>
+      <AdviceDisclaimer />
       </div>
     </article>
   );

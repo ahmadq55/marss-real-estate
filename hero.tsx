@@ -79,7 +79,7 @@ export function Hero() {
           Your business or property is worth full value. We don&apos;t force
           discounts &#8212; we engineer{" "}
           <span className="text-yellow-400 font-medium">acquisition structures</span>{" "}
-          that deliver full value to sellers, commission certainty to brokers,
+          that deliver full value to sellers, commission protection for brokers,
           and deal-level access to capital partners.{" "}
           <span className="text-white font-medium">We have a path for you.</span>
         </motion.p>

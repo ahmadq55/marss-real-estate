@@ -43,10 +43,10 @@ const paths = [
     title: "All-Cash / Traditional",
     tagline: "Clean, fast, no conditions.",
     description:
-      "When the numbers support a conventional close — senior debt, clean title, clear income — we move quickly with no financing contingency, no appraisal risk, and an LOI within 48 hours of receiving the package.",
+      "When the numbers support a conventional close — senior debt, clean title, clear income — we move quickly and can issue an LOI within 48 hours of receiving the package.",
     best: [
       "Stabilized assets with strong T-12",
-      "Sellers who need certainty of close",
+      "Sellers who need a predictable, dependable close",
       "Time-sensitive situations",
       "Estates, 1031 exchanges, partnership unwinds",
     ],
@@ -66,7 +66,7 @@ const paths = [
     best: [
       "Sellers seeking ongoing income",
       "Tax-deferred installment sale strategy",
-      "Deals where bank financing is limited",
+      "Deals where conventional financing is limited",
       "Sellers comfortable holding paper short-term",
     ],
     border: "border-[#1f1f1f] hover:border-blue-800/40",

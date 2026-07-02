@@ -8,6 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.marssrealestate.com"),
   title: "Marss Real Estate | Commercial Acquisitions & Creative Financing",
   description:
     "Marss Real Estate acquires commercial real estate, operating businesses, and real estate–anchored assets across Texas using creative capital structures including Equity Carry, Owner Financing, and Hybrid Capital Stack.",
@@ -23,6 +24,36 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Marss Real Estate",
+              description:
+                "Private equity and real estate investment group acquiring commercial real estate and essential operating businesses across Texas and the Sunbelt.",
+              url: "https://www.marssrealestate.com",
+              telephone: "+1-972-779-6787",
+              email: "support@marssrealestate.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Frisco",
+                addressRegion: "TX",
+                addressCountry: "US",
+              },
+              areaServed: [
+                { "@type": "State", name: "Texas" },
+                { "@type": "Place", name: "Sunbelt United States" },
+              ],
+              sameAs: [
+                "https://www.linkedin.com/in/ahmadqawasmeh/",
+                "https://www.facebook.com/1082373624969525",
+              ],
+              founder: { "@type": "Person", name: "Ahmad Qawasmeh" },
+            }),
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

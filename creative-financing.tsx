@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { AdviceDisclaimer } from "@/disclaimer";
 import {
   DollarSign,
   Shield,
@@ -29,11 +30,11 @@ const structures = [
     title: "Owner / Seller Financing",
     label: "Seller Acts as Lender",
     description:
-      "Marss acquires the asset using seller-extended financing — eliminating bank dependency and creating a recurring monthly income stream for the seller. Negotiated rate, term, and payment schedule. No institutional timeline. The seller's cash flow starts immediately from day one of the deal, funded directly by the asset's own operating income.",
+      "Marss acquires the asset using seller-extended financing — structured around the asset’s own operating cash flow and creating a recurring monthly income stream for the seller. Negotiated rate, term, and payment schedule. A streamlined, predictable path to closing. The seller's cash flow starts immediately from day one of the deal, funded directly by the asset's own operating income.",
     benefits: [
       "Monthly income without management obligations",
       "Negotiated rate, term, and payment schedule",
-      "Faster close — deal structure bypasses institutional approval timelines",
+      "A faster, more predictable path to closing",
       "Expanded buyer pool vs. traditional listing",
       "Ideal for free-and-clear assets with strong cash flow",
     ],
@@ -45,7 +46,7 @@ const structures = [
     title: "Equity Carry Structure",
     label: "Marss Flagship — Secured Preferred Equity",
     description:
-      "Marss brings a structured capital position to the closing table — delivering closing certainty without subjecting the seller to traditional buyer financing timelines or contingencies. The seller converts their equity into a secured preferred equity position within the deal entity: earning passive income, deferring capital gains through installment sale treatment, and retaining governance protections and step-in rights. The highest-value structure for commercial and business acquisitions.",
+      "Marss brings a structured capital position to the closing table — designed for a smoother, more predictable closing process without the delays and contingencies of a conventional sale. The seller converts their equity into a secured preferred equity position within the deal entity: earning passive income, deferring capital gains through installment sale treatment, and retaining governance protections and step-in rights. The highest-value structure for commercial and business acquisitions.",
     benefits: [
       "Full or near-full asking price at close",
       "Secured preferred equity — not a subordinated note",
@@ -94,7 +95,7 @@ const audienceBenefits = [
       "Convert equity to passive income stream",
       "Capital gains tax deferral through structured payments",
       "Governance protections and step-in rights retained",
-      "More qualified buyers — no financing contingency risk",
+      "More qualified buyers — fewer deal-breaking contingencies",
     ],
   },
   {
@@ -102,8 +103,8 @@ const audienceBenefits = [
     audience: "Brokers & Agents",
     points: [
       "Commission fully protected — paid at close",
-      "Higher certainty of close vs. bank-dependent deals",
-      "No appraisal risk collapsing the transaction",
+      "A more predictable path to close",
+      "Fewer third-party contingencies that can derail a deal",
       "Faster timeline from offer to closing table",
       "Institutional documentation — no surprises",
       "Deal structure that brokers can confidently present",
@@ -307,7 +308,7 @@ export function CreativeFinancing() {
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Sellers who work with Marss don’t have to choose between price
-                and certainty. Our structures are engineered to deliver both —
+                and a predictable process. Our structures are built to support both —
                 full or near-full asking price at the closing table, passive
                 income ongoing, and governance protections that activate the
                 moment performance milestones aren’t met.
@@ -405,6 +406,7 @@ export function CreativeFinancing() {
           </p>
         </motion.div>
       </div>
-    </section>
+            <AdviceDisclaimer />
+      </section>
   );
 }

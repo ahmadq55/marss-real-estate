@@ -38,7 +38,7 @@ const features = [
     icon: Wrench,
     title: "We Close the Hard Deals",
     description:
-      "Bank financing fell through? Seller needs a creative structure? Bring us the deals that didn't close elsewhere — our Equity Carry approach works where traditional finance fails.",
+      "Conventional financing fell through? Seller needs a creative structure? Bring us the deals that didn't close elsewhere — our Equity Carry approach works where traditional finance fails.",
   },
 ];
 

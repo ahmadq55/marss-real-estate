@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/#advisory", label: "Advisory" },
   { href: "/#strategy", label: "Our Approach" },
   { href: "/#buy-box", label: "Buy Box" },
+  { href: "/#faq", label: "FAQ" },
   { href: "/#contact", label: "Contact" },
 ];
 

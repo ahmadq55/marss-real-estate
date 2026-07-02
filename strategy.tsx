@@ -26,7 +26,7 @@ const strategies = [
     badge: "Direct Income",
     featured: false,
     description:
-      "The seller extends structured financing directly to Marss — converting a lump-sum exit into a recurring monthly income stream. Negotiated rate, term, and schedule. No bank dependency. Preferred where sellers own assets free-and-clear or with minimal existing debt.",
+      "The seller extends structured financing directly to Marss — converting a lump-sum exit into a recurring monthly income stream. Negotiated rate, term, and schedule. A streamlined, predictable process. Preferred where sellers own assets free-and-clear or with minimal existing debt.",
     bestFor: ["Free-and-clear assets", "Short-term rentals & pad splits", "Sellers prioritizing monthly income"],
   },
   {

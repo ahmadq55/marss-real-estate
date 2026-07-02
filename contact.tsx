@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { AdviceDisclaimer } from "@/disclaimer";
 import {
   Select,
   SelectContent,
@@ -23,6 +24,9 @@ interface FormData {
   role: string;
   assetType: string;
   dealSize: string;
+  location: string;
+  revenueRange: string;
+  timeline: string;
   message: string;
 }
 
@@ -34,6 +38,9 @@ export function Contact() {
     role: "",
     assetType: "",
     dealSize: "",
+    location: "",
+    revenueRange: "",
+    timeline: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -104,7 +111,7 @@ export function Contact() {
                 className="h-16 w-16 object-contain rounded-lg mb-4"
               />
               <h3 className="text-white text-xl font-bold mb-1">Marss Real Estate</h3>
-              <p className="text-yellow-500 text-sm font-medium mb-3">Serious Capital. Creative Structures. Deals That Close.</p>
+              <p className="text-yellow-500 text-sm font-medium mb-3">Serious Capital. Creative Structures. Deals Built to Close.</p>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Active acquirers of commercial real estate and essential operating businesses across the Sunbelt.
                 If you have a property or business that fits our criteria, let&apos;s talk.
@@ -253,6 +260,49 @@ export function Contact() {
                   </div>
                 </div>
 
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="space-y-2">
+                    <Label className="text-gray-300 text-sm">Property / Business Location</Label>
+                    <Input value={form.location} onChange={(e) => handleChange("location", e.target.value)} placeholder="City, State"
+                      className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-600 focus:border-yellow-500/50" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-gray-300 text-sm">Annual Revenue / EBITDA</Label>
+                    <Select onValueChange={(v) => handleChange("revenueRange", v)}>
+                      <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                        <SelectValue placeholder="Select range" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
+                        <SelectItem value="under-250k">Under $250K</SelectItem>
+                        <SelectItem value="250k-500k">$250K – $500K</SelectItem>
+                        <SelectItem value="500k-1m">$500K – $1M</SelectItem>
+                        <SelectItem value="1m-3m">$1M – $3M</SelectItem>
+                        <SelectItem value="3m-plus">$3M+</SelectItem>
+                        <SelectItem value="na">Not sure / N/A</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="space-y-2">
+                    <Label className="text-gray-300 text-sm">Desired Timeline</Label>
+                    <Select onValueChange={(v) => handleChange("timeline", v)}>
+                      <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                        <SelectValue placeholder="Select timeline" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
+                        <SelectItem value="asap">As soon as possible</SelectItem>
+                        <SelectItem value="30-days">Within 30 days</SelectItem>
+                        <SelectItem value="60-90-days">60 – 90 days</SelectItem>
+                        <SelectItem value="3-6-months">3 – 6 months</SelectItem>
+                        <SelectItem value="exploring">Just exploring options</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="hidden sm:block" />
+                </div>
+
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Tell Us About the Deal *</Label>
                   <Textarea required value={form.message} onChange={(e) => handleChange("message", e.target.value)}
@@ -264,9 +314,10 @@ export function Contact() {
 
                 <Button type="submit" disabled={loading}
                   className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-6 text-base tracking-wide">
-                  {loading ? "Submitting..." : <><span>Submit Inquiry</span><Send className="ml-2 h-4 w-4" /></>}
+                  {loading ? "Submitting..." : <><span>Submit a Deal</span><Send className="ml-2 h-4 w-4" /></>}
                 </Button>
                 <p className="text-gray-600 text-xs text-center">By submitting, you agree to be contacted by Marss Real Estate. We never share your information.</p>
+                <AdviceDisclaimer variant="inline" />
               </form>
             )}
           </motion.div>
