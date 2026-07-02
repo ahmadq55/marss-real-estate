@@ -49,7 +49,7 @@ export default function RootLayout({
               ],
               sameAs: [
                 "https://www.linkedin.com/in/ahmadqawasmeh/",
-                "https://www.facebook.com/profile.php?id=61590642727358",
+                "https://www.facebook.com/1082373624969525",
               ],
               founder: { "@type": "Person", name: "Ahmad Qawasmeh" },
             }),

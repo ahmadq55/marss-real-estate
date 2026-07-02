@@ -1,27 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote, Phone } from "lucide-react";
+import { ShieldCheck, Clock, Layers, Building2, MapPin, Handshake } from "lucide-react";
 
-const testimonials = [
+// Neutral, factual credibility points about how Marss operates.
+// No quotes and no third-party endorsements — those will be added only when
+// real, attributable, consented testimonials are available (FTC-compliant).
+const points = [
   {
-    quote:
-      "Marss moved faster than any buyer I’ve worked with. LOI was in my inbox within 48 hours, my commission was never in question, and the deal closed on structure. I send them every deal that fits their box.",
-    name: "Jonathan Filinto",
-    title: "Broker",
-    company: "Metro Brokers Of Oklahoma — Einstein Group LLC",
-    location: "Oklahoma City, OK",
-    phone: "405.406.1126",
-    role: "broker",
+    icon: ShieldCheck,
+    title: "Principal Buyer — Not a Wholesaler",
+    body: "We acquire for our own account and close on the structures we present. No assignment fees, no daisy chains.",
   },
   {
-    quote:
-      "The Equity Carry structure was explained clearly from day one. No pressure, no discount demands, and the milestone-based reporting kept me informed throughout. Exactly what was promised.",
-    name: "Mark Fontana",
-    title: "Owner",
-    company: "Car Wash",
-    location: "Denton, TX",
-    role: "seller",
+    icon: Building2,
+    title: "Institutional Underwriting",
+    body: "Every opportunity is underwritten in-house to Investment Committee standards — real T-12s, rent rolls, and financials, stress-tested before we commit.",
+  },
+  {
+    icon: Clock,
+    title: "48-Hour Response",
+    body: "Qualified deal submissions receive a response within 48 hours, with an LOI in days on opportunities that fit our criteria.",
+  },
+  {
+    icon: Layers,
+    title: "Structures Selected Per Deal",
+    body: "Equity Carry, Owner Financing, and Hybrid Capital Stacks — chosen for the asset, the seller's goals, and verified cash flow.",
+  },
+  {
+    icon: MapPin,
+    title: "Texas & the Sunbelt",
+    body: "Active in commercial real estate and essential operating businesses across Texas and the broader Sunbelt.",
+  },
+  {
+    icon: Handshake,
+    title: "Built for Repeat Relationships",
+    body: "Commission protection for brokers and aligned outcomes for sellers — we measure success by the partners who come back.",
   },
 ];
 
@@ -37,45 +51,33 @@ export function Testimonials() {
           className="text-center mb-16"
         >
           <div className="inline-block text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4">
-            What Partners Say
+            Why Work With Marss
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Built on Relationships.{" "}
-            <span className="gold-gradient">Proven on Deals.</span>
+            <span className="gold-gradient">Grounded in Discipline.</span>
           </h2>
+          <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
+            How we operate — the standards sellers, brokers, and capital partners
+            can count on from first call to close.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {testimonials.map((t, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {points.map((p, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-[#0f0f0f] border border-[#1f1f1f] rounded-xl p-8"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="bg-[#0f0f0f] border border-[#1f1f1f] hover:border-yellow-900/50 rounded-xl p-7 transition-colors duration-300 group"
             >
-              <div className="border-t-[3px] border-yellow-500/60 -mt-8 mb-7" />
-              <Quote className="h-6 w-6 text-yellow-500/40 mb-5" />
-              <p className="text-gray-300 text-base leading-relaxed mb-8 italic">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div className="border-t border-[#1f1f1f] pt-5">
-                <div className="font-bold text-sm text-white">{t.name}</div>
-                <div className="text-yellow-500 text-xs mt-0.5 font-medium">
-                  {t.title} &mdash; {t.company}
-                </div>
-                <div className="text-gray-400 text-xs mt-0.5">{t.location}</div>
-                {t.phone && (
-                  <a
-                    href={`tel:${t.phone.replace(/\./g, "")}`}
-                    className="inline-flex items-center gap-1.5 mt-2 text-gray-400 hover:text-yellow-400 transition-colors text-xs"
-                  >
-                    <Phone className="h-3 w-3" />
-                    {t.phone}
-                  </a>
-                )}
+              <div className="inline-flex items-center justify-center w-11 h-11 rounded-lg bg-yellow-500/10 border border-yellow-500/20 mb-4 group-hover:bg-yellow-500/15 transition-colors">
+                <p.icon className="h-5 w-5 text-yellow-400" />
               </div>
+              <h3 className="text-white font-bold mb-2">{p.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{p.body}</p>
             </motion.div>
           ))}
         </div>

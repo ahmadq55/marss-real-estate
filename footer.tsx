@@ -68,7 +68,7 @@ export function Footer() {
                 <a href="https://www.linkedin.com/in/ahmadqawasmeh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   <Linkedin className="h-4 w-4" />
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61590642727358" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <a href="https://www.facebook.com/1082373624969525" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   <Facebook className="h-4 w-4" />
                 </a>
               </div>
