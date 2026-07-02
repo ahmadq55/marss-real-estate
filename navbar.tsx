@@ -66,7 +66,7 @@ export function Navbar() {
               <Button size="sm" className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold tracking-wide px-5">Submit a Deal</Button>
             </Link>
           </div>
-          <button className="lg:hidden text-gray-300 hover:text-white transition-colors" onClick={() => setIsOpen(!isOpen)}>
+          <button aria-label="Toggle navigation menu" className="lg:hidden text-gray-300 hover:text-white transition-colors" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>

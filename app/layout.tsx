@@ -9,6 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.marssrealestate.com"),
+  icons: { icon: "https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg" },
   title: "Marss Real Estate | Commercial Acquisitions & Creative Financing",
   description:
     "Marss Real Estate acquires commercial real estate, operating businesses, and real estate–anchored assets across Texas using creative capital structures including Equity Carry, Owner Financing, and Hybrid Capital Stack.",
@@ -48,7 +49,7 @@ export default function RootLayout({
               ],
               sameAs: [
                 "https://www.linkedin.com/in/ahmadqawasmeh/",
-                "https://www.facebook.com/1082373624969525",
+                "https://www.facebook.com/profile.php?id=61590642727358",
               ],
               founder: { "@type": "Person", name: "Ahmad Qawasmeh" },
             }),

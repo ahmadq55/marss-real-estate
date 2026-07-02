@@ -68,7 +68,7 @@ export function Footer() {
                 <a href="https://www.linkedin.com/in/ahmadqawasmeh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-500 hover:text-yellow-400 transition-colors">
                   <Linkedin className="h-4 w-4" />
                 </a>
-                <a href="https://www.facebook.com/1082373624969525" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-500 hover:text-yellow-400 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61590642727358" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-500 hover:text-yellow-400 transition-colors">
                   <Facebook className="h-4 w-4" />
                 </a>
               </div>
@@ -104,18 +104,14 @@ export function Footer() {
 
         {/* Credibility / registration block — populate placeholders when available */}
         <div className="section-divider mb-6" />
-        <div className="grid sm:grid-cols-3 gap-4 mb-8 text-xs">
+        <div className="grid sm:grid-cols-2 gap-4 mb-8 text-xs">
           <div className="rounded-lg border border-[#161616] bg-[#0b0b0b] px-4 py-3">
             <div className="text-gray-600 font-bold tracking-widest uppercase mb-1">Entity</div>
-            <div className="text-gray-500">[LLC / Business Registration: ____________]</div>
+            <div className="text-gray-500">ARMSS LLC — a subsidiary of Marss LLC</div>
           </div>
           <div className="rounded-lg border border-[#161616] bg-[#0b0b0b] px-4 py-3">
             <div className="text-gray-600 font-bold tracking-widest uppercase mb-1">Registration / EIN</div>
-            <div className="text-gray-500">[State &amp; Registration No.: ____________]</div>
-          </div>
-          <div className="rounded-lg border border-[#161616] bg-[#0b0b0b] px-4 py-3">
-            <div className="text-gray-600 font-bold tracking-widest uppercase mb-1">Certifications</div>
-            <div className="text-gray-500">[Certifications / Memberships: ____________]</div>
+            <div className="text-gray-500">Texas Registered Company</div>
           </div>
         </div>
 

@@ -43,14 +43,13 @@ export function Hero() {
           backgroundSize: "60px 60px",
         }}
       />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[800px] h-[800px] rounded-full bg-yellow-600/5 blur-[120px] pointer-events-none" />
-      </div>
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(circle at 50% 38%, rgba(202,168,76,0.07), transparent 55%)" }}
+      />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={false}
           className="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 rounded-full px-4 py-1.5 mb-8"
         >
           <Shield className="h-3.5 w-3.5 text-yellow-400" />
@@ -59,9 +58,7 @@ export function Hero() {
           </span>
         </motion.div>
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          initial={false}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
         >
           Serious Capital.{" "}
@@ -71,9 +68,7 @@ export function Hero() {
           <span className="gold-gradient">Delivered.</span>
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={false}
           className="max-w-3xl mx-auto text-lg text-gray-400 leading-relaxed mb-10"
         >
           Your business or property is worth full value. We don&apos;t force
