@@ -244,7 +244,7 @@ export function BrokerPartner() {
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Representing *</Label>
                   <Select onValueChange={(v) => handleChange("representing", v)} required>
-                    <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger aria-label="Select" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -257,7 +257,7 @@ export function BrokerPartner() {
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Asset Type *</Label>
                   <Select onValueChange={(v) => handleChange("assetType", v)} required>
-                    <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger aria-label="Asset type" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Asset type" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -278,7 +278,7 @@ export function BrokerPartner() {
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Approximate Deal Size</Label>
                   <Select onValueChange={(v) => handleChange("dealSize", v)}>
-                    <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger aria-label="Deal size" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Deal size" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">

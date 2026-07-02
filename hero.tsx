@@ -127,7 +127,7 @@ export function Hero() {
           {stats.map((stat, i) => (
             <div key={i} className="bg-[#0f0f0f] px-6 py-6 text-center group hover:bg-[#141414] transition-colors">
               <div className="text-2xl lg:text-3xl font-bold text-yellow-400 mb-1">{stat.value}</div>
-              <div className="text-xs text-gray-500 tracking-widest uppercase">{stat.label}</div>
+              <div className="text-xs text-gray-400 tracking-widest uppercase">{stat.label}</div>
             </div>
           ))}
         </motion.div>

@@ -204,7 +204,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Your Role *</Label>
                     <Select onValueChange={(v) => handleChange("role", v)} required>
-                      <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger aria-label="Select role" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Select role" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -224,7 +224,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Asset / Business Type</Label>
                     <Select onValueChange={(v) => handleChange("assetType", v)}>
-                      <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger aria-label="Select type" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Select type" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -246,7 +246,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Deal Size (Approx.)</Label>
                     <Select onValueChange={(v) => handleChange("dealSize", v)}>
-                      <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger aria-label="Deal size" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Deal size" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -269,7 +269,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Annual Revenue / EBITDA</Label>
                     <Select onValueChange={(v) => handleChange("revenueRange", v)}>
-                      <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger aria-label="Select range" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Select range" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -288,7 +288,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label className="text-gray-300 text-sm">Desired Timeline</Label>
                     <Select onValueChange={(v) => handleChange("timeline", v)}>
-                      <SelectTrigger className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger aria-label="Select timeline" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Select timeline" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
