@@ -81,7 +81,8 @@ export function About() {
             <div className="flex-1">
               <div className="text-white font-bold text-lg tracking-widest mb-0.5">MARSS REAL ESTATE</div>
               <p className="text-yellow-500 text-sm mb-3">Ahmad Qawasmeh &mdash; Founder &amp; Managing Principal</p>
-              <p className="text-gray-300 text-sm leading-relaxed mb-5 max-w-2xl">This platform exists to connect Marss Real Estate with the people who move deals: property and business sellers seeking a credible buyer, brokers and agents who want a repeat partner that closes, and capital partners who want deal-level investment access.</p>
+              <p className="text-gray-300 text-sm leading-relaxed mb-3 max-w-2xl">Ahmad Qawasmeh spent 30 years as an executive with international IT corporations before turning to real estate investing in 2018 &mdash; building a portfolio across land, single-family, and multi-family real estate, and now extending into operating businesses backed by real estate. He personally underwrites every acquisition to institutional Investment Committee standards.</p>
+              <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-2xl">This platform connects Marss Real Estate with the people who move deals: property and business sellers seeking a credible buyer, brokers and agents who want a repeat partner that closes, and capital partners who want deal-level investment access.</p>
               <div className="flex flex-wrap gap-2 mb-5">
                 {["Property Sellers", "Business Sellers", "Brokers & Agents", "Capital Partners", "JV Investors"].map((a) => (
                   <span key={a} className="text-xs font-medium text-yellow-300/90 bg-yellow-500/10 border border-yellow-500/20 rounded-full px-3 py-1">{a}</span>
@@ -115,69 +116,6 @@ export function About() {
         </motion.div>
         <div className="section-divider" />
       </div>
-    
-        {/* Founder bio */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-[#0c0900] via-[#0a0a0a] to-[#060606] p-8 lg:p-10"
-        >
-          <div className="grid lg:grid-cols-3 gap-8 items-start">
-            <div className="flex flex-col items-start">
-              <Image
-                src="https://galaxy-prod.tlcdn.com/view/user_372EAGt89yD821sKcMySYfKrZna/bde94d41e1ab40ffa00d7e9c10ac56d9.png"
-                alt="Ahmad Qawasmeh"
-                width={112}
-                height={112}
-                loading="lazy"
-                className="h-28 w-28 object-cover object-top rounded-xl border border-yellow-400/30 grayscale mb-4"
-              />
-              <div className="text-yellow-400 text-[11px] font-bold tracking-[0.25em] uppercase mb-1">
-                Founder &amp; Managing Principal
-              </div>
-              <div className="text-white text-xl font-bold">Ahmad Qawasmeh</div>
-              <div className="text-gray-400 text-sm mb-4">Frisco, Texas</div>
-              <a
-                href="https://www.linkedin.com/in/ahmadqawasmeh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors"
-              >
-                <Linkedin className="h-4 w-4" /> Connect on LinkedIn <ExternalLink className="h-3 w-3" />
-              </a>
-            </div>
-
-            <div className="lg:col-span-2 space-y-4">
-              <div className="text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase">
-                Meet the Founder
-              </div>
-              <p className="text-gray-300 text-base leading-relaxed">
-                Ahmad Qawasmeh is the Founder and Managing Principal of Marss Real Estate, a private
-                equity and real estate investment group based in Frisco, Texas. He spent{" "}
-                <span className="text-yellow-400">30 years as an executive with international IT
-                corporations</span> before turning to real estate investing in{" "}
-                <span className="text-yellow-400">2018</span>.
-              </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Since 2018 he has invested across{" "}
-                <span className="text-yellow-400">land, single-family, and multi-family real
-                estate</span>, and is now extending his focus to operating businesses backed by real
-                estate. Ahmad personally underwrites every acquisition to institutional Investment
-                Committee standards — analyzing T-12 financials, rent rolls, and bank statements, and
-                stress-testing each opportunity at −10% and −20% revenue before committing — with a
-                focus on real estate–anchored assets and cash-flowing businesses at roughly{" "}
-                <span className="text-yellow-400">$500K+ EBITDA</span>.
-              </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                <span className="text-gray-300 font-semibold">Mission:</span> to give sellers a
-                full-value, structured exit and to give brokers and capital partners aligned,
-                transparent access to institutional-quality deals.
-              </p>
-            </div>
-          </div>
-        </motion.div>
 
       </section>
   );
