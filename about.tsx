@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle, Building, Briefcase, Globe, Linkedin, Facebook, ExternalLink } from "lucide-react";
+import { CheckCircle, Building, Briefcase, Globe, Linkedin, Facebook, Link as LinkIcon, ExternalLink } from "lucide-react";
 
 const credentials = [
   "Real estate and business acquisition firm — not a wholesaler or retail flipper",
@@ -101,13 +101,24 @@ export function About() {
                 </a>
                 <span className="text-gray-400 text-sm hidden sm:inline">&bull;</span>
                 <a
-                  href="https://www.facebook.com/people/Marss-Real-Estate/61590642727358/"
+                  href="https://www.facebook.com/1082373624969525"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-500 text-sm font-medium hover:text-blue-400 transition-colors group"
                 >
                   <Facebook className="h-4 w-4 shrink-0" />
                   Marss Real Estate on Facebook
+                  <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+                <span className="text-gray-400 text-sm hidden sm:inline">&bull;</span>
+                <a
+                  href="https://linktr.ee/AQ55"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-yellow-400 text-sm font-medium hover:text-yellow-300 transition-colors group"
+                >
+                  <LinkIcon className="h-4 w-4 shrink-0" />
+                  More Links
                   <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </div>
