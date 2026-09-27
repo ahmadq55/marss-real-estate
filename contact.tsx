@@ -64,10 +64,10 @@ export function Contact() {
       if (res.ok) {
         setSubmitted(true);
       } else {
-        setError("Something went wrong. Please try again or call 972.779.6787.");
+        setError("Something went wrong. Please try again or call 972.694.6407.");
       }
     } catch {
-      setError("Connection error. Please try again or call 972.779.6787.");
+      setError("Connection error. Please try again or call 972.694.6407.");
     } finally {
       setLoading(false);
     }
@@ -125,11 +125,11 @@ export function Contact() {
                 </div>
                 <span className="text-gray-300 text-sm group-hover:text-yellow-400 transition-colors">support@marssrealestate.com</span>
               </a>
-              <a href="tel:9727796787" className="flex items-center gap-3 group">
+              <a href="tel:9726946407" className="flex items-center gap-3 group">
                 <div className="p-2 rounded-lg bg-yellow-500/10 border border-yellow-500/20 group-hover:bg-yellow-500/15 transition-colors">
                   <Phone className="h-4 w-4 text-yellow-400" />
                 </div>
-                <span className="text-gray-300 text-sm group-hover:text-yellow-400 transition-colors">972.779.6787</span>
+                <span className="text-gray-300 text-sm group-hover:text-yellow-400 transition-colors">972.694.6407</span>
               </a>
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
@@ -177,7 +177,7 @@ export function Contact() {
                 <h3 className="text-white text-2xl font-bold mb-3">Inquiry Received</h3>
                 <p className="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">
                   Thank you for reaching out. A member of the Marss Real Estate team will respond within 48 hours.
-                  For urgent matters, call <a href="tel:9727796787" className="text-yellow-400 hover:underline">972.779.6787</a>.
+                  For urgent matters, call <a href="tel:9726946407" className="text-yellow-400 hover:underline">972.694.6407</a>.
                 </p>
               </div>
             ) : (
