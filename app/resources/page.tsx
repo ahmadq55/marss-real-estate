@@ -72,7 +72,7 @@ export default function ResourcesPage() {
         <p className="text-gray-400 text-sm mb-6 max-w-lg mx-auto">Submit your deal to Marss Real Estate. We screen, underwrite, and respond with a Go / No-Go and LOI within 48 hours.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link href="/#contact" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg text-sm transition-colors">Submit a Deal</Link>
-          <a href="tel:9727796787" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors">Call 972.779.6787</a>
+          <a href="tel:9726946407" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors">Call 972.694.6407</a>
         </div>
       </div>
     </div>

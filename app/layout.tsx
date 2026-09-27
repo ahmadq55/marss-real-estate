@@ -35,7 +35,7 @@ export default function RootLayout({
               description:
                 "Private equity and real estate investment group acquiring commercial real estate and essential operating businesses across Texas and the Sunbelt.",
               url: "https://www.marssrealestate.com",
-              telephone: "+1-972-779-6787",
+              telephone: "+1-972-694-6407",
               email: "support@marssrealestate.com",
               address: {
                 "@type": "PostalAddress",

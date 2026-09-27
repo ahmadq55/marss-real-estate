@@ -30,7 +30,7 @@ const AUTO_RESPONSE_HTML = (name: string) => `
       Hi ${escapeHtml(name)},<br/><br/>
       Thank you for reaching out to Marss Real Estate. We&apos;ve received your inquiry and a member of our team will be in touch within <strong style="color: #fff;">48 hours</strong>.
       <br/><br/>
-      For urgent matters, call us directly at <a href="tel:9727796787" style="color: #EAB308;">972.779.6787</a>.
+      For urgent matters, call us directly at <a href="tel:9726946407" style="color: #EAB308;">972.694.6407</a>.
     </p>
   </div>
 
@@ -45,7 +45,7 @@ const AUTO_RESPONSE_HTML = (name: string) => `
 
   <div style="text-align: center; padding-top: 24px; border-top: 1px solid #1f1f1f;">
     <p style="color: #9ca3af; font-size: 13px; margin: 0 0 4px;">Marss Real Estate &bull; Frisco, TX</p>
-    <p style="color: #6b7280; font-size: 12px; margin: 0;">972.779.6787 &bull; support@marssrealestate.com &bull; marssrealestate.com</p>
+    <p style="color: #6b7280; font-size: 12px; margin: 0;">972.694.6407 &bull; support@marssrealestate.com &bull; marssrealestate.com</p>
   </div>
 </div>
 `;

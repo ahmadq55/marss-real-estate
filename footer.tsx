@@ -58,8 +58,8 @@ export function Footer() {
               structures built around verified cash flow.
             </p>
             <div className="space-y-2">
-              <a href="tel:9727796787" className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 text-sm transition-colors">
-                <Phone className="h-3.5 w-3.5" /> 972.779.6787
+              <a href="tel:9726946407" className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 text-sm transition-colors">
+                <Phone className="h-3.5 w-3.5" /> 972.694.6407
               </a>
               <a href="mailto:support@marssrealestate.com" className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 text-sm transition-colors">
                 <Mail className="h-3.5 w-3.5" /> support@marssrealestate.com

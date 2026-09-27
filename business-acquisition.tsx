@@ -192,7 +192,7 @@ export function BusinessAcquisition() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a href="#contact"><Button className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 whitespace-nowrap">Submit a Business Deal <ArrowRight className="ml-2 h-4 w-4" /></Button></a>
-            <a href="tel:9727796787"><Button variant="outline" className="border-yellow-500/30 text-yellow-400 hover:bg-yellow-500/10 px-8 whitespace-nowrap">Call 972.779.6787</Button></a>
+            <a href="tel:9726946407"><Button variant="outline" className="border-yellow-500/30 text-yellow-400 hover:bg-yellow-500/10 px-8 whitespace-nowrap">Call 972.694.6407</Button></a>
           </div>
         </motion.div>
 
