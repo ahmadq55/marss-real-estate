@@ -75,7 +75,7 @@ export default function AITools2026Page() {
           <p className="text-gray-400 text-sm mb-5">We deploy institutional underwriting on every deal we receive. Gas stations, car washes, auto dealerships, commercial RE, multifamily. Commission protected for brokers from day one.</p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/#contact" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg text-sm transition-colors text-center">Submit a Deal</Link>
-            <a href="tel:9727796787" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-center">Call 972.779.6787</a>
+            <a href="tel:9726946407" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-center">Call 972.694.6407</a>
           </div>
         </div>
       </div>
