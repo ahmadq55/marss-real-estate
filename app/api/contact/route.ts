@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
 
   if (RESEND_API_KEY) {
     try {
-      await fetch("https://api.resend.com/emails", {
+      const internalRes = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${RESEND_API_KEY}`,
@@ -104,14 +104,16 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           from: "Marss Website <onboarding@resend.dev>",
-          to: "support@marssrealestate.com",
-          reply_to: email,
+          to: ["support@marssrealestate.com"],
+          replyTo: email,
           subject: `New Deal Inquiry from ${name} — ${assetType || role || "Inquiry"}`,
           html: internalHtml,
         }),
       });
+      const internalData = await internalRes.json();
+      console.log(`[Resend] Internal notify: HTTP ${internalRes.status} | ID: ${internalData.id || JSON.stringify(internalData)}`);
 
-      await fetch("https://api.resend.com/emails", {
+      const autoReplyRes = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${RESEND_API_KEY}`,
@@ -119,11 +121,13 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           from: "Ahmad at Marss Real Estate <onboarding@resend.dev>",
-          to: email,
+          to: [email],
           subject: `We received your inquiry — Marss Real Estate`,
           html: AUTO_RESPONSE_HTML(name),
         }),
       });
+      const autoReplyData = await autoReplyRes.json();
+      console.log(`[Resend] Auto-reply: HTTP ${autoReplyRes.status} | ID: ${autoReplyData.id || JSON.stringify(autoReplyData)}`);
     } catch (err) {
       console.error("Resend error:", err);
     }
