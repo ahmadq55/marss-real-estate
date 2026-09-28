@@ -103,7 +103,7 @@ export async function POST(req: NextRequest) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Marss Website <support@marssrealestate.com>",
+          from: "Marss Website <onboarding@resend.dev>",
           to: ["support@marssrealestate.com"],
           replyTo: email,
           subject: `New Deal Inquiry from ${name} — ${assetType || role || "Inquiry"}`,
@@ -120,7 +120,7 @@ export async function POST(req: NextRequest) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Ahmad at Marss Real Estate <support@marssrealestate.com>",
+          from: "Ahmad at Marss Real Estate <onboarding@resend.dev>",
           to: [email],
           subject: `We received your inquiry — Marss Real Estate`,
           html: AUTO_RESPONSE_HTML(name),

@@ -125,7 +125,7 @@ export async function POST(req: NextRequest) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Marss Real Estate <support@marssrealestate.com>",
+          from: "Marss Real Estate <onboarding@resend.dev>",
           to: [email],
           subject: `${escapeHtml(name)}, here is your Deal Screening Checklist`,
           html: `
@@ -156,7 +156,7 @@ export async function POST(req: NextRequest) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "MARSS Website <support@marssrealestate.com>",
+          from: "MARSS Website <onboarding@resend.dev>",
           to: ["marss.realestate@gmail.com"],
           subject: `New Lead: ${escapeHtml(name)} — Checklist Download`,
           html: `
