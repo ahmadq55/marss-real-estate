@@ -18,6 +18,9 @@ const audiences = [
   { label: "Invest & Partner", href: "/#jv-partners" },
   { label: "Advisory", href: "/#advisory" },
   { label: "Submit a Deal", href: "/#contact" },
+  { label: "Wholesaler Registration", href: "/wholesaler-registration" },
+  { label: "Buyer Registration", href: "/buyer-registration" },
+  { label: "Deal Submission", href: "/submit-a-deal" },
 ];
 
 const resources = [
