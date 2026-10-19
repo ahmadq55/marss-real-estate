@@ -26,6 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE_URL}/resources`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    ...["wholesaler-registration", "buyer-registration", "submit-a-deal"].map((path) => ({
+      url: `${BASE_URL}/${path}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7,
+    })),
   ];
 
   const acquisitionRoutes: MetadataRoute.Sitemap = ACQUISITION_TYPES.map((type) => ({
