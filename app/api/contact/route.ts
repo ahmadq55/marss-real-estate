@@ -111,6 +111,7 @@ export async function POST(req: NextRequest) {
         }),
       });
       const internalData = await internalRes.json();
+      if (!internalRes.ok) throw new Error(`Internal notification not accepted (${internalRes.status})`);
       console.log(`[Resend] Internal notify: HTTP ${internalRes.status} | ID: ${internalData.id || JSON.stringify(internalData)}`);
 
       const autoReplyRes = await fetch("https://api.resend.com/emails", {
@@ -127,14 +128,17 @@ export async function POST(req: NextRequest) {
         }),
       });
       const autoReplyData = await autoReplyRes.json();
+      if (!autoReplyRes.ok) console.error("Resend auto-reply not accepted:", autoReplyRes.status);
       console.log(`[Resend] Auto-reply: HTTP ${autoReplyRes.status} | ID: ${autoReplyData.id || JSON.stringify(autoReplyData)}`);
     } catch (err) {
       console.error("Resend error:", err);
+      return NextResponse.json({ ok: false, error: "Inquiry could not be delivered. Please try again." }, { status: 502 });
     }
   } else {
     console.log(`[CONTACT LEAD] ${name} | ${email} | ${phone} | ${role} | ${assetType} | ${dealSize}`);
     console.log(`[CONTACT MESSAGE] ${message.slice(0, 200)}`);
-    console.log("Add RESEND_API_KEY to Vercel environment variables to enable email delivery.");
+    console.error("Contact delivery is not configured.");
+    return NextResponse.json({ ok: false, error: "Contact delivery is temporarily unavailable." }, { status: 503 });
   }
 
   return NextResponse.json({ ok: true });
