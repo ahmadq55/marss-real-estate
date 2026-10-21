@@ -15,6 +15,8 @@ const navLinks = [
   { href: "/#strategy", label: "Our Approach" },
   { href: "/#buy-box", label: "Buy Box" },
   { href: "/#faq", label: "FAQ" },
+  { href: "/wholesalers", label: "Wholesalers" },
+  { href: "/buyers", label: "Buyers" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -62,7 +64,7 @@ export function Navbar() {
             <Link href="/resources" className="text-sm text-yellow-400 hover:text-yellow-300 transition-colors tracking-wide whitespace-nowrap font-semibold">
               Resources
             </Link>
-            <Link href="/#contact">
+            <Link href="/submit-deal">
               <Button size="sm" className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold tracking-wide px-5">Submit a Deal</Button>
             </Link>
           </div>
@@ -80,7 +82,7 @@ export function Navbar() {
             <Link href="/resources" className="block py-2.5 px-2 text-yellow-400 hover:text-yellow-300 transition-colors text-sm tracking-wide font-semibold" onClick={() => setIsOpen(false)}>
               Resources
             </Link>
-            <Link href="/#contact" onClick={() => setIsOpen(false)}>
+            <Link href="/submit-deal" onClick={() => setIsOpen(false)}>
               <Button className="mt-3 w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold">Submit a Deal</Button>
             </Link>
           </div>
