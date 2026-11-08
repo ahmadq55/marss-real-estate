@@ -8,7 +8,6 @@ const businessTypes = [
   { name: "Gas Stations / C-Stores", detail: "Fuel margin, inside sales, volume history" },
   { name: "Car Washes", detail: "Cars/day, avg ticket, subscription mix" },
   { name: "Auto Dealerships", detail: "Inventory turn, GP margin, service revenue" },
-  { name: "HVAC / Plumbing / Trades", detail: "Rev/tech, contract ratio, call conversion" },
   { name: "Motels / Extended Stay", detail: "RevPAR, ADR, occupancy, franchise terms" },
   { name: "Laundromats", detail: "Revenue/washer, card vs. coin mix, CapEx" },
   { name: "Light Manufacturing", detail: "EBITDA margin, capacity utilization, contracts" },
