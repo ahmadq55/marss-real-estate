@@ -244,14 +244,14 @@ export function BrokerPartner() {
             >
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Your Full Name *</Label>
-                  <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
+                  <Label htmlFor="broker-1" className="text-gray-300 text-sm">Your Full Name *</Label>
+                  <Input id="broker-1" required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
                     placeholder="Jane Smith"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Brokerage / Firm</Label>
-                  <Input value={form.brokerage} onChange={(e) => handleChange("brokerage", e.target.value)}
+                  <Label htmlFor="broker-2" className="text-gray-300 text-sm">Brokerage / Firm</Label>
+                  <Input id="broker-2" value={form.brokerage} onChange={(e) => handleChange("brokerage", e.target.value)}
                     placeholder="ABC Realty Group"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
@@ -259,14 +259,14 @@ export function BrokerPartner() {
 
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Email *</Label>
-                  <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
+                  <Label htmlFor="broker-3" className="text-gray-300 text-sm">Email *</Label>
+                  <Input id="broker-3" required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
                     placeholder="jane@brokerage.com"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Phone *</Label>
-                  <Input required value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
+                  <Label htmlFor="broker-4" className="text-gray-300 text-sm">Phone *</Label>
+                  <Input id="broker-4" required value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
                     placeholder="(555) 000-0000"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
@@ -274,9 +274,9 @@ export function BrokerPartner() {
 
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Representing *</Label>
+                  <Label htmlFor="broker-5" className="text-gray-300 text-sm">Representing *</Label>
                   <Select onValueChange={(v) => handleChange("representing", v)} required>
-                    <SelectTrigger aria-label="Select" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger id="broker-5" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -287,9 +287,9 @@ export function BrokerPartner() {
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Asset Type *</Label>
+                  <Label htmlFor="broker-6" className="text-gray-300 text-sm">Asset Type *</Label>
                   <Select onValueChange={(v) => handleChange("assetType", v)} required>
-                    <SelectTrigger aria-label="Asset type" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger id="broker-6" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Asset type" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -311,9 +311,9 @@ export function BrokerPartner() {
 
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Approximate Deal Size</Label>
+                  <Label htmlFor="broker-7" className="text-gray-300 text-sm">Approximate Deal Size</Label>
                   <Select onValueChange={(v) => handleChange("dealSize", v)}>
-                    <SelectTrigger aria-label="Deal size" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger id="broker-7" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Deal size" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -326,22 +326,22 @@ export function BrokerPartner() {
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Asking Price</Label>
-                  <Input value={form.askingPrice} onChange={(e) => handleChange("askingPrice", e.target.value)}
+                  <Label htmlFor="broker-8" className="text-gray-300 text-sm">Asking Price</Label>
+                  <Input id="broker-8" value={form.askingPrice} onChange={(e) => handleChange("askingPrice", e.target.value)}
                     placeholder="e.g. $2,400,000"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Property Name &amp; Location</Label>
-                  <Input value={form.propertyName} onChange={(e) => handleChange("propertyName", e.target.value)}
+                  <Label htmlFor="broker-9" className="text-gray-300 text-sm">Property Name &amp; Location</Label>
+                  <Input id="broker-9" value={form.propertyName} onChange={(e) => handleChange("propertyName", e.target.value)}
                     placeholder="Name, city, state"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Existing Financing / Assumability</Label>
-                  <Input value={form.financing} onChange={(e) => handleChange("financing", e.target.value)}
+                  <Label htmlFor="broker-10" className="text-gray-300 text-sm">Existing Financing / Assumability</Label>
+                  <Input id="broker-10" value={form.financing} onChange={(e) => handleChange("financing", e.target.value)}
                     placeholder="If known"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
@@ -349,8 +349,8 @@ export function BrokerPartner() {
 
 
               <div className="space-y-2">
-                <Label className="text-gray-300 text-sm">Deal Summary *</Label>
-                <Textarea required value={form.summary}
+                <Label htmlFor="broker-11" className="text-gray-300 text-sm">Deal Summary *</Label>
+                <Textarea id="broker-11" required value={form.summary}
                   onChange={(e) => handleChange("summary", e.target.value)}
                   placeholder="Describe the asset, location, financials, and what you are looking for from us."
                   rows={4}
