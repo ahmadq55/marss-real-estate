@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const PDF_URL = "https://marssrealestate.com/equity-carry-overview.pdf";
+const DELIVERY_ERROR = "Your inquiry could not be sent. Please call 972-694-6407 or email support@marssrealestate.com.";
 
 /** Escape user input before embedding in HTML emails */
 function escapeHtml(str: string): string {
@@ -22,13 +22,13 @@ const AUTO_RESPONSE_HTML = (name: string) => `
   <div style="text-align: center; margin-bottom: 32px;">
     <div style="color: #EAB308; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px;">MARSS REAL ESTATE</div>
     <h1 style="color: #ffffff; font-size: 22px; font-weight: 800; margin: 0 0 8px;">We Received Your Inquiry</h1>
-    <p style="color: #9ca3af; font-size: 14px; margin: 0;">A member of our team will respond within 48 hours.</p>
+    <p style="color: #9ca3af; font-size: 14px; margin: 0;">A member of our team will review your inquiry.</p>
   </div>
 
   <div style="background: #111; border: 1px solid #1f1f1f; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
     <p style="color: #d1d5db; font-size: 14px; line-height: 1.7; margin: 0;">
       Hi ${escapeHtml(name)},<br/><br/>
-      Thank you for reaching out to Marss Real Estate. We&apos;ve received your inquiry and a member of our team will be in touch within <strong style="color: #fff;">48 hours</strong>.
+      Thank you for reaching out to Marss Real Estate. We&apos;ve received your inquiry and a member of our team will follow up after reviewing it.
       <br/><br/>
       For urgent matters, call us directly at <a href="tel:9726946407" style="color: #EAB308;">972.694.6407</a>.
     </p>
@@ -73,6 +73,11 @@ export async function POST(req: NextRequest) {
   }
 
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
+  const sender = process.env.RESEND_FROM_EMAIL || "Marss Real Estate <support@marssrealestate.com>";
+  if (!RESEND_API_KEY) {
+    console.error("[contact] Email delivery is not configured");
+    return NextResponse.json({ ok: false, error: DELIVERY_ERROR }, { status: 503 });
+  }
 
   const internalHtml = `
     <div style="font-family:sans-serif;max-width:600px;">
@@ -92,48 +97,62 @@ export async function POST(req: NextRequest) {
     </div>
   `;
 
-  if (RESEND_API_KEY) {
-    try {
-      const internalRes = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: "Marss Website <onboarding@resend.dev>",
-          to: ["support@marssrealestate.com"],
-          replyTo: email,
-          subject: `New Deal Inquiry from ${name} — ${assetType || role || "Inquiry"}`,
-          html: internalHtml,
-        }),
+  // Success means the lead notification was accepted by the email provider.
+  // Acknowledgment failure must not invite duplicate lead submissions.
+  try {
+    const internalRes = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      signal: AbortSignal.timeout(10000),
+      body: JSON.stringify({
+        from: sender,
+        to: ["support@marssrealestate.com"],
+        reply_to: email,
+        subject: `New Deal Inquiry from ${name} — ${assetType || role || "Inquiry"}`,
+        html: internalHtml,
+      }),
+    });
+    const internalData = await internalRes.json();
+    if (!internalRes.ok || typeof internalData.id !== "string" || !internalData.id) {
+      console.error("[contact] Lead notification rejected", {
+        status: internalRes.status,
+        code: typeof internalData.name === "string" ? internalData.name : "invalid_response",
       });
-      const internalData = await internalRes.json();
-      console.log(`[Resend] Internal notify: HTTP ${internalRes.status} | ID: ${internalData.id || JSON.stringify(internalData)}`);
-
-      const autoReplyRes = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: "Ahmad at Marss Real Estate <onboarding@resend.dev>",
-          to: [email],
-          subject: `We received your inquiry — Marss Real Estate`,
-          html: AUTO_RESPONSE_HTML(name),
-        }),
-      });
-      const autoReplyData = await autoReplyRes.json();
-      console.log(`[Resend] Auto-reply: HTTP ${autoReplyRes.status} | ID: ${autoReplyData.id || JSON.stringify(autoReplyData)}`);
-    } catch (err) {
-      console.error("Resend error:", err);
+      return NextResponse.json({ ok: false, error: DELIVERY_ERROR }, { status: 502 });
     }
-  } else {
-    console.log(`[CONTACT LEAD] ${name} | ${email} | ${phone} | ${role} | ${assetType} | ${dealSize}`);
-    console.log(`[CONTACT MESSAGE] ${message.slice(0, 200)}`);
-    console.log("Add RESEND_API_KEY to Vercel environment variables to enable email delivery.");
+    console.info("[contact] Lead notification accepted", { id: internalData.id });
+  } catch {
+    console.error("[contact] Lead notification request failed");
+    return NextResponse.json({ ok: false, error: DELIVERY_ERROR }, { status: 502 });
   }
 
-  return NextResponse.json({ ok: true });
+  let acknowledgmentSent = false;
+  try {
+    const autoReplyRes = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      signal: AbortSignal.timeout(10000),
+      body: JSON.stringify({
+        from: sender,
+        to: [email],
+        subject: "We received your inquiry — Marss Real Estate",
+        html: AUTO_RESPONSE_HTML(name),
+      }),
+    });
+    const autoReplyData = await autoReplyRes.json();
+    acknowledgmentSent = autoReplyRes.ok && typeof autoReplyData.id === "string" && !!autoReplyData.id;
+    if (!acknowledgmentSent) {
+      console.warn("[contact] Acknowledgment rejected", { status: autoReplyRes.status });
+    }
+  } catch {
+    console.warn("[contact] Acknowledgment request failed");
+  }
+
+  return NextResponse.json({ ok: true, acknowledgmentSent });
 }

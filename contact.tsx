@@ -61,10 +61,11 @@ export function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      if (res.ok) {
+      const result = await res.json();
+      if (res.ok && result.ok === true) {
         setSubmitted(true);
       } else {
-        setError("Something went wrong. Please try again or call 972.694.6407.");
+        setError("Your inquiry could not be sent. Please call 972-694-6407 or email support@marssrealestate.com.");
       }
     } catch {
       setError("Connection error. Please try again or call 972.694.6407.");
