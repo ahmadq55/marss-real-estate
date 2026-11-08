@@ -6,7 +6,7 @@ import { Linkedin, Facebook, Phone, Mail } from "lucide-react";
 
 const company = [
   { label: "About", href: "/#about" },
-  { label: "Our Approach", href: "/#strategy" },
+  { label: "Deal Structures", href: "/#strategy" },
   { label: "Buy Box", href: "/#buy-box" },
   { label: "How It Works", href: "/#process" },
   { label: "FAQ", href: "/#faq" },
@@ -22,10 +22,10 @@ const audiences = [
 
 const resources = [
   { label: "All Resources", href: "/resources" },
-  { label: "Equity Carry Guide", href: "/resources/equity-carry-guide" },
-  { label: "Gas Stations", href: "/acquisitions/gas-stations" },
-  { label: "Car Washes", href: "/acquisitions/car-washes" },
-  { label: "Multi-Family", href: "/acquisitions/multifamily" },
+  { label: "Self-Storage", href: "/acquisitions/self-storage" },
+  { label: "MHP / RV Parks", href: "/acquisitions/mobile-home-rv-parks" },
+  { label: "Multifamily", href: "/acquisitions/multifamily" },
+  { label: "Hospitality", href: "/acquisitions/motels" },
 ];
 
 export function Footer() {
@@ -53,9 +53,8 @@ export function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-5">
-              Active acquirer of commercial real estate and essential operating
-              businesses across Texas and the Sunbelt, using creative capital
-              structures built around verified cash flow.
+              Acquirer of income-producing and value-add real estate. Texas-focused,
+              with select opportunities nationwide.
             </p>
             <div className="space-y-2">
               <a href="tel:9726946407" className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 text-sm transition-colors">
@@ -107,7 +106,7 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 gap-4 mb-8 text-xs">
           <div className="rounded-lg border border-[#161616] bg-[#0b0b0b] px-4 py-3">
             <div className="text-gray-400 font-bold tracking-widest uppercase mb-1">Entity</div>
-            <div className="text-gray-400">ARMSS LLC — a subsidiary of Marss LLC</div>
+            <div className="text-gray-400">Marss LLC. Acquisitions may be completed through affiliated entities, including ARMSS LLC, a subsidiary of Marss LLC.</div>
           </div>
           <div className="rounded-lg border border-[#161616] bg-[#0b0b0b] px-4 py-3">
             <div className="text-gray-400 font-bold tracking-widest uppercase mb-1">Registration / EIN</div>
@@ -127,7 +126,7 @@ export function Footer() {
           <p className="text-gray-400 text-xs leading-relaxed">
             <span className="text-gray-400 font-semibold">Not a licensed real estate brokerage.</span>{" "}
             Marss Real Estate is a private equity and real estate investment group that acquires
-            assets for its own account. It does not provide brokerage services or represent buyers
+            assets directly, through affiliated entities or alongside investment partners. It does not provide brokerage services or represent buyers
             or sellers as a licensed real estate broker or agent.
           </p>
           <p className="text-gray-400 text-xs leading-relaxed">
@@ -145,7 +144,7 @@ export function Footer() {
             © {new Date().getFullYear()} Marss Real Estate. All rights reserved.
           </p>
           <p className="text-gray-400 text-xs">
-            Frisco, Texas · Sunbelt Markets · Commercial &amp; Business Acquisitions
+            Frisco, Texas · Texas-Focused · Select Markets Nationwide
           </p>
         </div>
       </div>

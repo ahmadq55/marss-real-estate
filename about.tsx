@@ -5,16 +5,16 @@ import Image from "next/image";
 import { CheckCircle, Building, Briefcase, Globe, Linkedin, Facebook, Link as LinkIcon, ExternalLink } from "lucide-react";
 
 const credentials = [
-  "Real estate and business acquisition firm — not a wholesaler or retail flipper",
-  "Specializes in value-add commercial real estate and essential operating businesses",
-  "Creative Financing Suite — Equity Carry (flagship), Owner Financing, Sale-Leaseback, and JV structures",
-  "Aligned incentives: buyer and seller win together at every closing",
-  "Transparent milestone-based performance tracking — no black boxes",
-  "Active across gas stations, car washes, auto dealerships, motels, light manufacturing, and more",
+  "Private equity and investment acquisition platform — not a licensed brokerage or wholesaler",
+  "Self-storage, MHP / RV parks, multifamily and value-add hospitality",
+  "Underwriting of historical financials, normalized income and real estate value",
+  "Flexible deal structures based on each asset's economics",
+  "Texas-focused, with select opportunities nationwide",
+  "Businesses with seller-owned real estate, generally ~$500K+ EBITDA",
 ];
 
 const pillars = [
-  { icon: Building, title: "Real Estate Expertise", description: "Deep knowledge of commercial, multi-family, mixed-use, and business-backed asset classes — deal structures, value-add execution, and stabilization strategy." },
+  { icon: Building, title: "Real Estate Expertise", description: "Deep knowledge of self-storage, MHP / RV parks, multifamily, hospitality, commercial and mixed-use assets — valuation, value-add execution and stabilization strategy." },
   { icon: Briefcase, title: "Business-Backed Capital", description: "Our investment activity is supported by active business operations, providing operational credibility and stable deal execution across real estate and business acquisitions." },
   { icon: Globe, title: "Strategic Partnerships", description: "We build long-term relationships with sellers, agents, brokers, and capital partners — not one-off transactions. Repeat business is how we measure success." },
 ];
@@ -31,8 +31,8 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <div className="border-l-2 border-yellow-500 pl-6 mb-8">
-              <p className="text-gray-300 text-lg leading-relaxed mb-4">We are a real estate and business acquisition firm actively acquiring commercial real estate and essential operating businesses &mdash; gas stations, car washes, auto dealerships, motels, light manufacturing, and more &mdash; using a suite of <span className="text-yellow-400 font-semibold">creative financing structures</span> engineered around verified cash flow. Equity Carry is our flagship approach, but we select the right structure for each deal based on the asset, the seller&apos;s goals, and the numbers.</p>
-              <p className="text-gray-400 leading-relaxed">Sellers receive immediate liquidity, ongoing passive income, and capital gains tax deferral. Brokers get commission protection and a repeat buyer who closes. Capital partners get deal-level co-investment access with institutional-grade underwriting.</p>
+              <p className="text-gray-300 text-lg leading-relaxed mb-4">We are a private equity and investment acquisition platform. We source, evaluate, underwrite, structure and participate in acquisitions of <span className="text-yellow-400 font-semibold">income-producing real estate</span> and businesses backed by owned real estate. Acquisitions may be completed through affiliated entities, investment partners or joint ventures, depending on the transaction. The right structure is chosen for each deal based on the asset, the seller&apos;s goals and the numbers.</p>
+              <p className="text-gray-400 leading-relaxed">Owners get a credible, straightforward counterparty. Brokers get fast preliminary screening and clear communication. Capital partners get deal-level opportunities with institutional-grade underwriting. No outcome is guaranteed.</p>
             </div>
             <ul className="space-y-3">
               {credentials.map((item, i) => (
@@ -82,7 +82,6 @@ export function About() {
               <div className="text-white font-bold text-lg tracking-widest mb-0.5">MARSS REAL ESTATE</div>
               <p className="text-yellow-500 text-sm mb-3">Ahmad Qawasmeh &mdash; Founder &amp; Managing Principal</p>
               <p className="text-gray-300 text-sm leading-relaxed mb-3 max-w-2xl">This platform connects Marss Real Estate with the people who move deals: property and business sellers seeking a credible buyer, brokers and agents who want a repeat partner that closes, and capital partners who want deal-level investment access.</p>
-              <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-2xl">Ahmad Qawasmeh spent 30 years as an executive with international IT corporations before turning to real estate investing in 2018 &mdash; building a portfolio across land, single-family, and multi-family real estate, and now extending into operating businesses backed by real estate. He personally underwrites every acquisition to institutional Investment Committee standards.</p>
               <div className="flex flex-wrap gap-2 mb-5">
                 {["Property Sellers", "Business Sellers", "Brokers & Agents", "Capital Partners", "JV Investors"].map((a) => (
                   <span key={a} className="text-xs font-medium text-yellow-300/90 bg-yellow-500/10 border border-yellow-500/20 rounded-full px-3 py-1">{a}</span>
