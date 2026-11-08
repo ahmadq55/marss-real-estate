@@ -171,7 +171,7 @@ export function Advisory() {
         >
           {[
             { value: "10+", label: "Asset Classes Analyzed" },
-            { value: "48 Hr", label: "Avg. Deal Turnaround" },
+            { value: "Per Deal", label: "Review Scope & Timing" },
             { value: "$1M–$10M+", label: "Deal Size Range" },
             { value: "Texas", label: "Primary Market Focus" },
           ].map((stat, i) => (
@@ -300,7 +300,7 @@ export function Advisory() {
               </div>
               <h3 className="text-white text-2xl font-bold mb-3">Request Received</h3>
               <p className="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">
-                Thank you — we will respond within 48 hours to discuss your advisory needs.
+                Thank you — we will follow up to discuss your advisory needs.
               </p>
             </div>
           ) : (
@@ -399,7 +399,7 @@ export function Advisory() {
               </Button>
               {error && <p className="text-red-400 text-sm text-center">{error}</p>}
               <p className="text-gray-400 text-xs text-center">
-                We respond within 48 hours. Your information is never shared.
+                We aim to respond promptly once sufficient information is available. Your information is never shared.
               </p>
             </form>
           )}

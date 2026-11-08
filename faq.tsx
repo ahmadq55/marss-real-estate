@@ -81,7 +81,7 @@ export function Faq() {
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
             Straight answers to the questions we hear most. Have one that isn&apos;t
-            here? Reach out — we respond within 48 hours.
+            here? Reach out — we aim to respond promptly once sufficient information is available.
           </p>
         </motion.div>
 

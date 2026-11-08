@@ -5,30 +5,30 @@ import { Target, BarChart3, Handshake, Eye, CheckCircle, ArrowRight, Users, Shie
 import { Button } from "@/button";
 
 const investorBenefits = [
-  { icon: Target, title: "Deal-by-Deal Co-Investment", description: "You choose the specific acquisition you want exposure to — a single named asset, not a blind pool. Full underwriting package provided before you commit." },
-  { icon: BarChart3, title: "Institutional Underwriting Standards", description: "Every opportunity is underwritten to Investment Committee standards — T-12 actuals, rent rolls, and bank statements verified, stress-tested at -10% and -20% revenue." },
-  { icon: Handshake, title: "Aligned Interests", description: "Marss co-invests and operates the asset alongside you. Returns structured through a secured equity position with transparent, milestone-based reporting." },
-  { icon: Eye, title: "Full Transparency", description: "Review the underwriting model, business plan, and full risk map before you commit a dollar. No black boxes, no pressure, no surprises after close." },
+  { icon: Target, title: "Deal-by-Deal Co-Investment", description: "Potential collaboration is evaluated for each specific acquisition. Participation depends on fit, diligence and the applicable agreements." },
+  { icon: BarChart3, title: "Acquisition Review", description: "Initial screening focuses on fit and the information needed for a preliminary decision. Deeper underwriting evaluates historical performance, normalized income, capital needs, financing and material risks before a binding acquisition commitment." },
+  { icon: Handshake, title: "Aligned Interests", description: "Capital contributions, operating responsibilities, economic terms and reporting are established for each transaction in the applicable agreements." },
+  { icon: Eye, title: "Full Transparency", description: "Review the available underwriting, proposed business plan and material risks before a commitment. Diligence findings and limitations are identified as the review progresses." },
 ];
 
 const advisoryBenefits = [
-  { icon: FileText, title: "Deal Underwriting Collaboration", description: "Participate as an active underwriting advisor on specific acquisitions — contribute financial analysis, market intelligence, or asset-class expertise in exchange for preferred economic participation." },
-  { icon: TrendingUp, title: "Early Deal Flow Access", description: "Advisory partners receive first look at vetted, pre-LOI opportunities before deals reach broader distribution. Access to off-market and proprietary deal flow in Texas and select markets nationwide." },
-  { icon: Shield, title: "Governance & Protection Rights", description: "Advisory board participation comes with documented governance protections — step-in rights, negative control provisions, and monthly reporting covenants built into every structure." },
-  { icon: Users, title: "Build Long-Term Partnership", description: "This isn't a one-deal relationship. Advisory partners grow with our acquisition pipeline — preferential access, preferred economics, and a direct seat at the underwriting table on future deals." },
+  { icon: FileText, title: "Deal Underwriting Collaboration", description: "Contribute financial analysis, market intelligence or asset-class expertise on a specific acquisition, with scope and any compensation documented by agreement." },
+  { icon: TrendingUp, title: "Early Deal Flow Access", description: "Relevant opportunities may be discussed with prospective partners based on fit, availability and confidentiality requirements." },
+  { icon: Shield, title: "Governance & Protection Rights", description: "Governance, reporting and any security arrangements depend on the transaction and the applicable written agreements. No protection is guaranteed." },
+  { icon: Users, title: "Build Long-Term Partnership", description: "We seek ongoing relationships with experienced partners. Future participation is considered separately for each opportunity." },
 ];
 
 const steps = [
   { n: "01", title: "Express Interest", body: "Tell us your target asset classes, check size, hold horizon, and whether you want co-investment, advisory, or both. We add you to the partner list for matching opportunities." },
   { n: "02", title: "Review the Deal Package", body: "When a specific acquisition matches your profile, you receive the full underwriting model, business plan, and risk assessment — no pressure." },
-  { n: "03", title: "Co-Invest or Advise", body: "Partner with Marss on that specific asset through a secured equity structure with defined governance, reporting rights, and milestone-linked returns." },
+  { n: "03", title: "Co-Invest or Advise", body: "Participation amounts, operating responsibilities, economic terms, governance rights, reporting and any security arrangements are negotiated individually and documented in the applicable agreements. No participation, protection or return is guaranteed." },
 ];
 
 const partnerTypes = [
-  "Accredited investors deploying $100K-$2M+ per deal",
+  "Capital partners evaluating transaction-specific participation",
   "Real estate professionals seeking passive co-investment exposure",
   "Experienced operators with asset-class expertise (gas stations, car washes, auto)",
-  "Family offices evaluating $1M-$10M acquisitions",
+  "Family offices evaluating acquisition opportunities",
   "Private equity sponsors screening deal flow with advisory capacity",
   "Business owners seeking structured real estate co-investment",
 ];
@@ -40,7 +40,7 @@ export function JvPartners() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <div className="inline-block text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4">Invest &amp; Partner</div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Co-Invest. Advise. Build <span className="gold-gradient">Deal Flow Together.</span></h2>
-          <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">Marss operates two partnership tracks: deal-level co-investment for capital partners, and an advisory board role for experienced operators and underwriters who want skin in the game.</p>
+          <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">We welcome conversations with capital partners, experienced operators and acquisition professionals about potential collaboration on specific transactions.</p>
         </motion.div>
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="rounded-2xl border border-yellow-900/40 bg-gradient-to-br from-[#0d0a00] to-[#0a0a0a] p-8">
@@ -49,7 +49,7 @@ export function JvPartners() {
               <span className="text-yellow-400 text-xs font-bold tracking-widest uppercase">Track 1</span>
             </div>
             <h3 className="text-white font-bold text-2xl mb-2">Capital Co-Investment</h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">Invest alongside Marss on specific, named acquisitions. You pick the deal — no blind pools. Minimum $100K per deal. Secured equity structure with full underwriting visibility before commitment.</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">Participation amounts, operating responsibilities, economic terms, governance rights, reporting and any security arrangements are negotiated individually and documented in the applicable agreements. No participation, protection or return is guaranteed.</p>
             <div className="space-y-4">
               {investorBenefits.map((b, i) => (
                 <div key={i} className="flex items-start gap-3">
@@ -68,7 +68,7 @@ export function JvPartners() {
               <span className="text-blue-400 text-xs font-bold tracking-widest uppercase">Track 2</span>
             </div>
             <h3 className="text-white font-bold text-2xl mb-2">Advisory Board Role</h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">For experienced operators, underwriters, and industry specialists — contribute your expertise to Marss deal analysis and acquisitions in exchange for preferred economic participation and early deal flow access.</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">We welcome experienced operators, underwriters and industry specialists to discuss collaboration. Responsibilities and any economic participation are negotiated individually.</p>
             <div className="space-y-4">
               {advisoryBenefits.map((b, i) => (
                 <div key={i} className="flex items-start gap-3">

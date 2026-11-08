@@ -89,7 +89,7 @@ export function Contact() {
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
             Whether you have a qualified deal, want to explore a structure, or are looking to build a long-term
-            partnership — we respond within 48 hours.
+            partnership — we aim to respond promptly once sufficient information is available.
           </p>
         </motion.div>
 
@@ -174,7 +174,7 @@ export function Contact() {
                 </div>
                 <h3 className="text-white text-2xl font-bold mb-3">Inquiry Received</h3>
                 <p className="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">
-                  Thank you for reaching out. A member of the Marss Real Estate team will respond within 48 hours.
+                  Thank you for reaching out. A member of the Marss Real Estate team will follow up after reviewing your inquiry.
                   For urgent matters, call <a href="tel:9726946407" className="text-yellow-400 hover:underline">972.694.6407</a>.
                 </p>
               </div>

@@ -9,18 +9,18 @@ import { ShieldCheck, Clock, Layers, Building2, MapPin, Handshake } from "lucide
 const points = [
   {
     icon: ShieldCheck,
-    title: "Principal Buyer — Not a Wholesaler",
-    body: "We acquire directly, through affiliated entities or alongside investment partners. No assignment fees, no daisy chains.",
+    title: "Direct and Partnered Acquisitions",
+    body: "Marss Real Estate evaluates and pursues acquisitions directly, through affiliated acquiring entities or alongside investment partners and joint ventures. The acquiring entity, responsibilities and compensation arrangements are established for each transaction.",
   },
   {
     icon: Building2,
-    title: "Institutional Underwriting",
-    body: "Every opportunity is underwritten in-house to Investment Committee standards — real T-12s, rent rolls, and financials, stress-tested before we commit.",
+    title: "Disciplined Underwriting",
+    body: "Initial screening focuses on fit and the information needed for a preliminary decision. Deeper underwriting evaluates historical performance, normalized income, capital needs, financing and material risks before a binding acquisition commitment.",
   },
   {
     icon: Clock,
     title: "Defined Review Process",
-    body: "Qualified submissions follow a clear review and response process. No outcomes are promised before adequate review.",
+    body: "We aim to provide a preliminary response promptly once sufficient information is available. Timing depends on the opportunity and the completeness of the submission.",
   },
   {
     icon: Layers,

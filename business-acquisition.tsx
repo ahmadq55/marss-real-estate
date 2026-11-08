@@ -16,23 +16,23 @@ const businessTypes = [
 ];
 
 const financialDocs = [
-  "T-12 Income Statement (verified line-by-line)",
+  "T-12 Income Statement",
   "3-Year P&L and Tax Returns",
   "12-Month Bank & Merchant Statements",
   "EBITDA Bridge (add-back documentation)",
-  "Rent Roll or Lease Agreements (if RE included)",
+  "Rent Roll or Lease Agreements for the included real estate",
   "Equipment List & Condition Assessment",
   "Franchise Agreement (if applicable)",
   "Environmental Phase I Report",
 ];
 
 const metrics = [
-  { label: "Target EBITDA", value: "$500K+", note: "Trailing 12, verified" },
-  { label: "DSCR Floor", value: "1.40x", note: "Senior debt only" },
-  { label: "Owner Dependency", value: "< 25%", note: "Revenue portable" },
-  { label: "Revenue Concentration", value: "< 30%", note: "No single customer" },
-  { label: "EBITDA Multiple", value: "3x–6x", note: "Sourced, not invented" },
-  { label: "RE Cap Rate", value: "≥ 6.0%", note: "Valued independently" },
+  { label: "Target EBITDA", value: "~$500K+", note: "Exceptions considered based on combined economics" },
+  { label: "Debt Coverage", value: "Per deal", note: "Senior debt, seller payments and other financing obligations" },
+  { label: "Owner Dependency", value: "Assessed", note: "Management continuity and operational risk" },
+  { label: "Revenue Concentration", value: "Assessed", note: "Customer mix and earnings durability" },
+  { label: "Business Valuation", value: "Market-based", note: "Relevant evidence, earnings and risk" },
+  { label: "Real Estate Value", value: "Separate", note: "Avoid double-counting property income" },
 ];
 
 const redFlags = [
@@ -48,25 +48,25 @@ const underwritingSteps = [
   {
     n: "01",
     title: "Financial Extraction",
-    body: "We extract Net Income, EBITDA, and SDE from source documents — never from the seller's summary. Every add-back is sourced and categorized: defensible vs. speculative. We reconcile against bank deposits.",
+    body: "Initial screening may begin with a financial summary. During underwriting and diligence, we review source financials, evaluate add-backs and reconcile reported performance against supporting records as available. Seller claims, verified results and projections are identified separately.",
     icon: FileText,
   },
   {
     n: "02",
     title: "Valuation Range",
-    body: "We apply sourced EBITDA multiples from BizBuySell, IBBA, and Pepperdine data specific to your asset class. Real estate is valued separately on cap rate and never blended with business income.",
+    body: "We assess business earnings and real estate value separately, then evaluate the combined acquisition economics. Valuation considers relevant market evidence, operating risk, capital requirements and transaction structure. We avoid double-counting income attributable to the real estate.",
     icon: BarChart3,
   },
   {
     n: "03",
     title: "Capital Stack Design",
-    body: "We evaluate the debt and acquisition structure that best fits the asset. DSCR is stress-tested at −10% and −20% revenue without seller payments counting toward coverage.",
+    body: "We evaluate existing debt, required payoff, transfer restrictions and available capital before proposing terms. Coverage analysis considers senior debt, seller payments and other recurring financing obligations, with downside scenarios appropriate to the asset.",
     icon: Target,
   },
   {
     n: "04",
-    title: "Risk Map & Go / No-Go",
-    body: "Every deal gets a formal risk map: operator dependency, license transferability, revenue concentration, environmental, CapEx, and refinance/exit feasibility. IC-grade memo issued before LOI.",
+    title: "Preliminary LOI and Diligence",
+    body: "A qualified opportunity may receive a conditional preliminary LOI once decision-critical facts support price and structure. Detailed financial, title, operational and property verification continues through diligence.",
     icon: Shield,
   },
 ];
@@ -79,13 +79,11 @@ export function BusinessAcquisition() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <div className="inline-block text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-4">Business Acquisitions</div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            We Underwrite Businesses at{" "}
-            <span className="gold-gradient">Institutional Standards.</span>
+            Business Acquisitions With{" "}
+            <span className="gold-gradient">Owned Real Estate</span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
-            When you bring a business deal to Marss, you&apos;re not dealing with a retail buyer guessing at multiples.
-            You&apos;re dealing with a team that extracts EBITDA from source documents, stress-tests the capital stack,
-            and builds an IC-grade acquisition memo before issuing a single LOI.
+            We evaluate operating businesses where the seller-owned real estate is included in the acquisition. Our initial review focuses on actual earnings, property value, existing debt, capital needs and the seller’s objectives.
           </p>
         </motion.div>
 
@@ -100,7 +98,7 @@ export function BusinessAcquisition() {
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-400 text-xs mt-4">All targets require a real estate component (owned real estate or eligible for sale-leaseback). General target ~$500K+ EBITDA; exceptions considered.</p>
+          <p className="text-center text-gray-400 text-xs mt-4">Seller-owned underlying real estate must be included in the sale. We generally target businesses with approximately $500,000 or more in EBITDA, with exceptions considered based on the combined business and property economics.</p>
         </motion.div>
 
         {/* Underwriting Process */}
@@ -129,7 +127,7 @@ export function BusinessAcquisition() {
             className="bg-[#0f0f0f] border border-[#1f1f1f] rounded-2xl p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 rounded-lg bg-yellow-500/10 border border-yellow-500/20"><TrendingUp className="h-5 w-5 text-yellow-400" /></div>
-              <h3 className="text-white font-bold text-lg">Our Underwriting Thresholds</h3>
+              <h3 className="text-white font-bold text-lg">Underwriting Considerations</h3>
             </div>
             <div className="space-y-3">
               {metrics.map((m, i) => (
@@ -142,7 +140,7 @@ export function BusinessAcquisition() {
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 text-xs mt-4 italic">These are our hard gates. Deals below threshold are passed or restructured — not rationalized.</p>
+            <p className="text-gray-400 text-xs mt-4 italic">We assess actual earnings, debt coverage, owner dependence, customer concentration, property value, capital needs and exit feasibility. Targets and assumptions vary by asset and transaction; no single valuation multiple or cap rate applies to every opportunity.</p>
           </motion.div>
 
           {/* Docs + Red Flags */}
@@ -186,8 +184,7 @@ export function BusinessAcquisition() {
           className="rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-[#0c0900] to-[#0a0a0a] p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-white font-bold text-2xl mb-2">Have a Business + Real Estate Deal?</h3>
-            <p className="text-gray-400 text-sm max-w-xl">Bring us the financials. We screen qualified submissions against our criteria and give you a straight answer with sourced reasoning — not a vague counter.
-              <span className="text-yellow-400 font-medium"> No fishing. No retrades. Just a straight answer.</span>
+            <p className="text-gray-400 text-sm max-w-xl">Share the location, price guidance, actual income or earnings, occupancy where relevant, existing debt details if known and major capital needs. A full diligence package is not required for an initial review. Any preliminary proposal remains subject to diligence and definitive agreements.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">

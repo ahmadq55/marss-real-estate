@@ -75,7 +75,7 @@ export function Hero() {
           className="max-w-3xl mx-auto text-lg text-gray-400 leading-relaxed mb-10"
         >
           Marss Real Estate sources, underwrites and acquires income-producing
-          and value-add real estate, with a transaction structure built around
+          and value-add real estate, including businesses with seller-owned real estate included in the acquisition, with a transaction structure built around
           each asset and each owner&apos;s goals.
         </motion.p>
         <motion.div
