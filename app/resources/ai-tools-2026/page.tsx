@@ -70,9 +70,9 @@ export default function AITools2026Page() {
         </section>
 
         <div className="border border-yellow-900/30 bg-gradient-to-br from-[#0d0900] to-[#0a0a0a] rounded-2xl p-8 mt-10">
-          <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-2">Active Buyer &bull; 48-Hour Response</div>
+          <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-2">Active Acquirer &bull; Texas-Focused</div>
           <h3 className="text-xl font-bold text-white mb-2">Submit a Deal to Marss Real Estate</h3>
-          <p className="text-gray-400 text-sm mb-5">We deploy institutional underwriting on every deal we receive. Gas stations, car washes, auto dealerships, commercial RE, multifamily. Commission protected for brokers from day one.</p>
+          <p className="text-gray-400 text-sm mb-5">We deploy institutional underwriting on every deal we receive. Self-storage, mobile home and RV parks, multifamily, hospitality and other income-producing assets. Texas-focused, with select opportunities nationwide.</p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/#contact" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg text-sm transition-colors text-center">Submit a Deal</Link>
             <a href="tel:9726946407" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-center">Call 972.694.6407</a>

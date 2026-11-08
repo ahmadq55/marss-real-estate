@@ -77,7 +77,7 @@ export default function AnalyzeCommercialDealPage() {
         <div className="border border-yellow-900/30 bg-gradient-to-br from-[#0d0900] to-[#0a0a0a] rounded-2xl p-8 mt-10">
           <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-2">Have a Deal That Clears the Gates?</div>
           <h3 className="text-xl font-bold text-white mb-2">Submit to Marss for a Full Underwriting Review</h3>
-          <p className="text-gray-400 text-sm mb-5">We screen, underwrite, and issue a Go/No-Go with LOI within 48 hours. Commission protected for brokers from day one.</p>
+          <p className="text-gray-400 text-sm mb-5">We screen and review qualified submissions against our acquisition criteria and follow up if there is a fit.</p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/#contact" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg text-sm transition-colors text-center">Submit a Deal</Link>
             <a href="tel:9726946407" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-center">Call 972.694.6407</a>
