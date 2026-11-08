@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AdviceDisclaimer } from "@/disclaimer";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "How Equity Carry Financing Works | Marss Real Estate",
   description: "A complete guide to Equity Carry financing for business sellers — how it delivers full or near-full asking price, how seller protections are documented, and how and when you get paid.",
 };
