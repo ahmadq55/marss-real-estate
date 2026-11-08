@@ -34,13 +34,11 @@ const AUTO_RESPONSE_HTML = (name: string) => `
     </p>
   </div>
 
-  <div style="background: #0d0900; border: 1px solid #78350f; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
-    <div style="color: #EAB308; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px;">Free Resource</div>
-    <h2 style="color: #fff; font-size: 16px; font-weight: 700; margin: 0 0 8px;">Equity Carry Acquisition &mdash; Overview for Sellers</h2>
-    <p style="color: #9ca3af; font-size: 13px; line-height: 1.6; margin: 0 0 16px;">
-      How we close at full or near-full asking price using a preferred equity structure &mdash; including seller protections, how the capital stack is built, and how and when you receive your full payoff.
+  <div style="background: #111; border: 1px solid #1f1f1f; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+    <div style="color: #EAB308; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px;">What Happens Next</div>
+    <p style="color: #9ca3af; font-size: 13px; line-height: 1.6; margin: 0;">
+      We review each inquiry against our acquisition criteria and follow up if there is a fit. We may ask for a few basic details. No offer or outcome is promised before adequate review.
     </p>
-    <a href="${PDF_URL}" style="display: inline-block; background: #EAB308; color: #000; font-weight: 700; font-size: 13px; padding: 10px 20px; border-radius: 6px; text-decoration: none;">&darr; Download PDF Overview</a>
   </div>
 
   <div style="text-align: center; padding-top: 24px; border-top: 1px solid #1f1f1f;">
