@@ -1,33 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Building, Users, TrendingUp } from "lucide-react";
+import { ArrowRight, Shield, Building, Users, TrendingUp, Warehouse, Tent, Building2, Hotel } from "lucide-react";
 import { Button } from "@/button";
 
-const stats = [
-  { label: "LOI Commitment", value: "48-Hr" },
-  { label: "Active Markets", value: "Sunbelt" },
-  { label: "Asset Classes", value: "10+" },
-  { label: "Min. EBITDA", value: "$500K+" },
+const categories = [
+  { icon: Warehouse, label: "Self-Storage", sub: "Occupancy and revenue upside" },
+  { icon: Tent, label: "MHP / RV Parks", sub: "Lot rent, infill and stabilization" },
+  { icon: Building2, label: "Multifamily", sub: "Value-add and stabilized communities" },
+  { icon: Hotel, label: "Hospitality", sub: "Fee-simple hotels and motels" },
 ];
 
 const audiencePaths = [
   {
     icon: Building,
-    label: "Selling a Property or Business",
-    sub: "Multiple exit structures — full value, no forced discount",
+    label: "Property or Business Owner",
+    sub: "A confidential, no-obligation conversation",
     href: "#sellers",
   },
   {
     icon: Users,
-    label: "Broker or Agent with a Deal",
-    sub: "Commission protected from Day 1. LOI in days.",
+    label: "Broker or Agent",
+    sub: "Fast preliminary deal screening",
     href: "#for-brokers",
   },
   {
     icon: TrendingUp,
-    label: "Investor or Capital Partner",
-    sub: "Deal-level co-investment and advisory access",
+    label: "Investor or JV Partner",
+    sub: "Deal-level partnership opportunities",
     href: "#jv-partners",
   },
 ];
@@ -54,29 +54,29 @@ export function Hero() {
         >
           <Shield className="h-3.5 w-3.5 text-yellow-400" />
           <span className="text-yellow-400 text-xs font-semibold tracking-widest uppercase">
-            Active Acquirer · Sunbelt Markets · 10+ Asset Classes
+            Texas-Focused · Select Markets Nationwide
           </span>
         </motion.div>
         <motion.h1
           initial={false}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
         >
-          Serious Capital.{" "}
-          <span className="gold-gradient">Creative Structures.</span>
-          <br className="hidden sm:block" />
-          <span className="text-white">Your Asset&apos;s Full Value &#8212;&nbsp;</span>
-          <span className="gold-gradient">Delivered.</span>
+          Real Estate{" "}
+          <span className="gold-gradient">Acquisitions</span>
         </motion.h1>
+        <motion.p
+          initial={false}
+          className="max-w-3xl mx-auto text-xl text-yellow-400 font-medium leading-relaxed mb-4"
+        >
+          Texas-focused acquisitions. Select opportunities nationwide.
+        </motion.p>
         <motion.p
           initial={false}
           className="max-w-3xl mx-auto text-lg text-gray-400 leading-relaxed mb-10"
         >
-          Your business or property is worth full value. We don&apos;t force
-          discounts &#8212; we engineer{" "}
-          <span className="text-yellow-400 font-medium">acquisition structures</span>{" "}
-          that deliver full value to sellers, commission protection for brokers,
-          and deal-level access to capital partners.{" "}
-          <span className="text-white font-medium">We have a path for you.</span>
+          Marss Real Estate sources, underwrites and acquires income-producing
+          and value-add real estate, with a transaction structure built around
+          each asset and each owner&apos;s goals.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -90,9 +90,9 @@ export function Hero() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
-          <a href="#strategy">
+          <a href="#buy-box">
             <Button size="lg" variant="outline" className="border-yellow-500/40 text-yellow-400 hover:bg-yellow-500/10 hover:border-yellow-400 px-8 py-6 text-base tracking-wide">
-              Our Approach
+              View Acquisition Criteria
             </Button>
           </a>
         </motion.div>
@@ -124,11 +124,12 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-yellow-900/20 rounded-2xl overflow-hidden border border-yellow-900/30"
         >
-          {stats.map((stat, i) => (
-            <div key={i} className="bg-[#0f0f0f] px-6 py-6 text-center group hover:bg-[#141414] transition-colors">
-              <div className="text-2xl lg:text-3xl font-bold text-yellow-400 mb-1">{stat.value}</div>
-              <div className="text-xs text-gray-400 tracking-widest uppercase">{stat.label}</div>
-            </div>
+          {categories.map((cat, i) => (
+            <a key={i} href="#buy-box" className="bg-[#0f0f0f] px-6 py-6 text-center group hover:bg-[#141414] transition-colors">
+              <cat.icon className="h-6 w-6 text-yellow-400 mx-auto mb-3" />
+              <div className="text-lg lg:text-xl font-bold text-white mb-1">{cat.label}</div>
+              <div className="text-xs text-gray-400 leading-relaxed">{cat.sub}</div>
+            </a>
           ))}
         </motion.div>
       </div>
