@@ -27,7 +27,7 @@ const financialDocs = [
 ];
 
 const metrics = [
-  { label: "Min. EBITDA", value: "$500K", note: "Trailing 12, verified" },
+  { label: "Target EBITDA", value: "$500K+", note: "Trailing 12, verified" },
   { label: "DSCR Floor", value: "1.40x", note: "Senior debt only" },
   { label: "Owner Dependency", value: "< 25%", note: "Revenue portable" },
   { label: "Revenue Concentration", value: "< 30%", note: "No single customer" },
@@ -60,7 +60,7 @@ const underwritingSteps = [
   {
     n: "03",
     title: "Capital Stack Design",
-    body: "We structure a capital stack that closes the deal at full price. Equity Carry allows the seller to stay in as a secured preferred partner. DSCR is stress-tested at −10% and −20% revenue without seller payments counting toward coverage.",
+    body: "We evaluate the debt and acquisition structure that best fits the asset. DSCR is stress-tested at −10% and −20% revenue without seller payments counting toward coverage.",
     icon: Target,
   },
   {
@@ -100,7 +100,7 @@ export function BusinessAcquisition() {
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-400 text-xs mt-4">All targets require a real estate component (owned real estate or eligible for sale-leaseback). Minimum $500K EBITDA.</p>
+          <p className="text-center text-gray-400 text-xs mt-4">All targets require a real estate component (owned real estate or eligible for sale-leaseback). General target ~$500K+ EBITDA; exceptions considered.</p>
         </motion.div>
 
         {/* Underwriting Process */}
@@ -186,7 +186,7 @@ export function BusinessAcquisition() {
           className="rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-[#0c0900] to-[#0a0a0a] p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-white font-bold text-2xl mb-2">Have a Business + Real Estate Deal?</h3>
-            <p className="text-gray-400 text-sm max-w-xl">Bring us the financials. We&apos;ll screen it in under 48 hours and give you a clear Go / No-Go with sourced reasoning — not a vague counter.
+            <p className="text-gray-400 text-sm max-w-xl">Bring us the financials. We screen qualified submissions against our criteria and give you a straight answer with sourced reasoning — not a vague counter.
               <span className="text-yellow-400 font-medium"> No fishing. No retrades. Just a straight answer.</span>
             </p>
           </div>

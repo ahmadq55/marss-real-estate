@@ -13,7 +13,7 @@ const investorBenefits = [
 
 const advisoryBenefits = [
   { icon: FileText, title: "Deal Underwriting Collaboration", description: "Participate as an active underwriting advisor on specific acquisitions — contribute financial analysis, market intelligence, or asset-class expertise in exchange for preferred economic participation." },
-  { icon: TrendingUp, title: "Early Deal Flow Access", description: "Advisory partners receive first look at vetted, pre-LOI opportunities before deals reach broader distribution. Access to off-market and proprietary deal flow across the Sunbelt." },
+  { icon: TrendingUp, title: "Early Deal Flow Access", description: "Advisory partners receive first look at vetted, pre-LOI opportunities before deals reach broader distribution. Access to off-market and proprietary deal flow in Texas and select markets nationwide." },
   { icon: Shield, title: "Governance & Protection Rights", description: "Advisory board participation comes with documented governance protections — step-in rights, negative control provisions, and monthly reporting covenants built into every structure." },
   { icon: Users, title: "Build Long-Term Partnership", description: "This isn't a one-deal relationship. Advisory partners grow with our acquisition pipeline — preferential access, preferred economics, and a direct seat at the underwriting table on future deals." },
 ];
@@ -28,7 +28,7 @@ const partnerTypes = [
   "Accredited investors deploying $100K-$2M+ per deal",
   "Real estate professionals seeking passive co-investment exposure",
   "Experienced operators with asset-class expertise (gas stations, car washes, auto)",
-  "Family offices evaluating $1M-$10M Sunbelt acquisitions",
+  "Family offices evaluating $1M-$10M acquisitions",
   "Private equity sponsors screening deal flow with advisory capacity",
   "Business owners seeking structured real estate co-investment",
 ];
