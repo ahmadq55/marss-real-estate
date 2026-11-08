@@ -183,27 +183,27 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-2xl p-8 space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Full Name *</Label>
-                    <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)} placeholder="John Smith"
+                    <Label htmlFor="contact-1" className="text-gray-300 text-sm">Full Name *</Label>
+                    <Input id="contact-1" required value={form.name} onChange={(e) => handleChange("name", e.target.value)} placeholder="John Smith"
                       className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Email *</Label>
-                    <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="john@example.com"
+                    <Label htmlFor="contact-2" className="text-gray-300 text-sm">Email *</Label>
+                    <Input id="contact-2" required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="john@example.com"
                       className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Phone</Label>
-                    <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} placeholder="(972) 000-0000"
+                    <Label htmlFor="contact-3" className="text-gray-300 text-sm">Phone</Label>
+                    <Input id="contact-3" value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} placeholder="(972) 000-0000"
                       className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Your Role *</Label>
+                    <Label htmlFor="contact-4" className="text-gray-300 text-sm">Your Role *</Label>
                     <Select onValueChange={(v) => handleChange("role", v)} required>
-                      <SelectTrigger aria-label="Select role" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger id="contact-4" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Select role" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -221,9 +221,9 @@ export function Contact() {
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Asset / Business Type</Label>
+                    <Label htmlFor="contact-5" className="text-gray-300 text-sm">Asset / Business Type</Label>
                     <Select onValueChange={(v) => handleChange("assetType", v)}>
-                      <SelectTrigger aria-label="Select type" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger id="contact-5" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Select type" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -244,9 +244,9 @@ export function Contact() {
                     </Select>
                   </div>
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Deal Size (Approx.)</Label>
+                    <Label htmlFor="contact-6" className="text-gray-300 text-sm">Deal Size (Approx.)</Label>
                     <Select onValueChange={(v) => handleChange("dealSize", v)}>
-                      <SelectTrigger aria-label="Deal size" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger id="contact-6" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Deal size" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -262,14 +262,14 @@ export function Contact() {
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Property / Business Location</Label>
-                    <Input value={form.location} onChange={(e) => handleChange("location", e.target.value)} placeholder="City, State"
+                    <Label htmlFor="contact-7" className="text-gray-300 text-sm">Property / Business Location</Label>
+                    <Input id="contact-7" value={form.location} onChange={(e) => handleChange("location", e.target.value)} placeholder="City, State"
                       className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Annual Revenue / EBITDA</Label>
+                    <Label htmlFor="contact-8" className="text-gray-300 text-sm">Annual Revenue / EBITDA</Label>
                     <Select onValueChange={(v) => handleChange("revenueRange", v)}>
-                      <SelectTrigger aria-label="Select range" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger id="contact-8" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Select range" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -286,9 +286,9 @@ export function Contact() {
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <Label className="text-gray-300 text-sm">Desired Timeline</Label>
+                    <Label htmlFor="contact-9" className="text-gray-300 text-sm">Desired Timeline</Label>
                     <Select onValueChange={(v) => handleChange("timeline", v)}>
-                      <SelectTrigger aria-label="Select timeline" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                      <SelectTrigger id="contact-9" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                         <SelectValue placeholder="Select timeline" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -304,8 +304,8 @@ export function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Tell Us About the Deal *</Label>
-                  <Textarea required value={form.message} onChange={(e) => handleChange("message", e.target.value)}
+                  <Label htmlFor="contact-10" className="text-gray-300 text-sm">Tell Us About the Deal *</Label>
+                  <Textarea id="contact-10" required value={form.message} onChange={(e) => handleChange("message", e.target.value)}
                     placeholder="Asset address, current EBITDA / NOI, asking price, timeline, what you need from the buyer..."
                     rows={4} className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50 resize-none" />
                 </div>
