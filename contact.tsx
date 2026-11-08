@@ -233,7 +233,6 @@ export function Contact() {
                         <SelectItem value="gas-station">Gas Station / C-Store</SelectItem>
                         <SelectItem value="car-wash">Car Wash</SelectItem>
                         <SelectItem value="auto-dealer">Auto Dealership / Garage</SelectItem>
-                        <SelectItem value="hvac">HVAC / Plumbing / Trades</SelectItem>
                         <SelectItem value="motel">Hotel / Motel / Extended Stay</SelectItem>
                         <SelectItem value="laundromat">Laundromat</SelectItem>
                         <SelectItem value="light-mfg">Light Manufacturing</SelectItem>
