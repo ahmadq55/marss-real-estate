@@ -7,32 +7,32 @@ import { AdviceDisclaimer } from "@/disclaimer";
 
 const faqs = [
   {
-    q: "Will I get full price for my property or business?",
-    a: "Our structures are designed so sellers can transact at full or near-full asking price rather than accepting a discounted all-cash offer. The exact figure depends on the asset, its verified cash flow, and the structure we agree on. We don't force discounts as a starting point — but no specific price or outcome is promised until it is documented in a signed agreement.",
+    q: "How do you arrive at a price?",
+    a: "We evaluate every transaction on the asset's actual operating performance, real estate value, existing debt and capital requirements. We don't use a one-size-fits-all pricing formula, and no specific price or outcome is promised until it is documented in a signed agreement.",
   },
   {
-    q: "What is Equity Carry, in plain terms?",
-    a: "It's a structure where, instead of selling entirely for cash, the seller keeps a secured position in the entity that acquires the asset — receiving income over time and participating in future upside, with governance protections and step-in rights. It is one of several structures we use, and we select the right one per deal. See our Equity Carry guide in Resources for a full walkthrough.",
+    q: "What deal structures do you use?",
+    a: "Cash acquisitions, traditional or third-party financing, first-position seller financing, existing loan assumptions, Equity Carry and other hybrid structures. The right one depends on the seller's objectives, existing debt, the property's economics and available capital, and terms are negotiated per transaction.",
   },
   {
-    q: "How is this different from a normal sale?",
-    a: "A traditional sale is a single cash event. Our structures can spread proceeds across time, which may create income and potential tax advantages (for example, installment sale treatment) while keeping the seller in a protected position. Whether that is right for you depends entirely on your goals and your own advisors' guidance.",
+    q: "What happens after I submit an inquiry?",
+    a: "We acknowledge the inquiry, screen it against our acquisition criteria and may ask for a few basic details. Opportunities that fit move to deeper review. Timing varies, and no offer or outcome is promised before adequate review.",
   },
   {
-    q: "Are there tax advantages?",
-    a: "Depending on the structure, proceeds received across multiple tax years may qualify for installment sale treatment under IRS rules, which can spread capital gains liability. This is general information, not tax advice — your CPA should evaluate what applies to your specific situation.",
+    q: "Do I need to prepare financials first?",
+    a: "No. Owners can start with a short conversation: your contact details, the property, and what you have in mind. More detailed financial information is requested only after initial qualification.",
   },
   {
-    q: "How fast can you move?",
-    a: "We respond to qualified deal submissions within 48 hours and can issue an LOI within days on opportunities that fit our criteria. Actual closing timelines vary with diligence, title, and the specifics of each transaction.",
+    q: "Are there tax implications?",
+    a: "Tax treatment depends on the structure and your individual situation. This is general information, not tax advice. Please consult your CPA about what applies to you.",
   },
   {
     q: "What types of assets do you acquire?",
-    a: "Commercial real estate, multi-family (5+ units), mixed-use, and essential operating businesses — gas stations, car washes, auto dealerships, motels, laundromats, light manufacturing, self-storage, and more — primarily across Texas and the broader Sunbelt.",
+    a: "Our principal categories are self-storage, mobile home and RV parks, multifamily and value-add hospitality (fee-simple hotels and motels). We also consider commercial and mixed-use real estate, businesses with seller-owned real estate and other income-producing assets. We are Texas-focused, with select opportunities nationwide.",
   },
   {
-    q: "I'm a broker or agent — is my commission protected?",
-    a: "Yes. Your commission is structured into the transaction and documented at LOI, not negotiated afterward. We work to build repeat relationships with the professionals who bring us deals.",
+    q: "I'm a broker or agent. How does compensation work?",
+    a: "We welcome deals from brokers and agents who represent a transaction. Any broker compensation is discussed directly and documented in writing; nothing is promised before it is agreed.",
   },
   {
     q: "Is any of this an investment offering?",

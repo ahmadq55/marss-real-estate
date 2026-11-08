@@ -3,17 +3,10 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Resources | Marss Real Estate",
-  description: "Free institutional-grade resources for commercial real estate investors, business sellers, and acquisition professionals — deal analysis frameworks, financing guides, and market tools.",
+  description: "Free institutional-grade resources for commercial real estate investors, business sellers, and acquisition professionals — deal analysis frameworks and market tools.",
 };
 
 const articles = [
-  {
-    href: "/resources/equity-carry-guide",
-    tag: "Seller Guide",
-    title: "How Equity Carry Financing Works",
-    description: "A complete guide to the Equity Carry acquisition structure for business sellers — how it delivers full or near-full asking price, how seller protections are documented, and when and how you get paid.",
-    readTime: "8 min read",
-  },
   {
     href: "/resources/analyze-commercial-deal",
     tag: "Underwriting Framework",
@@ -69,7 +62,7 @@ export default function ResourcesPage() {
       <div className="mt-16 bg-gradient-to-br from-[#0d0900] to-[#0a0a0a] border border-yellow-900/30 rounded-2xl p-8 text-center">
         <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-3">Have a Deal?</div>
         <h3 className="text-2xl font-bold text-white mb-3">Get a Second Set of Eyes Before You Commit</h3>
-        <p className="text-gray-400 text-sm mb-6 max-w-lg mx-auto">Submit your deal to Marss Real Estate. We screen, underwrite, and respond with a Go / No-Go and LOI within 48 hours.</p>
+        <p className="text-gray-400 text-sm mb-6 max-w-lg mx-auto">Submit your deal to Marss Real Estate. We screen and review qualified submissions against our acquisition criteria and follow up if there is a fit.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link href="/#contact" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg text-sm transition-colors">Submit a Deal</Link>
           <a href="tel:9726946407" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors">Call 972.694.6407</a>

@@ -10,11 +10,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.marssrealestate.com"),
   icons: { icon: "https://galaxy-prod.tlcdn.com/gen/user_372EAGt89yD821sKcMySYfKrZna/e9ff5e89-f497-406d-a231-3ce92bbf61ab.jpg" },
-  title: "Marss Real Estate | Commercial Acquisitions & Creative Financing",
+  title: "Marss Real Estate | Real Estate Acquisitions | Texas-Focused",
   description:
-    "Marss Real Estate acquires commercial real estate, operating businesses, and real estate–anchored assets across Texas using creative capital structures including Equity Carry, Owner Financing, and Hybrid Capital Stack.",
+    "Marss Real Estate acquires self-storage, mobile home and RV parks, multifamily and value-add hospitality assets. Texas-focused, with select opportunities nationwide.",
   keywords:
-    "commercial real estate acquisition, equity carry financing, owner financing, Texas real estate, Marss Real Estate",
+    "real estate acquisition, self-storage acquisition, mobile home park acquisition, RV park acquisition, multifamily acquisition, hotel motel acquisition, Texas real estate, Marss Real Estate",
 };
 
 export default function RootLayout({
@@ -32,8 +32,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Marss Real Estate",
+              legalName: "Marss LLC",
               description:
-                "Private equity and real estate investment group acquiring commercial real estate and essential operating businesses across Texas and the Sunbelt.",
+                "Private equity and investment group acquiring income-producing real estate and real-estate-backed businesses. Texas-focused, with select opportunities nationwide.",
               url: "https://www.marssrealestate.com",
               telephone: "+1-972-694-6407",
               email: "support@marssrealestate.com",
@@ -45,7 +46,7 @@ export default function RootLayout({
               },
               areaServed: [
                 { "@type": "State", name: "Texas" },
-                { "@type": "Place", name: "Sunbelt United States" },
+                { "@type": "Country", name: "United States" },
               ],
               sameAs: [
                 "https://www.linkedin.com/in/ahmadqawasmeh/",

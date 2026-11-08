@@ -22,7 +22,7 @@ export default function AnalyzeBusinessAcquisitionPage() {
 
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">What Asset Classes This Covers</h2>
-          <p className="leading-relaxed text-gray-400 mb-4">This framework applies to essential operating businesses anchored by real estate. The real estate component is critical — it provides the downside floor that makes creative financing structures viable.</p>
+          <p className="leading-relaxed text-gray-400 mb-4">This framework applies to essential operating businesses anchored by real estate. The real estate component is critical — it provides the downside floor that makes a range of financing structures viable.</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {["Gas Stations","Car Washes","Auto Dealerships","HVAC / Plumbing","Motels / Hotels","Laundromats","Self-Storage","Light Manufacturing"].map((t) => (
               <div key={t} className="border border-[#1f1f1f] bg-[#0d0d0d] rounded-lg px-3 py-2 text-center">
@@ -138,7 +138,7 @@ export default function AnalyzeBusinessAcquisitionPage() {
         <div className="border border-yellow-900/30 bg-gradient-to-br from-[#0d0900] to-[#0a0a0a] rounded-2xl p-8 mt-10">
           <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-2">Deal Scores Green or Yellow?</div>
           <h3 className="text-xl font-bold text-white mb-2">Submit to Marss for Full Underwriting</h3>
-          <p className="text-gray-400 text-sm mb-5">We evaluate gas stations, car washes, auto dealerships, motels, HVAC businesses, laundromats, and more. LOI within 48 hours. Commission protected for brokers.</p>
+          <p className="text-gray-400 text-sm mb-5">We evaluate businesses with seller-owned real estate, including gas stations, car washes, auto dealerships, HVAC businesses, laundromats and more. Qualified submissions are reviewed against our criteria.</p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/#contact" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg text-sm transition-colors text-center">Submit a Deal</Link>
             <a href="tel:9726946407" className="inline-block border border-yellow-400/30 hover:border-yellow-400/60 text-yellow-400 font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-center">Call 972.694.6407</a>

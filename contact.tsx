@@ -111,9 +111,9 @@ export function Contact() {
                 className="h-16 w-16 object-contain rounded-lg mb-4"
               />
               <h3 className="text-white text-xl font-bold mb-1">Marss Real Estate</h3>
-              <p className="text-yellow-500 text-sm font-medium mb-3">Serious Capital. Creative Structures. Deals Built to Close.</p>
+              <p className="text-yellow-500 text-sm font-medium mb-3">Texas-focused acquisitions. Select opportunities nationwide.</p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Active acquirers of commercial real estate and essential operating businesses across the Sunbelt.
+                Acquirers of income-producing and value-add real estate and real-estate-backed businesses.
                 If you have a property or business that fits our criteria, let&apos;s talk.
               </p>
             </div>
@@ -135,16 +135,14 @@ export function Contact() {
                 <div className="p-2 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
                   <MapPin className="h-4 w-4 text-yellow-400" />
                 </div>
-                <span className="text-gray-300 text-sm">Frisco, TX — Nationwide Sunbelt Focus</span>
+                <span className="text-gray-300 text-sm">Frisco, TX — Texas-Focused, Select Markets Nationwide</span>
               </div>
             </div>
 
             <div className="bg-[#0f0f0f] border border-yellow-900/30 rounded-xl p-5">
-              <div className="text-yellow-400 text-xs font-bold tracking-widest uppercase mb-3">Response Commitment</div>
+              <div className="text-yellow-400 text-xs font-bold tracking-widest uppercase mb-3">Review Process</div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                All qualified deal submissions receive a response within{" "}
-                <span className="text-white font-semibold">48 hours</span>.
-                LOI issued within days on qualifying opportunities.
+                Every inquiry is acknowledged and qualified submissions are reviewed against our acquisition criteria. No offer or outcome is promised before adequate review.
               </p>
             </div>
 
@@ -228,17 +226,18 @@ export function Contact() {
                         <SelectValue placeholder="Select type" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
-                        <SelectItem value="multifamily">Multi-Family (5+ units)</SelectItem>
+                        <SelectItem value="multifamily">Multifamily</SelectItem>
                         <SelectItem value="mixed-use">Mixed-Use</SelectItem>
                         <SelectItem value="commercial">Commercial / Retail</SelectItem>
                         <SelectItem value="gas-station">Gas Station / C-Store</SelectItem>
                         <SelectItem value="car-wash">Car Wash</SelectItem>
                         <SelectItem value="auto-dealer">Auto Dealership / Garage</SelectItem>
                         <SelectItem value="hvac">HVAC / Plumbing / Trades</SelectItem>
-                        <SelectItem value="motel">Motel / Extended Stay</SelectItem>
+                        <SelectItem value="motel">Hotel / Motel / Extended Stay</SelectItem>
                         <SelectItem value="laundromat">Laundromat</SelectItem>
                         <SelectItem value="light-mfg">Light Manufacturing</SelectItem>
                         <SelectItem value="self-storage">Self-Storage</SelectItem>
+                        <SelectItem value="mhp-rv">Mobile Home / RV Park</SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>

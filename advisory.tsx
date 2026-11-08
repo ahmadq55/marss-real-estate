@@ -56,7 +56,7 @@ const packages = [
 ];
 
 const whoWeServe = [
-  "Private equity sponsors screening Sunbelt assets",
+  "Private equity sponsors screening Texas and select-market assets",
   "Family offices evaluating $1M–$10M acquisitions",
   "Syndicators underwriting first or second deal",
   "Operators assessing business + real estate combos",
@@ -84,6 +84,7 @@ export function Advisory() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (field: keyof AdvisoryForm, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -92,9 +93,38 @@ export function Advisory() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+    setError("");
+    const message = [
+      "Source: Advisory form",
+      `Investor / client type: ${form.role || "Not specified"}`,
+      `Service requested: ${form.service || "Not specified"}`,
+      "",
+      form.message,
+    ].join("\n");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          role: "Advisory inquiry",
+          assetType: form.assetType,
+          dealSize: form.dealSize,
+          message,
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or call 972.694.6407.");
+      }
+    } catch {
+      setError("Connection error. Please try again or call 972.694.6407.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -143,7 +173,7 @@ export function Advisory() {
             { value: "10+", label: "Asset Classes Analyzed" },
             { value: "48 Hr", label: "Avg. Deal Turnaround" },
             { value: "$1M–$10M+", label: "Deal Size Range" },
-            { value: "Sunbelt", label: "Primary Market Focus" },
+            { value: "Texas", label: "Primary Market Focus" },
           ].map((stat, i) => (
             <div key={i} className="bg-[#0f0f0f] px-6 py-6 text-center">
               <div className="text-2xl lg:text-3xl font-bold text-yellow-400 mb-1">
@@ -367,6 +397,7 @@ export function Advisory() {
                   <><span>Request a Consultation</span><Send className="ml-2 h-4 w-4" /></>
                 )}
               </Button>
+              {error && <p className="text-red-400 text-sm text-center">{error}</p>}
               <p className="text-gray-400 text-xs text-center">
                 We respond within 48 hours. Your information is never shared.
               </p>

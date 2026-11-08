@@ -18,11 +18,11 @@ const MARKETS: Record<string, Market> = {
     name: "Gas Stations & C-Stores",
     h1: "We Acquire Gas Stations & Convenience Stores",
     intro:
-      "Marss Real Estate acquires fuel and convenience retail across Texas and the Sunbelt — real estate plus the operating business — using structures built around the asset's verified cash flow.",
+      "Marss Real Estate acquires fuel and convenience retail in Texas and select markets nationwide — real estate plus the operating business — using structures built around the asset's verified cash flow.",
     why: [
       "Real estate anchors the downside; fuel + inside sales drive the income",
       "We underwrite to trailing financials, not projections",
-      "Structures that let owners exit at full or near-full value",
+      "Structures built around the asset's economics",
     ],
     criteria: [
       "Fee-simple real estate (owned, not leased land preferred)",
@@ -49,17 +49,17 @@ const MARKETS: Record<string, Market> = {
     ],
   },
   multifamily: {
-    name: "Multi-Family (5+ Units)",
-    h1: "We Acquire Multi-Family Properties",
+    name: "Multifamily",
+    h1: "We Acquire Multifamily Properties",
     intro:
-      "Value-add and stabilized multi-family (5+ units) across the Sunbelt, underwritten to T-12 actuals, rent rolls, and verified operating expenses.",
+      "Value-add and stabilized multifamily communities in Texas and select markets nationwide, underwritten to T-12 actuals, rent rolls, and verified operating expenses.",
     why: [
       "Institutional-grade underwriting on every deal",
-      "Structures that avoid forcing a discounted sale",
+      "Structures matched to the seller's goals",
       "Long-term hold horizon (3–10 years) aligned with sellers",
     ],
     criteria: [
-      "5+ units, Texas / Sunbelt markets",
+      "Small and midsize communities, Texas-focused",
       "T-12, rent roll, and bank statements available",
       "Clear value-add or stabilization path",
       "Realistic in-place cap rate on verified NOI",
@@ -69,17 +69,34 @@ const MARKETS: Record<string, Market> = {
     name: "Self-Storage",
     h1: "We Acquire Self-Storage Facilities",
     intro:
-      "Self-storage assets with stable occupancy and expansion or management-upside potential.",
+      "Operating self-storage facilities with existing income and potential for improvement through occupancy stabilization, rent optimization, expense improvements and expansion where justified.",
     why: [
       "Low operational intensity, durable demand",
       "Underwritten to actual occupancy and rate history",
-      "Management and revenue-management upside identified pre-LOI",
+      "Management and revenue-management upside identified up front",
     ],
     criteria: [
-      "Owned real estate",
+      "Operating facility with existing income",
       "Occupancy and rate roll history",
       "Expansion land or lease-up upside a plus",
-      "Sunbelt / Texas focus",
+      "Texas-focused; select markets nationwide",
+    ],
+  },
+  "mobile-home-rv-parks": {
+    name: "Mobile Home & RV Parks",
+    h1: "We Acquire Mobile Home & RV Parks",
+    intro:
+      "Operating mobile home and RV communities with existing income and opportunities in occupancy, lot rent, vacant-site infill, utility efficiency and property improvements.",
+    why: [
+      "Durable demand and sticky residents",
+      "Underwritten to actual occupancy, lot rent and utility history",
+      "Stabilization and infill upside identified up front",
+    ],
+    criteria: [
+      "Operating community with existing income",
+      "Lot rent roll and occupancy history",
+      "Utility and infrastructure condition documented",
+      "Texas-focused; select markets nationwide",
     ],
   },
   "auto-dealerships": {
@@ -100,20 +117,20 @@ const MARKETS: Record<string, Market> = {
     ],
   },
   motels: {
-    name: "Motels & Extended-Stay",
-    h1: "We Acquire Motels & Extended-Stay Properties",
+    name: "Hotels, Motels & Extended-Stay",
+    h1: "We Acquire Value-Add Hotels & Motels",
     intro:
-      "Independent and flagged motels and extended-stay assets with real estate and repositioning upside.",
+      "Fee-simple hotels, motels and extended-stay assets with renovation, repositioning and revenue-management upside.",
     why: [
       "Real estate plus operating income in one asset",
-      "Repositioning and revenue-management upside",
-      "Structures aligned to the seller's timing and tax goals",
+      "Renovation, reflagging and revenue-management upside",
+      "Operational improvements and stabilization plan up front",
     ],
     criteria: [
-      "Owned real estate",
+      "Fee-simple ownership",
       "Occupancy, ADR, and RevPAR history",
       "PIP / capex needs documented",
-      "Sunbelt / Texas focus",
+      "Texas-focused; select markets nationwide",
     ],
   },
   laundromats: {
@@ -130,7 +147,7 @@ const MARKETS: Record<string, Market> = {
       "Owned real estate or long assignable lease",
       "Verifiable revenue (card system data preferred)",
       "Equipment age and utility cost history",
-      "Texas / Sunbelt focus",
+      "Texas-focused; select markets nationwide",
     ],
   },
   "light-manufacturing": {

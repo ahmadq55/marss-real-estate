@@ -18,37 +18,37 @@ import {
 const features = [
   {
     icon: Shield,
-    title: "Your Commission, Protected From Day One",
+    title: "Clear Acquisition Criteria",
     description:
-      "Your commission is baked into the deal structure at LOI — not negotiated after. We have never cut a broker out of a transaction and never will.",
+      "Four principal asset categories, Texas-focused with select markets nationwide. Know before you submit whether a deal fits.",
   },
   {
     icon: Clock,
-    title: "48-Hour Response. LOI in Days.",
+    title: "Fast Preliminary Screening",
     description:
-      "No committee approvals, no endless underwriting cycles. A qualifying submission gets a response within 48 hours and a formal LOI within days.",
+      "A defined review and response process. Qualified submissions are screened promptly; no outcome is promised before adequate review.",
   },
   {
     icon: Repeat,
-    title: "We Are a Repeat Buyer",
+    title: "Professional Communication",
     description:
-      "Brokers who bring us one deal become priority partners for every future deal. We maintain an active pipeline and are constantly acquiring across the Sunbelt.",
+      "A repeat buyer with an active pipeline. Straightforward updates and clear next steps from the first submission.",
   },
   {
     icon: Wrench,
-    title: "We Close the Hard Deals",
+    title: "Structures From Real Economics",
     description:
-      "Conventional financing fell through? Seller needs a creative structure? Bring us the deals that didn't close elsewhere — our Equity Carry approach works where traditional finance fails.",
+      "Cash, financing, seller financing, loan assumptions, Equity Carry or hybrids, with access to acquisition and capital partners.",
   },
 ];
 
 const qualifiers = [
-  "Seller willing to consider equity carry or seller financing",
-  "Asset has a clear value-add or stabilization path",
-  "Business-backed deals: minimum $500K EBITDA with real estate",
+  "Income-producing asset in one of our four principal categories",
+  "Clear value-add or stabilization path",
+  "Financial summary available (T-12, rent roll or P&L)",
+  "Existing financing or assumability details, if known",
+  "Business-backed deals: ~$500K+ EBITDA with owned real estate",
   "No major environmental or title encumbrances",
-  "Motivated seller aligned on long-term outcome",
-  "Agent / broker fully representing the transaction",
 ];
 
 interface BrokerForm {
@@ -60,6 +60,8 @@ interface BrokerForm {
   assetType: string;
   dealSize: string;
   askingPrice: string;
+  propertyName: string;
+  financing: string;
   summary: string;
 }
 
@@ -67,10 +69,11 @@ export function BrokerPartner() {
   const [form, setForm] = useState<BrokerForm>({
     name: "", brokerage: "", email: "", phone: "",
     representing: "", assetType: "", dealSize: "",
-    askingPrice: "", summary: "",
+    askingPrice: "", propertyName: "", financing: "", summary: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (field: keyof BrokerForm, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -79,9 +82,41 @@ export function BrokerPartner() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+    setError("");
+    const message = [
+      "Source: Broker / Deal Source form",
+      `Brokerage / firm: ${form.brokerage || "Not provided"}`,
+      `Representing: ${form.representing || "Not specified"}`,
+      `Property name and location: ${form.propertyName || "Not provided"}`,
+      `Asking price: ${form.askingPrice || "Not provided"}`,
+      `Existing financing / assumability: ${form.financing || "Not provided"}`,
+      "",
+      form.summary,
+    ].join("\n");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          role: "Broker / Deal Source",
+          assetType: form.assetType,
+          dealSize: form.dealSize,
+          message,
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or call 972.694.6407.");
+      }
+    } catch {
+      setError("Connection error. Please try again or call 972.694.6407.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -100,14 +135,11 @@ export function BrokerPartner() {
             For Agents, Brokers &amp; Deal Originators
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Your Commission Is Protected.{" "}
-            <span className="gold-gradient">Your Relationship Is Valued.</span>
+            Clear Criteria.{" "}
+            <span className="gold-gradient">Fast Review.</span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
-            Marss Real Estate is a repeat buyer — not a one-time transaction. Brokers
-            who bring us qualified deals become long-term partners in our active
-            acquisition pipeline. We never circumvent your relationship, and your fee
-            is structured into the deal from day one.
+            Brokers and agents bring us income-producing opportunities and get a capable group that evaluates them efficiently. We publish clear acquisition criteria, screen deals quickly and communicate professionally. Transaction structures are based on each deal's actual economics.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a href="#broker-submit">
@@ -162,10 +194,10 @@ export function BrokerPartner() {
             Deal Qualifiers
           </div>
           <h3 className="text-2xl font-bold text-white mb-2">
-            What Makes a Deal Fast-Track?
+            What Makes a Deal a Fit?
           </h3>
           <p className="text-gray-400 text-sm mb-8">
-            Deals that match these criteria can be under LOI within days, not months.
+            Deals that match these criteria are prioritized for deeper review.
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {qualifiers.map((item, i) => (
@@ -191,7 +223,7 @@ export function BrokerPartner() {
             </div>
             <h3 className="text-3xl font-bold text-white">Submit a Deal for Review</h3>
             <p className="text-gray-400 text-sm mt-2">
-              Your commission is protected from the moment you submit.
+              Send us what you have. Qualified submissions are screened against our criteria.
             </p>
           </div>
 
@@ -202,7 +234,7 @@ export function BrokerPartner() {
               </div>
               <h3 className="text-white text-2xl font-bold mb-3">Deal Received</h3>
               <p className="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">
-                You will hear from us within 48 hours. Your commission is protected.
+                Thank you. We have received your submission and will follow up after review.
               </p>
             </div>
           ) : (
@@ -261,7 +293,10 @@ export function BrokerPartner() {
                       <SelectValue placeholder="Asset type" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
-                      <SelectItem value="multifamily">Multi-Family (5+ units)</SelectItem>
+                      <SelectItem value="self-storage">Self-Storage</SelectItem>
+                      <SelectItem value="mhp-rv">Mobile Home / RV Park</SelectItem>
+                      <SelectItem value="multifamily">Multifamily</SelectItem>
+                      <SelectItem value="hospitality">Hotel / Motel / Hospitality</SelectItem>
                       <SelectItem value="mixed-use">Mixed-Use</SelectItem>
                       <SelectItem value="commercial">Commercial / Retail</SelectItem>
                       <SelectItem value="gas-station">Gas Station / Fueling Center</SelectItem>
@@ -297,6 +332,21 @@ export function BrokerPartner() {
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
               </div>
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div className="space-y-2">
+                  <Label className="text-gray-300 text-sm">Property Name &amp; Location</Label>
+                  <Input value={form.propertyName} onChange={(e) => handleChange("propertyName", e.target.value)}
+                    placeholder="Name, city, state"
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
+                </div>
+                <div className="space-y-2">
+                  <Label className="text-gray-300 text-sm">Existing Financing / Assumability</Label>
+                  <Input value={form.financing} onChange={(e) => handleChange("financing", e.target.value)}
+                    placeholder="If known"
+                    className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
+                </div>
+              </div>
+
 
               <div className="space-y-2">
                 <Label className="text-gray-300 text-sm">Deal Summary *</Label>
@@ -313,8 +363,9 @@ export function BrokerPartner() {
                   <><span>Submit a Deal</span><Send className="ml-2 h-4 w-4" /></>
                 )}
               </Button>
+              {error && <p className="text-red-400 text-sm text-center">{error}</p>}
               <p className="text-gray-400 text-xs text-center">
-                Your commission is protected from submission. We never share your information.
+                We never share your information. Broker compensation, where applicable, is discussed and documented in writing.
               </p>
             </form>
           )}

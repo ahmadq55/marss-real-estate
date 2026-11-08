@@ -7,53 +7,53 @@ const steps = [
   {
     number: "01",
     icon: Building,
-    title: "Acquisition",
-    subtitle: "Capital Stack + Equity Partnership",
+    title: "Inquiry",
+    subtitle: "Confidential Intake",
     description:
-      "Our creative capital stacking structure delivers real cash to the closing table. The seller's equity converts to a secured preferred equity position in the deal entity — with clearly defined governance, performance milestones, and step-in rights protecting the seller throughout.",
+      "Share the basics: your contact details, the property and what you have in mind. Owners can start with a short conversation. No full financial package is required.",
     highlights: [
-      "Creative capital stack delivers cash at close",
-      "Seller converts equity to secured preferred position",
-      "Terms documented in legally binding agreement",
+      "Minimal information to start",
+      "Separate owner and broker pathways",
+      "Confidential handling",
     ],
   },
   {
     number: "02",
-    icon: TrendingUp,
-    title: "Stabilization",
-    subtitle: "Active Management",
+    icon: Activity,
+    title: "Underwriting",
+    subtitle: "Evaluation",
     description:
-      "Buyer executes the value-add plan — leasing, renovation, or repositioning the asset to reach target occupancy and NOI.",
+      "We review historical performance, normalized income, real estate value, capital needs and operating risks to understand what the asset can support.",
     highlights: [
-      "Leasing, renovation, repositioning",
-      "Active property management",
-      "Progress tracked against milestones",
+      "Historical financial review",
+      "Normalized income and valuation",
+      "Capital expenditures and risks",
     ],
   },
   {
     number: "03",
-    icon: Activity,
-    title: "Performance",
-    subtitle: "Milestone-Linked",
+    icon: TrendingUp,
+    title: "Structure",
+    subtitle: "Terms & LOI",
     description:
-      "Seller carry accrues based on NOI growth, occupancy, or agreed performance milestones. Performance is transparently tracked and reported.",
+      "Where the opportunity fits, we develop a transaction structure based on the actual economics and discuss it with you before any letter of intent.",
     highlights: [
-      "Carry tied to NOI / occupancy milestones",
-      "Transparent reporting to seller",
-      "Regular performance updates",
+      "Structure based on actual economics",
+      "Conditional preliminary LOI",
+      "Definitive agreements govern",
     ],
   },
   {
     number: "04",
     icon: CheckCircle,
-    title: "Exit",
-    subtitle: "Full Realization",
+    title: "Close & Stabilize",
+    subtitle: "Execution",
     description:
-      "Asset is sold or refinanced at stabilized value. Seller carry pays out at full value — no forced discounts, no haircuts. Aligned exit for all parties.",
+      "We work through diligence, title and closing, then execute the value-add and stabilization plan for the asset.",
     highlights: [
-      "Sale or refinance triggers payout",
-      "Seller receives full carry value",
-      "No forced discounts at exit",
+      "Diligence, title and closing",
+      "Value-add planning",
+      "Stabilization strategy",
     ],
   },
 ];
@@ -77,8 +77,7 @@ export function Process() {
             How It <span className="gold-gradient">Works</span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
-            A clear, four-phase framework from acquisition to full value
-            realization — no surprises, no games.
+            A clear, four-step process from first conversation to closing and stabilization.
           </p>
         </motion.div>
 

@@ -1,67 +1,77 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building, MapPin, DollarSign, Package, CheckCircle, ArrowRight, Hotel } from "lucide-react";
+import { Warehouse, Tent, Building2, Hotel, MapPin, Layers, CheckCircle, ArrowRight } from "lucide-react";
 
-const criteria = [
+const categories = [
   {
-    icon: Building,
-    title: "Asset Types",
+    icon: Warehouse,
+    badge: "Primary Focus",
+    title: "Self-Storage",
     items: [
-      "Multi-family (5+ units)",
-      "Short-Term Rentals (STR / vacation rental)",
-      "Pad Split / Co-Living properties",
-      "Self-Storage facilities",
-      "RV Parks / RV Resorts",
-      "Mixed-use & commercial / retail",
-      "Office, light industrial & warehousing",
-      "Hotels, motels & hospitality (value-add)",
-      "Operating businesses backed by real estate",
+      "Operating facilities with existing income",
+      "Occupancy stabilization",
+      "Rent and revenue management",
+      "Operating expense improvements",
+      "Expansion where justified",
+      "Repositioning or improved management",
     ],
   },
   {
-    icon: Package,
-    title: "Asset Condition",
+    icon: Tent,
+    badge: "Primary Focus",
+    title: "Mobile Home & RV Parks",
     items: [
-      "Value-add opportunities",
-      "Under-occupied or mismanaged",
-      "Transitional or repositioning plays",
-      "Light to moderate distress",
-      "Stabilization upside required",
-      "STR-conversion or co-living-conversion ready",
+      "Operating communities with existing income",
+      "Occupancy improvements",
+      "Lot rent adjustments",
+      "Vacant-site infill",
+      "Utility and operating efficiencies",
+      "Property improvements and stabilization",
     ],
   },
   {
-    icon: DollarSign,
-    title: "Deal Size",
+    icon: Building2,
+    badge: "Active Focus",
+    title: "Multifamily",
     items: [
-      "Minimum: $300,000 (STR & pad split)",
-      "Minimum: $500,000 (commercial & business)",
-      "Preferred: $1M – $10M+",
-      "Larger deals considered case-by-case",
-      "Creative structure — equity carry, owner financing, or hybrid",
+      "Small and midsize apartment communities",
+      "Garden-style and workforce housing",
+      "Stabilized properties with attractive economics",
+      "Value-add and underperforming properties",
+      "Favorable assumable debt a plus",
+      "Seller financing or other viable structures",
     ],
   },
   {
-    icon: MapPin,
-    title: "Geography",
+    icon: Hotel,
+    badge: "Selective Focus",
+    title: "Value-Add Hospitality",
     items: [
-      "Primary: Texas (DFW, Houston, Austin, SA)",
-      "Sunbelt & Southeast growth markets",
-      "Emerging & secondary markets welcome",
-      "STR: high-tourism & business travel corridors",
-      "National reach via partner network",
+      "Fee-simple hotels and motels",
+      "Renovation and repositioning",
+      "Improved revenue management",
+      "Reflagging or conversion",
+      "Operational improvements",
+      "Stabilization and value creation",
     ],
   },
 ];
 
+const alsoConsidered = [
+  "Commercial and mixed-use real estate",
+  "Businesses with seller-owned real estate (target ~$500K+ EBITDA, exceptions considered)",
+  "Other income-producing real estate",
+  "Select residential and rental opportunities where compelling",
+];
+
 const dealQualifiers = [
-  "Seller open to creative financing — equity carry, owner financing, or hybrid capital stack",
-  "Asset has clear value-add, STR-conversion, or stabilization path",
+  "Income-producing asset with verifiable financial performance",
+  "Clear path to stabilization or value creation",
+  "Owner or authorized representative engaged in the process",
   "No major environmental or title encumbrances",
-  "Motivated seller aligned on structured, long-term payout",
-  "Agent / broker fully representing the transaction",
-  "STR & pad split: local STR regulations permit short-term or shared-housing operations",
+  "Hospitality: fee-simple ownership",
+  "Business targets include owned real estate",
 ];
 
 const repositioningPhases = [
@@ -69,19 +79,19 @@ const repositioningPhases = [
     phase: "Phase 1",
     title: "Stabilize & Optimize",
     description:
-      "Streamline operations for improved efficiency under current branding. Recruit and install top-tier management talent. Execute targeted CapEx for renovation and property improvements — driving ADR, occupancy, and NOI from day one.",
+      "Streamline operations, install strong management and execute targeted CapEx — driving ADR, occupancy and NOI from day one.",
   },
   {
     phase: "Phase 2",
-    title: "Boutique Repositioning",
+    title: "Reposition",
     description:
-      "Reposition the asset as a boutique hotel or motel under Marss proprietary branding. Curate a distinct guest experience that commands premium rates and repeat bookings in the local market.",
+      "Improve revenue management and, where the market supports it, reflag or reposition the asset under a stronger brand concept.",
   },
   {
     phase: "Phase 3",
     title: "Conversion Analysis",
     description:
-      "If zoning and economic analysis support it, evaluate conversion to multifamily residential — unlocking a higher and better use that maximizes the underlying real estate value.",
+      "If zoning and economic analysis support it, evaluate conversion to a higher and better use that maximizes the underlying real estate value.",
   },
 ];
 
@@ -104,15 +114,14 @@ export function BuyBox() {
             Our <span className="gold-gradient">Buy Box</span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
-            We are active acquirers across commercial real estate, operating businesses,
-            short-term rentals, self-storage, RV parks, and pad split properties. If your deal matches
-            these criteria, we want to hear from you — fast.
+            We acquire income-producing and value-add assets in four principal
+            categories. Texas-focused, with select opportunities nationwide.
           </p>
         </motion.div>
 
-        {/* Criteria Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {criteria.map((c, i) => (
+        {/* Four principal categories */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          {categories.map((c, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
@@ -121,12 +130,15 @@ export function BuyBox() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-[#0f0f0f] border border-[#1a1a1a] hover:border-yellow-900/50 rounded-xl p-6 transition-all duration-300 group"
             >
-              <div className="p-3 w-fit rounded-lg bg-yellow-500/10 border border-yellow-500/20 mb-4 group-hover:bg-yellow-500/15 transition-colors">
-                <c.icon className="h-5 w-5 text-yellow-400" />
+              <div className="flex items-start justify-between mb-4">
+                <div className="p-3 w-fit rounded-lg bg-yellow-500/10 border border-yellow-500/20 group-hover:bg-yellow-500/15 transition-colors">
+                  <c.icon className="h-5 w-5 text-yellow-400" />
+                </div>
+                <span className="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full bg-yellow-500/15 text-yellow-400 border border-yellow-500/30">
+                  {c.badge}
+                </span>
               </div>
-              <h3 className="text-white font-bold text-base mb-4 tracking-wide">
-                {c.title}
-              </h3>
+              <h3 className="text-white font-bold text-lg mb-4 tracking-wide">{c.title}</h3>
               <ul className="space-y-2.5">
                 {c.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-2">
@@ -139,7 +151,60 @@ export function BuyBox() {
           ))}
         </div>
 
-        {/* Hotel / Motel Repositioning Strategy */}
+        {/* Also considered + geography */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-xl p-6"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2.5 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
+                <Layers className="h-5 w-5 text-yellow-400" />
+              </div>
+              <h3 className="text-white font-bold text-base tracking-wide">Also Considered</h3>
+            </div>
+            <ul className="space-y-2.5">
+              {alsoConsidered.map((item, j) => (
+                <li key={j} className="flex items-start gap-2">
+                  <div className="h-1.5 w-1.5 rounded-full bg-yellow-500 mt-2 shrink-0" />
+                  <span className="text-gray-400 text-sm leading-snug">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-xl p-6"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2.5 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
+                <MapPin className="h-5 w-5 text-yellow-400" />
+              </div>
+              <h3 className="text-white font-bold text-base tracking-wide">Geography</h3>
+            </div>
+            <ul className="space-y-2.5">
+              {[
+                "Primary focus: Texas",
+                "Dallas–Fort Worth, Houston, San Antonio, Austin, Waco and surrounding markets",
+                "Select opportunities across the Sunbelt and nationwide",
+                "Nationwide reach through broker and investment partners",
+              ].map((item, j) => (
+                <li key={j} className="flex items-start gap-2">
+                  <div className="h-1.5 w-1.5 rounded-full bg-yellow-500 mt-2 shrink-0" />
+                  <span className="text-gray-400 text-sm leading-snug">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+
+        {/* Hospitality repositioning */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -162,9 +227,9 @@ export function BuyBox() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-3xl">
-              Marss acquires underperforming hotels and motels with a disciplined three-phase repositioning
-              playbook — from operational stabilization to boutique brand repositioning, with a multifamily
-              conversion pathway where the economics and zoning support it.
+              We selectively acquire fee-simple hotels and motels with a disciplined
+              three-phase playbook — from operational stabilization to repositioning,
+              with a conversion analysis where the economics and zoning support it.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {repositioningPhases.map((phase, i) => (
@@ -207,8 +272,8 @@ export function BuyBox() {
                 Does Your Deal Fit?
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                We move quickly on deals that match our criteria. A qualifying
-                deal can be under LOI within days, not months.
+                Send what you have. We screen submissions against our criteria and
+                follow up on opportunities that fit.
               </p>
               <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold text-sm hover:text-yellow-300 transition-colors">
                 Submit a Deal <ArrowRight className="h-4 w-4" />
