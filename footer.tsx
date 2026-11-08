@@ -48,7 +48,7 @@ export function Footer() {
                   MARSS REAL ESTATE
                 </div>
                 <div className="text-yellow-500 text-xs">
-                  Private Equity &amp; Real Estate Investment Group
+                  Real Estate Acquisitions
                 </div>
               </div>
             </div>

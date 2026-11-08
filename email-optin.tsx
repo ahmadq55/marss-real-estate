@@ -66,8 +66,8 @@ export function EmailOptin() {
               </h2>
               <p className="text-gray-400 leading-relaxed mb-6">
                 The exact framework Marss Real Estate uses to screen every deal in under 60 minutes.
-                25 questions. Go / No-Go scoring. Covers commercial real estate, gas stations, car washes,
-                auto dealers, HVAC businesses, and more.
+                25 questions. Go / No-Go scoring. Covers commercial real estate and businesses sold with their real estate,
+                such as gas stations, car washes and auto dealers.
               </p>
               <div className="space-y-3">
                 {checklistItems.map((item, i) => (
@@ -105,13 +105,13 @@ export function EmailOptin() {
               ) : (
                 <form onSubmit={handleSubmit} className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-2xl p-8 space-y-4">
                   <div className="space-y-2">
-                    <Label className="text-gray-400 text-xs uppercase tracking-wide">First Name *</Label>
-                    <Input required value={name} onChange={(e) => setName(e.target.value)} placeholder="Ahmad"
+                    <Label htmlFor="checklist-1" className="text-gray-400 text-xs uppercase tracking-wide">First Name *</Label>
+                    <Input id="checklist-1" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Ahmad"
                       className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   <div className="space-y-2">
-                    <Label className="text-gray-400 text-xs uppercase tracking-wide">Email *</Label>
-                    <Input required type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com"
+                    <Label htmlFor="checklist-2" className="text-gray-400 text-xs uppercase tracking-wide">Email *</Label>
+                    <Input id="checklist-2" required type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com"
                       className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                   </div>
                   {error && <p className="text-red-400 text-xs">{error}</p>}

@@ -310,14 +310,14 @@ export function Advisory() {
             >
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Full Name *</Label>
-                  <Input required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
+                  <Label htmlFor="advisory-1" className="text-gray-300 text-sm">Full Name *</Label>
+                  <Input id="advisory-1" required value={form.name} onChange={(e) => handleChange("name", e.target.value)}
                     placeholder="John Smith"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Email *</Label>
-                  <Input required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
+                  <Label htmlFor="advisory-2" className="text-gray-300 text-sm">Email *</Label>
+                  <Input id="advisory-2" required type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)}
                     placeholder="john@example.com"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
@@ -325,15 +325,15 @@ export function Advisory() {
 
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Phone</Label>
-                  <Input value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
+                  <Label htmlFor="advisory-3" className="text-gray-300 text-sm">Phone</Label>
+                  <Input id="advisory-3" value={form.phone} onChange={(e) => handleChange("phone", e.target.value)}
                     placeholder="(555) 000-0000"
                     className="bg-[#151515] border-[#252525] text-white placeholder:text-gray-400 focus:border-yellow-500/50" />
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Your Role *</Label>
+                  <Label htmlFor="advisory-4" className="text-gray-300 text-sm">Your Role *</Label>
                   <Select onValueChange={(v) => handleChange("role", v)} required>
-                    <SelectTrigger aria-label="Select role" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger id="advisory-4" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Select role" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -350,9 +350,9 @@ export function Advisory() {
 
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Service Interest *</Label>
+                  <Label htmlFor="advisory-5" className="text-gray-300 text-sm">Service Interest *</Label>
                   <Select onValueChange={(v) => handleChange("service", v)} required>
-                    <SelectTrigger aria-label="Select service" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger id="advisory-5" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Select service" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -364,9 +364,9 @@ export function Advisory() {
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-gray-300 text-sm">Approximate Deal Size</Label>
+                  <Label htmlFor="advisory-6" className="text-gray-300 text-sm">Approximate Deal Size</Label>
                   <Select onValueChange={(v) => handleChange("dealSize", v)}>
-                    <SelectTrigger aria-label="Deal size" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
+                    <SelectTrigger id="advisory-6" className="bg-[#151515] border-[#252525] text-white focus:border-yellow-500/50">
                       <SelectValue placeholder="Deal size" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1a1a1a] border-[#2a2a2a]">
@@ -381,10 +381,10 @@ export function Advisory() {
               </div>
 
               <div className="space-y-2">
-                <Label className="text-gray-300 text-sm">
+                <Label htmlFor="advisory-7" className="text-gray-300 text-sm">
                   Tell Us About Your Situation *
                 </Label>
-                <Textarea required value={form.message}
+                <Textarea id="advisory-7" required value={form.message}
                   onChange={(e) => handleChange("message", e.target.value)}
                   placeholder="Describe the deal, asset class, timeline, and what you need."
                   rows={4}

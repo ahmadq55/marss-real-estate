@@ -34,7 +34,7 @@ export default function RootLayout({
               name: "Marss Real Estate",
               legalName: "Marss LLC",
               description:
-                "Private equity and investment group acquiring income-producing real estate and real-estate-backed businesses. Texas-focused, with select opportunities nationwide.",
+                "Real estate acquisition company acquiring income-producing real estate and real-estate-backed businesses. Texas-focused, with select opportunities nationwide.",
               url: "https://www.marssrealestate.com",
               telephone: "+1-972-694-6407",
               email: "support@marssrealestate.com",
