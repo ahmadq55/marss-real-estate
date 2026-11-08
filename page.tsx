@@ -6,7 +6,6 @@ import { SellerPaths } from "@/seller-paths";
 import { BusinessAcquisition } from "@/business-acquisition";
 
 const Strategy = dynamic(() => import("@/strategy").then((m) => m.Strategy));
-const CreativeFinancing = dynamic(() => import("@/creative-financing").then((m) => m.CreativeFinancing));
 const BuyBox = dynamic(() => import("@/buy-box").then((m) => m.BuyBox));
 const Process = dynamic(() => import("@/process").then((m) => m.Process));
 const Advisory = dynamic(() => import("@/advisory").then((m) => m.Advisory));
@@ -27,7 +26,6 @@ export default function Home() {
       <SellerPaths />
       <BusinessAcquisition />
       <Strategy />
-      <CreativeFinancing />
       <BuyBox />
       <Process />
       <Advisory />

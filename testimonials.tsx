@@ -10,7 +10,7 @@ const points = [
   {
     icon: ShieldCheck,
     title: "Principal Buyer — Not a Wholesaler",
-    body: "We acquire for our own account and close on the structures we present. No assignment fees, no daisy chains.",
+    body: "We acquire directly, through affiliated entities or alongside investment partners. No assignment fees, no daisy chains.",
   },
   {
     icon: Building2,
@@ -19,23 +19,23 @@ const points = [
   },
   {
     icon: Clock,
-    title: "48-Hour Response",
-    body: "Qualified deal submissions receive a response within 48 hours, with an LOI in days on opportunities that fit our criteria.",
+    title: "Defined Review Process",
+    body: "Qualified submissions follow a clear review and response process. No outcomes are promised before adequate review.",
   },
   {
     icon: Layers,
     title: "Structures Selected Per Deal",
-    body: "Equity Carry, Owner Financing, and Hybrid Capital Stacks — chosen for the asset, the seller's goals, and verified cash flow.",
+    body: "Cash, financing, seller financing, loan assumptions, Equity Carry or hybrids — chosen for the asset and the numbers.",
   },
   {
     icon: MapPin,
-    title: "Texas & the Sunbelt",
-    body: "Active in commercial real estate and essential operating businesses across Texas and the broader Sunbelt.",
+    title: "Texas-Focused. Nationwide Reach.",
+    body: "Direct owner outreach in Texas, with select opportunities across the Sunbelt and nationwide through broker and investment partners.",
   },
   {
     icon: Handshake,
     title: "Built for Repeat Relationships",
-    body: "Commission protection for brokers and aligned outcomes for sellers — we measure success by the partners who come back.",
+    body: "Clear communication for brokers and aligned outcomes for sellers — we measure success by the partners who come back.",
   },
 ];
 

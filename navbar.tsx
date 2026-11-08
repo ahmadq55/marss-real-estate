@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/#for-brokers", label: "For Brokers" },
   { href: "/#jv-partners", label: "Invest & Partner" },
   { href: "/#advisory", label: "Advisory" },
-  { href: "/#strategy", label: "Our Approach" },
+  { href: "/#strategy", label: "Structures" },
   { href: "/#buy-box", label: "Buy Box" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#contact", label: "Contact" },

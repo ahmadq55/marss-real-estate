@@ -7,6 +7,7 @@ const ACQUISITION_TYPES = [
   "car-washes",
   "multifamily",
   "self-storage",
+  "mobile-home-rv-parks",
   "auto-dealerships",
   "motels",
   "laundromats",
@@ -17,7 +18,6 @@ const RESOURCE_PAGES = [
   "ai-tools-2026",
   "analyze-business-acquisition",
   "analyze-commercial-deal",
-  "equity-carry-guide",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
