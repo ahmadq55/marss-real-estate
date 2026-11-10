@@ -5,7 +5,7 @@ import Image from "next/image";
 import { CheckCircle, Building, Briefcase, Globe, Linkedin, Facebook, Link as LinkIcon, ExternalLink } from "lucide-react";
 
 const credentials = [
-  "Private equity and investment acquisition platform — not a licensed brokerage or wholesaler",
+  "Real estate acquisition platform — not a licensed brokerage or wholesaler",
   "Self-storage, MHP / RV parks, multifamily and value-add hospitality",
   "Underwriting of historical financials, normalized income and real estate value",
   "Flexible deal structures based on each asset's economics",
@@ -31,7 +31,7 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <div className="border-l-2 border-yellow-500 pl-6 mb-8">
-              <p className="text-gray-300 text-lg leading-relaxed mb-4">We are a private equity and investment acquisition platform. We source, evaluate, underwrite, structure and participate in acquisitions of <span className="text-yellow-400 font-semibold">income-producing real estate</span> and businesses backed by owned real estate. Acquisitions may be completed through affiliated entities, investment partners or joint ventures, depending on the transaction. The right structure is chosen for each deal based on the asset, the seller&apos;s goals and the numbers.</p>
+              <p className="text-gray-300 text-lg leading-relaxed mb-4">We are a real estate acquisition platform. We source, evaluate, underwrite, structure and participate in acquisitions of <span className="text-yellow-400 font-semibold">income-producing real estate</span> and businesses backed by owned real estate. Acquisitions may be completed through affiliated entities, investment partners or joint ventures, depending on the transaction. The right structure is chosen for each deal based on the asset, the seller&apos;s goals and the numbers.</p>
               <p className="text-gray-400 leading-relaxed">Owners get a credible, straightforward counterparty. Brokers get fast preliminary screening and clear communication. Capital partners get deal-level opportunities with institutional-grade underwriting. No outcome is guaranteed.</p>
             </div>
             <ul className="space-y-3">
