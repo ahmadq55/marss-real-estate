@@ -20,12 +20,6 @@ const Footer = dynamic(() => import("@/footer").then((m) => m.Footer));
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0a0a0a]">
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded focus:bg-yellow-500 focus:px-4 focus:py-2 focus:font-bold focus:text-black"
-      >
-        Skip to main content
-      </a>
       <Navbar />
       <div id="main-content" tabIndex={-1} />
       <Hero />
