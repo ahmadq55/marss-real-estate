@@ -125,7 +125,7 @@ export function Footer() {
           </p>
           <p className="text-gray-400 text-xs leading-relaxed">
             <span className="text-gray-400 font-semibold">Not a licensed real estate brokerage.</span>{" "}
-            Marss Real Estate is a private equity and real estate investment group that acquires
+            Marss Real Estate is a real estate acquisition company that acquires
             assets directly, through affiliated entities or alongside investment partners. It does not provide brokerage services or represent buyers
             or sellers as a licensed real estate broker or agent.
           </p>
