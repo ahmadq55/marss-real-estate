@@ -111,13 +111,13 @@ export function About() {
                 </a>
                 <span className="text-gray-400 text-sm hidden sm:inline">&bull;</span>
                 <a
-                  href="https://linktr.ee/AQ55"
+                  href="https://www.instagram.com/qgate1434/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-yellow-400 text-sm font-medium hover:text-yellow-300 transition-colors group"
                 >
                   <LinkIcon className="h-4 w-4 shrink-0" />
-                  More Links
+                  Marss Real Estate on Instagram
                   <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </div>
